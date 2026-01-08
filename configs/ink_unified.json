@@ -1,0 +1,315 @@
+{
+  "name": "ink",
+  "description": "Ink (React for CLIs) and Ink-UI component library. Use for building interactive command-line applications with React components, flexbox terminal layouts, keyboard input handling, and pre-built UI components like spinners, inputs, and selects.",
+  "merge_mode": "rule-based",
+  "cli_development_gotchas": {
+    "_comment": "CRITICAL: These are terminal-specific constraints that differ from browser React",
+    "terminal_constraints": [
+      "Terminal dimensions are finite and dynamic - use useStdout().stdout.columns/rows or measureElement()",
+      "No scrolling by default - content that exceeds terminal height is lost unless using Static component",
+      "Colors depend on terminal support - test with FORCE_COLOR=0 for no-color fallback",
+      "Unicode/emoji rendering varies by terminal - test across iTerm2, Terminal.app, Windows Terminal, VS Code terminal",
+      "Box-drawing characters may not render correctly in all terminals or fonts",
+      "Text wrapping is character-based, not word-based by default - use wrap='wrap' for word wrap",
+      "Terminal resize events require handling - components don't auto-resize without explicit useStdout hooks"
+    ],
+    "input_handling_gotchas": [
+      "Raw mode required for character-by-character input - terminal must support it",
+      "stdin is shared - only one useInput hook should be active at a time (use isActive prop)",
+      "Ctrl+C handling: exitOnCtrlC=true (default) exits immediately; set false to handle manually",
+      "Paste events come as single input with full text, not character-by-character",
+      "Arrow keys, function keys require special key object checks (key.leftArrow, key.return, etc.)",
+      "Tab/Shift+Tab are reserved for focus navigation when using useFocus system",
+      "Backspace is '\\u007F' or '\\b' depending on terminal - check both"
+    ],
+    "rendering_gotchas": [
+      "Ink re-renders entire UI on each state change - no DOM diffing like browser React",
+      "console.log() interferes with rendering - use patchConsole:true or useStdout().write()",
+      "Static component items are immutable after render - only new items trigger re-render",
+      "No CSS - all styling via props (color, bold, etc.) using chalk color names or hex",
+      "Percentage widths (width='50%') only work when parent has explicit dimensions",
+      "measureElement() only works after initial render - call in useEffect, not during render",
+      "maxFps option (default 30) limits render frequency - lower for less CPU usage"
+    ],
+    "lifecycle_gotchas": [
+      "useApp().exit() is async - await it or handle cleanup in waitUntilExit()",
+      "unmount() clears the terminal output - use clear() to preserve static content",
+      "Multiple render() calls create multiple instances - usually you want one",
+      "stdin may need manual cleanup if app crashes - terminal left in raw mode",
+      "Process doesn't exit automatically - call process.exit() or use exit() from useApp"
+    ],
+    "testing_gotchas": [
+      "Use ink-testing-library, not @testing-library/react",
+      "lastFrame() returns ANSI-stripped string - use frames array for raw output",
+      "stdin.write() for simulating input in tests",
+      "Async state updates need await delay() or waitFor patterns"
+    ]
+  },
+  "library_opinionations": {
+    "_comment": "Design decisions built into Ink that you cannot change",
+    "flexbox_only": "All layout uses Yoga flexbox engine - no CSS Grid, no absolute positioning, no floats",
+    "no_dom": "No DOM - you cannot use document.*, window.*, or any browser APIs",
+    "text_must_be_in_text": "All text content MUST be wrapped in <Text> component - bare strings cause errors",
+    "single_line_text_default": "Text doesn't wrap by default - explicitly set wrap='wrap' or 'truncate'",
+    "no_images": "No image support - terminal is text-only (use ASCII art or Unicode block characters)",
+    "no_custom_fonts": "Font is terminal's monospace font - no font-family, font-size in traditional sense",
+    "sync_render": "Rendering is synchronous and blocks - long operations freeze UI",
+    "no_animations_api": "No built-in animation API - use setInterval/setTimeout with state updates",
+    "stdout_only": "Output goes to stdout only - stderr requires useStderr hook",
+    "focus_is_sequential": "Focus navigation is linear (Tab order) - no 2D focus grid navigation"
+  },
+  "sources": [
+    {
+      "type": "documentation",
+      "name": "Ink Core",
+      "base_url": "https://github.com/vadimdemedes/ink",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "article, .markdown-body, main",
+        "title": "h1, h2",
+        "code_blocks": "pre code, .highlight"
+      },
+      "url_patterns": {
+        "include": ["/blob/master/readme", "/wiki", "/blob/master/docs"],
+        "exclude": ["/issues", "/pull", "/releases", "/commits", "/branches"]
+      },
+      "categories": {
+        "getting_started": ["install", "quick", "start", "intro", "getting-started"],
+        "core_components": ["box", "text", "newline", "transform", "static"],
+        "hooks": ["useInput", "useApp", "useStdin", "useStdout", "useStderr", "useFocus", "useFocusManager"],
+        "rendering": ["render", "instance", "unmount", "waitUntilExit", "clear", "rerender"],
+        "layout": ["flexbox", "flexDirection", "flexGrow", "flexShrink", "alignItems", "justifyContent", "width", "height", "padding", "margin"],
+        "styling": ["color", "backgroundColor", "bold", "italic", "underline", "strikethrough", "dimColor", "inverse"],
+        "testing": ["ink-testing-library", "test", "render", "lastFrame"]
+      },
+      "rate_limit": 0.5,
+      "max_pages": 100
+    },
+    {
+      "type": "github",
+      "repo": "vadimdemedes/ink",
+      "include_issues": true,
+      "max_issues": 50,
+      "issue_labels": ["bug", "question", "help wanted"],
+      "include_changelog": true,
+      "include_releases": true,
+      "include_code": true,
+      "code_analysis_depth": "surface",
+      "file_patterns": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "readme.md",
+        "examples/**/*.tsx"
+      ],
+      "exclude_patterns": [
+        "test/**/*",
+        "node_modules/**/*",
+        "*.test.*"
+      ]
+    },
+    {
+      "type": "documentation",
+      "name": "Ink-UI Components",
+      "base_url": "https://github.com/vadimdemedes/ink-ui",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "article, .markdown-body, main",
+        "title": "h1, h2",
+        "code_blocks": "pre code, .highlight"
+      },
+      "url_patterns": {
+        "include": ["/blob/main/readme", "/blob/main/docs", "/wiki"],
+        "exclude": ["/issues", "/pull", "/releases", "/commits"]
+      },
+      "categories": {
+        "text_inputs": ["TextInput", "PasswordInput", "EmailInput"],
+        "selection": ["Select", "MultiSelect", "ConfirmInput"],
+        "feedback": ["Spinner", "ProgressBar", "StatusMessage", "Alert", "Badge"],
+        "lists": ["UnorderedList", "OrderedList"],
+        "theming": ["ThemeProvider", "defaultTheme", "extendTheme", "useTheme"]
+      },
+      "rate_limit": 0.5,
+      "max_pages": 75
+    },
+    {
+      "type": "github",
+      "repo": "vadimdemedes/ink-ui",
+      "include_issues": true,
+      "max_issues": 30,
+      "include_changelog": true,
+      "include_releases": true,
+      "include_code": true,
+      "code_analysis_depth": "surface",
+      "file_patterns": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "readme.md",
+        "docs/**/*.md"
+      ]
+    }
+  ],
+  "ink_core_components": {
+    "_comment": "Quick reference for Ink's built-in components",
+    "Box": {
+      "description": "Flexbox container - equivalent to div",
+      "key_props": ["flexDirection", "flexGrow", "flexShrink", "flexBasis", "alignItems", "alignSelf", "justifyContent", "width", "height", "minWidth", "minHeight", "padding", "paddingX", "paddingY", "paddingTop", "paddingBottom", "paddingLeft", "paddingRight", "margin", "marginX", "marginY", "marginTop", "marginBottom", "marginLeft", "marginRight", "gap", "borderStyle", "borderColor", "borderTop", "borderBottom", "borderLeft", "borderRight"],
+      "border_styles": ["single", "double", "round", "bold", "singleDouble", "doubleSingle", "classic", "arrow"]
+    },
+    "Text": {
+      "description": "Text output - all text must be wrapped in this",
+      "key_props": ["color", "backgroundColor", "dimColor", "bold", "italic", "underline", "strikethrough", "inverse", "wrap"],
+      "wrap_values": ["wrap", "truncate", "truncate-start", "truncate-middle", "truncate-end"],
+      "colors": "chalk color names (red, green, blue, cyan, magenta, yellow, white, gray) OR hex (#FF5733) OR rgb(r,g,b)"
+    },
+    "Newline": {
+      "description": "Insert line breaks",
+      "key_props": ["count"]
+    },
+    "Transform": {
+      "description": "Transform child text output",
+      "key_props": ["transform"],
+      "transform_signature": "(text: string, index: number) => string"
+    },
+    "Static": {
+      "description": "Render content once at top of output - for logs, completed tasks",
+      "key_props": ["items", "style"],
+      "usage_note": "Items array should only grow - modifications to existing items are ignored"
+    }
+  },
+  "ink_hooks": {
+    "useInput": {
+      "description": "Handle keyboard input",
+      "signature": "(handler: (input: string, key: Key) => void, options?: {isActive?: boolean}) => void",
+      "key_object": ["leftArrow", "rightArrow", "upArrow", "downArrow", "return", "escape", "ctrl", "shift", "tab", "backspace", "delete", "meta"]
+    },
+    "useApp": {
+      "description": "Access app instance",
+      "returns": "{ exit: (error?: Error) => void }",
+      "usage_note": "exit() unmounts the app and optionally throws error"
+    },
+    "useFocus": {
+      "description": "Make component focusable",
+      "signature": "(options?: {autoFocus?: boolean, id?: string, isActive?: boolean}) => {isFocused: boolean, focus: () => void}",
+      "usage_note": "Tab/Shift+Tab navigates between focusable components"
+    },
+    "useFocusManager": {
+      "description": "Programmatic focus control",
+      "returns": "{ enableFocus: () => void, disableFocus: () => void, focusNext: () => void, focusPrevious: () => void, focus: (id: string) => void }"
+    },
+    "useStdin": {
+      "description": "Access stdin stream",
+      "returns": "{ stdin: NodeJS.ReadStream, setRawMode: (mode: boolean) => void, isRawModeSupported: boolean }"
+    },
+    "useStdout": {
+      "description": "Access stdout stream and write function",
+      "returns": "{ stdout: NodeJS.WriteStream, write: (data: string) => void }",
+      "usage_note": "write() outputs above Ink's rendering area"
+    },
+    "useStderr": {
+      "description": "Access stderr stream",
+      "returns": "{ stderr: NodeJS.WriteStream, write: (data: string) => void }"
+    }
+  },
+  "ink_ui_components": {
+    "_comment": "Pre-built components from @inkjs/ui",
+    "inputs": {
+      "TextInput": {
+        "props": ["isDisabled", "placeholder", "defaultValue", "suggestions", "onChange", "onSubmit"],
+        "description": "Single-line text input with optional autocomplete"
+      },
+      "PasswordInput": {
+        "props": ["isDisabled", "placeholder", "onChange", "onSubmit"],
+        "description": "Text input with masked characters"
+      },
+      "EmailInput": {
+        "props": ["isDisabled", "placeholder", "defaultValue", "domains", "onChange", "onSubmit"],
+        "description": "Text input with email domain autocomplete",
+        "default_domains": ["aol.com", "gmail.com", "yahoo.com", "hotmail.com", "live.com", "outlook.com", "icloud.com", "hey.com"]
+      },
+      "ConfirmInput": {
+        "props": ["isDisabled", "defaultChoice", "submitOnEnter", "onConfirm", "onCancel"],
+        "description": "Y/N confirmation prompt",
+        "default_choice_values": ["confirm", "cancel"]
+      }
+    },
+    "selection": {
+      "Select": {
+        "props": ["isDisabled", "visibleOptionCount", "highlightText", "options", "defaultValue", "onChange"],
+        "options_shape": "Array<{label: string, value: string}>",
+        "description": "Single-select dropdown"
+      },
+      "MultiSelect": {
+        "props": ["isDisabled", "visibleOptionCount", "highlightText", "options", "defaultValue", "onChange"],
+        "description": "Multi-select with checkboxes",
+        "onChange_returns": "string[] (array of selected values)"
+      }
+    },
+    "feedback": {
+      "Spinner": {
+        "props": ["label"],
+        "description": "Animated loading indicator"
+      },
+      "ProgressBar": {
+        "props": ["value"],
+        "description": "Progress indicator (value 0-100)"
+      },
+      "StatusMessage": {
+        "props": ["variant"],
+        "variants": ["info", "success", "error", "warning"],
+        "description": "Styled status message"
+      },
+      "Alert": {
+        "props": ["children", "variant", "title"],
+        "variants": ["info", "success", "error", "warning"],
+        "description": "Alert box with optional title"
+      },
+      "Badge": {
+        "props": ["children", "color"],
+        "colors": ["green", "red", "yellow", "blue"],
+        "description": "Colored badge/tag"
+      }
+    },
+    "lists": {
+      "UnorderedList": {
+        "description": "Bulleted list with UnorderedList.Item children",
+        "supports_nesting": true
+      },
+      "OrderedList": {
+        "description": "Numbered list with OrderedList.Item children",
+        "supports_nesting": true
+      }
+    },
+    "theming": {
+      "ThemeProvider": "Wrap app to apply custom theme",
+      "defaultTheme": "Default Ink-UI theme object",
+      "extendTheme": "extendTheme(defaultTheme, customizations) - merge custom styles",
+      "customization_example": {
+        "components": {
+          "Spinner": {
+            "styles": {
+              "frame": "() => ({ color: 'magenta' })"
+            }
+          }
+        }
+      }
+    }
+  },
+  "render_options": {
+    "stdout": "NodeJS.WriteStream (default: process.stdout)",
+    "stdin": "NodeJS.ReadStream (default: process.stdin)",
+    "stderr": "NodeJS.WriteStream (default: process.stderr)",
+    "exitOnCtrlC": "boolean (default: true) - whether Ctrl+C exits immediately",
+    "patchConsole": "boolean (default: true) - intercept console.* to prevent render conflicts",
+    "debug": "boolean (default: false) - render debug info",
+    "maxFps": "number (default: 30) - max renders per second",
+    "isScreenReaderEnabled": "boolean - enable screen reader mode"
+  },
+  "render_instance_methods": {
+    "waitUntilExit": "() => Promise<void> - resolves when app exits",
+    "unmount": "() => void - unmount app and clear output",
+    "clear": "() => void - clear Ink output but preserve terminal",
+    "rerender": "(element: ReactElement) => void - force rerender with new tree"
+  },
+  "rate_limit": 0.5,
+  "max_pages": 250
+}
