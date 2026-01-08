@@ -1,0 +1,33 @@
+{
+  "name": "webtui",
+  "description": "WebTUI CSS library for terminal-style UIs in the browser. Use for TUI-inspired components, ASCII box borders, monospace typography, theming with Catppuccin/Gruvbox/Nord/Vitesse, and semantic HTML-based styling without JavaScript.",
+  "base_url": "https://webtui.ironclad.sh/",
+  "start_urls": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/typography"
+  ],
+  "selectors": {
+    "main_content": "main, article, [class*='content']",
+    "title": "h1",
+    "code_blocks": "pre code, pre"
+  },
+  "url_patterns": {
+    "include": ["/start", "/components", "/plugins", "/installation", "/contributing"],
+    "exclude": ["/showcase", "/examples", "#"]
+  },
+  "categories": {
+    "getting_started": ["intro", "installation", "tuis-vs-guis", "quickstart"],
+    "components": ["button", "badge", "checkbox", "dialog", "input", "popover", "pre", "progress", "radio", "range", "separator", "spinner", "switch", "table", "textarea", "tooltip", "accordion", "typography", "view"],
+    "theming": ["theming", "theme", "colors", "dark", "light", "css-variables"],
+    "utilities": ["ascii-boxes", "box", "utils"],
+    "plugins": ["plugin", "catppuccin", "gruvbox", "nord", "vitesse", "everforest", "nerd-font"],
+    "frameworks": ["nextjs", "vite", "astro"],
+    "contributing": ["contributing", "style-guide"]
+  },
+  "rate_limit": 0.5,
+  "max_pages": 100
+}
