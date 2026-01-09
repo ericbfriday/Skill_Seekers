@@ -1,0 +1,1326 @@
+{
+  "url": "https://github.com/vadimdemedes/ink",
+  "title": "Navigation Menu",
+  "content": "There was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\n🌈 React for interactive command-line apps\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\nReact for CLIs. Build and test your CLI output using components.\n\nInk provides the same component-based UI building experience that React offers in the browser, but for command-line apps. It uses Yoga to build Flexbox layouts in the terminal, so most CSS-like properties are available in Ink as well. If you are already familiar with React, you already know Ink.\n\nSince Ink is a React renderer, all features of React are supported. Head over to the React website for documentation on how to use it. Only Ink's methods are documented in this readme.\n\nMy open source work is supported by the community ❤️\n\nFeel free to play around with the code and fork this Repl at https://repl.it/@vadimdemedes/ink-counter-demo.\n\n(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)\n\nUse create-ink-app to quickly scaffold a new Ink-based CLI.\n\nAlternatively, create a TypeScript project:\n\nInk requires the same Babel setup as you would do for regular React-based apps in the browser.\n\nSet up Babel with a React preset to ensure all examples in this readme work as expected. After installing Babel, install @babel/preset-react and insert the following configuration in babel.config.json:\n\nNext, create a file source.js, where you'll type code that uses Ink:\n\nThen, transpile this file with Babel:\n\nNow you can run cli.js with Node.js:\n\nIf you don't like transpiling files during development, you can use import-jsx or @esbuild-kit/esm-loader to import a JSX file and transpile it on the fly.\n\nInk uses Yoga, a Flexbox layout engine, to build great user interfaces for your CLIs using familiar CSS-like properties you've used when building apps for the browser. It's important to remember that each element is a Flexbox container. Think of it as if every <div> in the browser had display: flex. See <Box> built-in component below for documentation on how to use Flexbox layouts in Ink. Note that all text must be wrapped in a <Text> component.\n\nThis component can display text and change its style to make it bold, underlined, italic, or strikethrough.\n\nNote: <Text> allows only text nodes and nested <Text> components inside of it. For example, <Box> component can't be used inside <Text>.\n\nChange text color. Ink uses chalk under the hood, so all its functionality is supported.\n\nSame as color above, but for background.\n\nType: boolean Default: false\n\nDim the color (make it less bright).\n\nType: boolean Default: false\n\nType: boolean Default: false\n\nMake the text italic.\n\nType: boolean Default: false\n\nMake the text underlined.\n\nType: boolean Default: false\n\nMake the text crossed with a line.\n\nType: boolean Default: false\n\nInvert background and foreground colors.\n\nType: string Allowed values: wrap truncate truncate-start truncate-middle truncate-end Default: wrap\n\nThis property tells Ink to wrap or truncate text if its width is larger than the container. If wrap is passed (the default), Ink will wrap text and split it into multiple lines. If truncate-* is passed, Ink will truncate text instead, resulting in one line of text with the rest cut off.\n\n<Box> is an essential Ink component to build your layout. It's like <div style=\"display: flex\"> in the browser.\n\nWidth of the element in spaces. You can also set it as a percentage, which will calculate the width based on the width of the parent element.\n\nHeight of the element in lines (rows). You can also set it as a percentage, which will calculate the height based on the height of the parent element.\n\nSets a minimum width of the element. Percentages aren't supported yet; see facebook/yoga#872.\n\nSets a minimum height of the element. Percentages aren't supported yet; see facebook/yoga#872.\n\nType: number Default: 0\n\nType: number Default: 0\n\nType: number Default: 0\n\nType: number Default: 0\n\nType: number Default: 0\n\nHorizontal padding. Equivalent to setting paddingLeft and paddingRight.\n\nType: number Default: 0\n\nVertical padding. Equivalent to setting paddingTop and paddingBottom.\n\nType: number Default: 0\n\nPadding on all sides. Equivalent to setting paddingTop, paddingBottom, paddingLeft and paddingRight.\n\nType: number Default: 0\n\nType: number Default: 0\n\nType: number Default: 0\n\nType: number Default: 0\n\nType: number Default: 0\n\nHorizontal margin. Equivalent to setting marginLeft and marginRight.\n\nType: number Default: 0\n\nVertical margin. Equivalent to setting marginTop and marginBottom.\n\nType: number Default: 0\n\nMargin on all sides. Equivalent to setting marginTop, marginBottom, marginLeft and marginRight.\n\nType: number Default: 0\n\nSize of the gap between an element's columns and rows. A shorthand for columnGap and rowGap.\n\nType: number Default: 0\n\nSize of the gap between an element's columns.\n\nType: number Default: 0\n\nSize of the gap between an element's rows.\n\nType: number Default: 0\n\nType: number Default: 1\n\nType: string Allowed values: row row-reverse column column-reverse\n\nType: string Allowed values: nowrap wrap wrap-reverse\n\nType: string Allowed values: flex-start center flex-end\n\nType: string Default: auto Allowed values: auto flex-start center flex-end\n\nType: string Allowed values: flex-start center flex-end space-between space-around space-evenly\n\nType: string Allowed values: flex none Default: flex\n\nSet this property to none to hide the element.\n\nType: string Allowed values: visible hidden Default: visible\n\nBehavior for an element's overflow in the horizontal direction.\n\nType: string Allowed values: visible hidden Default: visible\n\nBehavior for an element's overflow in the vertical direction.\n\nType: string Allowed values: visible hidden Default: visible\n\nA shortcut for setting overflowX and overflowY at the same time.\n\nType: string Allowed values: single double round bold singleDouble doubleSingle classic | BoxStyle\n\nAdd a border with a specified style. If borderStyle is undefined (the default), no border will be added. Ink uses border styles from the cli-boxes module.\n\nAlternatively, pass a custom border style like so:\n\nSee example in examples/borders.\n\nChange border color. A shorthand for setting borderTopColor, borderRightColor, borderBottomColor, and borderLeftColor.\n\nChange top border color. Accepts the same values as color in <Text> component.\n\nChange the right border color. Accepts the same values as color in <Text> component.\n\nChange the bottom border color. Accepts the same values as color in <Text> component.\n\nChange the left border color. Accepts the same values as color in <Text> component.\n\nType: boolean Default: false\n\nDim the border color. A shorthand for setting borderTopDimColor, borderBottomDimColor, borderLeftDimColor, and borderRightDimColor.\n\nType: boolean Default: false\n\nDim the top border color.\n\nType: boolean Default: false\n\nDim the bottom border color.\n\nType: boolean Default: false\n\nDim the left border color.\n\nType: boolean Default: false\n\nDim the right border color.\n\nType: boolean Default: true\n\nDetermines whether the top border is visible.\n\nType: boolean Default: true\n\nDetermines whether the right border is visible.\n\nType: boolean Default: true\n\nDetermines whether the bottom border is visible.\n\nType: boolean Default: true\n\nDetermines whether the left border is visible.\n\nBackground color for the element.\n\nAccepts the same values as color in the <Text> component.\n\nThe background color fills the entire <Box> area and is inherited by child <Text> components unless they specify their own backgroundColor.\n\nBackground colors work with borders and padding:\n\nSee example in examples/box-backgrounds.\n\nAdds one or more newline (\\n) characters. Must be used within <Text> components.\n\nType: number Default: 1\n\nNumber of newlines to insert.\n\nA flexible space that expands along the major axis of its containing layout. It's useful as a shortcut for filling all the available space between elements.\n\nFor example, using <Spacer> in a <Box> with default flex direction (row) will position \"Left\" on the left side and will push \"Right\" to the right side.\n\nIn a vertical flex direction (column), it will position \"Top\" at the top of the container and push \"Bottom\" to the bottom. Note that the container needs to be tall enough to see this in effect.\n\n<Static> component permanently renders its output above everything else. It's useful for displaying activity like completed tasks or logs - things that don't change after they're rendered (hence the name \"Static\").\n\nIt's preferred to use <Static> for use cases like these when you can't know or control the number of items that need to be rendered.\n\nFor example, Tap uses <Static> to display a list of completed tests. Gatsby uses it to display a list of generated pages while still displaying a live progress bar.\n\nNote: <Static> only renders new items in the items prop and ignores items that were previously rendered. This means that when you add new items to the items array, changes you make to previous items will not trigger a rerender.\n\nSee examples/static for an example usage of <Static> component.\n\nArray of items of any type to render using the function you pass as a component child.\n\nStyles to apply to a container of child elements. See <Box> for supported properties.\n\nFunction that is called to render every item in the items array. The first argument is the item itself, and the second argument is the index of that item in the items array.\n\nNote that a key must be assigned to the root component.\n\nTransform a string representation of React components before they're written to output. For example, you might want to apply a gradient to text, add a clickable link, or create some text effects. These use cases can't accept React nodes as input; they expect a string. That's what the <Transform> component does: it gives you an output string of its child components and lets you transform it in any way.\n\nNote: <Transform> must be applied only to <Text> children components and shouldn't change the dimensions of the output; otherwise, the layout will be incorrect.\n\nSince the transform function converts all characters to uppercase, the final output rendered to the terminal will be \"HELLO WORLD\", not \"Hello World\".\n\nWhen the output wraps to multiple lines, it can be helpful to know which line is being processed.\n\nFor example, to implement a hanging indent component, you can indent all the lines except for the first.\n\nFunction that transforms children output. It accepts children and must return transformed children as well.\n\nOutput of child components.\n\nThe zero-indexed line number of the line that's currently being transformed.\n\nThis hook is used for handling user input. It's a more convenient alternative to using useStdin and listening for data events. The callback you pass to useInput is called for each character when the user enters any input. However, if the user pastes text and it's more than one character, the callback will be called only once, and the whole string will be passed as input. You can find a full example of using useInput at examples/use-input.\n\nThe handler function that you pass to useInput receives two arguments:\n\nThe input that the program received.\n\nHandy information about a key that was pressed.\n\nType: boolean Default: false\n\nIf an arrow key was pressed, the corresponding property will be true. For example, if the user presses the left arrow key, key.leftArrow equals true.\n\nType: boolean Default: false\n\nReturn (Enter) key was pressed.\n\nType: boolean Default: false\n\nEscape key was pressed.\n\nType: boolean Default: false\n\nCtrl key was pressed.\n\nType: boolean Default: false\n\nShift key was pressed.\n\nType: boolean Default: false\n\nType: boolean Default: false\n\nBackspace key was pressed.\n\nType: boolean Default: false\n\nDelete key was pressed.\n\nType: boolean Default: false\n\nIf the Page Up or Page Down key was pressed, the corresponding property will be true. For example, if the user presses Page Down, key.pageDown equals true.\n\nType: boolean Default: false\n\nMeta key was pressed.\n\nType: boolean Default: true\n\nEnable or disable capturing of user input. Useful when there are multiple useInput hooks used at once to avoid handling the same input several times.\n\nuseApp is a React hook that exposes a method to manually exit the app (unmount).\n\nExit (unmount) the whole Ink app.\n\nOptional error. If passed, waitUntilExit will reject with that error.\n\nuseStdin is a React hook that exposes the stdin stream.\n\nType: stream.Readable Default: process.stdin\n\nThe stdin stream passed to render() in options.stdin, or process.stdin by default. Useful if your app needs to handle user input.\n\nA boolean flag determining if the current stdin supports setRawMode. A component using setRawMode might want to use isRawModeSupported to nicely fall back in environments where raw mode is not supported.\n\nSee setRawMode. Ink exposes this function to be able to handle Ctrl+C, that's why you should use Ink's setRawMode instead of process.stdin.setRawMode.\n\nWarning: This function will throw unless the current stdin supports setRawMode. Use isRawModeSupported to detect setRawMode support.\n\nuseStdout is a React hook that exposes the stdout stream where Ink renders your app.\n\nType: stream.Writable Default: process.stdout\n\nWrite any string to stdout while preserving Ink's output. It's useful when you want to display external information outside of Ink's rendering and ensure there's no conflict between the two. It's similar to <Static>, except it can't accept components; it only works with strings.\n\nData to write to stdout.\n\nSee additional usage example in examples/use-stdout.\n\nuseStderr is a React hook that exposes the stderr stream.\n\nType: stream.Writable Default: process.stderr\n\nWrite any string to stderr while preserving Ink's output.\n\nIt's useful when you want to display external information outside of Ink's rendering and ensure there's no conflict between the two. It's similar to <Static>, except it can't accept components; it only works with strings.\n\nData to write to stderr.\n\nA component that uses the useFocus hook becomes \"focusable\" to Ink, so when the user presses Tab, Ink will switch focus to this component. If there are multiple components that execute the useFocus hook, focus will be given to them in the order in which these components are rendered. This hook returns an object with an isFocused boolean property, which determines whether this component is focused.\n\nType: boolean Default: false\n\nAuto-focus this component if there's no active (focused) component right now.\n\nType: boolean Default: true\n\nEnable or disable this component's focus, while still maintaining its position in the list of focusable components. This is useful for inputs that are temporarily disabled.\n\nType: string Required: false\n\nSet a component's focus ID, which can be used to programmatically focus the component. This is useful for large interfaces with many focusable elements to avoid having to cycle through all of them.\n\nSee example in examples/use-focus and examples/use-focus-with-id.\n\nThis hook exposes methods to enable or disable focus management for all components or manually switch focus to the next or previous components.\n\nEnable focus management for all components.\n\nNote: You don't need to call this method manually unless you've disabled focus management. Focus management is enabled by default.\n\nDisable focus management for all components. The currently active component (if there's one) will lose its focus.\n\nSwitch focus to the next focusable component. If there's no active component right now, focus will be given to the first focusable component. If the active component is the last in the list of focusable components, focus will be switched to the first focusable component.\n\nNote: Ink calls this method when user presses Tab.\n\nSwitch focus to the previous focusable component. If there's no active component right now, focus will be given to the first focusable component. If the active component is the first in the list of focusable components, focus will be switched to the last focusable component.\n\nNote: Ink calls this method when user presses Shift+Tab.\n\nSwitch focus to the component with the given id. If there's no component with that ID, focus will be given to the next focusable component.\n\nReturns whether a screen reader is enabled. This is useful when you want to render different output for screen readers.\n\nMount a component and render the output.\n\nType: stream.Writable Default: process.stdout\n\nOutput stream where the app will be rendered.\n\nType: stream.Readable Default: process.stdin\n\nInput stream where app will listen for input.\n\nType: stream.Writable Default: process.stderr\n\nType: boolean Default: true\n\nConfigure whether Ink should listen for Ctrl+C keyboard input and exit the app. This is needed in case process.stdin is in raw mode, because then Ctrl+C is ignored by default and the process is expected to handle it manually.\n\nType: boolean Default: true\n\nPatch console methods to ensure console output doesn't mix with Ink's output. When any of the console.* methods are called (like console.log()), Ink intercepts their output, clears the main output, renders output from the console method, and then rerenders the main output again. That way, both are visible and don't overlap each other.\n\nThis functionality is powered by patch-console, so if you need to disable Ink's interception of output but want to build something custom, you can use that.\n\nType: ({renderTime: number}) => void Default: undefined\n\nRuns the given callback after each render and re-render with a metrics object.\n\nType: boolean Default: false\n\nIf true, each update will be rendered as separate output, without replacing the previous one.\n\nType: number Default: 30\n\nMaximum frames per second for render updates. This controls how frequently the UI can update to prevent excessive re-rendering. Higher values allow more frequent updates but may impact performance. Setting it to a lower value may be useful for components that update very frequently, to reduce CPU usage.\n\nType: boolean Default: false\n\nEnable incremental rendering mode which only updates changed lines instead of redrawing the entire output. This can reduce flickering and improve performance for frequently updating UIs.\n\nThis is the object that render() returns.\n\nReplace the previous root node with a new one or update the props of the current root node.\n\nManually unmount the whole Ink app.\n\nReturns a promise that resolves when the app is unmounted.\n\nMeasure the dimensions of a particular <Box> element. Returns an object with width and height properties. This function is useful when your component needs to know the amount of available space it has. You can use it when you need to change the layout based on the length of its content.\n\nNote: measureElement() returns correct results only after the initial render, when the layout has been calculated. Until then, width and height equal zero. It's recommended to call measureElement() in a useEffect hook, which fires after the component has rendered.\n\nA reference to a <Box> element captured with the ref property. See Refs for more information on how to capture references.\n\nInk components are simple to test with ink-testing-library. Here's a simple example that checks how the component is rendered:\n\nCheck out ink-testing-library for more examples and full documentation.\n\nInk supports React Devtools out of the box. To enable integration with React Devtools in your Ink-based CLI, first ensure you have installed the optional react-devtools-core dependency, and then run your app with the DEV=true environment variable:\n\nThen, start React Devtools itself:\n\nAfter it starts, you should see the component tree of your CLI. You can even inspect and change the props of components, and see the results immediately in the CLI, without restarting it.\n\nNote: You must manually quit your CLI via Ctrl+C after you're done testing.\n\nInk has basic support for screen readers.\n\nTo enable it, you can either pass the isScreenReaderEnabled option to the render function or set the INK_SCREEN_READER environment variable to true.\n\nInk implements a small subset of functionality from the ARIA specification.\n\nWhen screen reader support is enabled, Ink will try its best to generate a screen-reader-friendly output.\n\nFor example, for this code:\n\nInk will generate the following output for screen readers:\n\nYou can also provide a custom label for screen readers if you want to render something different for them.\n\nFor example, if you are building a progress bar, you can use aria-label to provide a more descriptive label for screen readers.\n\nIn the example above, the screen reader will read \"Progress: 50%\" instead of \"50%\".\n\nA label for the element for screen readers.\n\nType: boolean Default: false\n\nHide the element from screen readers.\n\nThe role of the element.\n\nThe state of the element.\n\nWhen building custom components, it's important to keep accessibility in mind. While Ink provides the building blocks, ensuring your components are accessible will make your CLIs usable by a wider audience.\n\nFor a practical example of building an accessible component, see the ARIA example.\n\nThe examples directory contains a set of real examples. You can run them with:\n\n🌈 React for interactive command-line apps\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.",
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "License",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h1",
+      "text": "vadimdemedes/ink",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Folders and files",
+      "id": "folders-and-files"
+    },
+    {
+      "level": "h2",
+      "text": "Latest commit",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "History",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Repository files navigation",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Install",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Who's Using Ink?",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Contents",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Getting Started",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Components",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "<Text>",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "color",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "backgroundColor",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "dimColor",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "bold",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "italic",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "underline",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "strikethrough",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "inverse",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "wrap",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "<Box>",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Dimensions",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "width",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "height",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "minWidth",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "minHeight",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Padding",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "paddingTop",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "paddingBottom",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "paddingLeft",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "paddingRight",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "paddingX",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "paddingY",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "padding",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Margin",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "marginTop",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "marginBottom",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "marginLeft",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "marginRight",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "marginX",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "marginY",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "margin",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Gap",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "gap",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "columnGap",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "rowGap",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Flex",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "flexGrow",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "flexShrink",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "flexBasis",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "flexDirection",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "flexWrap",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "alignItems",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "alignSelf",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "justifyContent",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Visibility",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "display",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "overflowX",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "overflowY",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "overflow",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Borders",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderStyle",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderTopColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderRightColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderBottomColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderLeftColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderDimColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderTopDimColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderBottomDimColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderLeftDimColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderRightDimColor",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderTop",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderRight",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderBottom",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "borderLeft",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Background",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "backgroundColor",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "<Newline>",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "count",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "<Spacer>",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "<Static>",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "items",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "style",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "children(item)",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "<Transform>",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "transform(outputLine, index)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "children",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "index",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Hooks",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useInput(inputHandler, options?)",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "inputHandler(input, key)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "input",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "key",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.leftArrow",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.rightArrow",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.upArrow",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.downArrow",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.return",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.escape",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.ctrl",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.shift",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.tab",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.backspace",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.delete",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.pageDown",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.pageUp",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "key.meta",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "options",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "isActive",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useApp()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "exit(error?)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "error",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useStdin()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "stdin",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "isRawModeSupported",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "setRawMode(isRawModeEnabled)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "isRawModeEnabled",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useStdout()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "stdout",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "write(data)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "data",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useStderr()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "stderr",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "write(data)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "data",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useFocus(options?)",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "options",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "autoFocus",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "isActive",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "id",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useFocusManager()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "enableFocus()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "disableFocus()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "focusNext()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "focusPrevious()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "focus(id)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "id",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "useIsScreenReaderEnabled()",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "API",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "render(tree, options?)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "tree",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "options",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "stdout",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "stdin",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "stderr",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "exitOnCtrlC",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "patchConsole",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "onRender",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "debug",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "maxFps",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "incrementalRendering",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Instance",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "rerender(tree)",
+      "id": ""
+    },
+    {
+      "level": "h6",
+      "text": "tree",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "unmount()",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "waitUntilExit()",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "clear()",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "measureElement(ref)",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "ref",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Testing",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Using React Devtools",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Screen Reader Support",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "aria-label",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "aria-hidden",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "aria-role",
+      "id": ""
+    },
+    {
+      "level": "h5",
+      "text": "aria-state",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Creating Components",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "General Principles",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Useful Components",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Useful Hooks",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Maintainers",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "About",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Topics",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Resources",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "License",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Code of conduct",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Contributing",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Stars",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Watchers",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Forks",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Releases 70",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Sponsor this project",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Used by 92.6k",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Contributors 154",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Languages",
+      "id": ""
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "npm install ink react",
+      "language": "unknown"
+    },
+    {
+      "code": "import React, {useState, useEffect} from 'react';\nimport {render, Text} from 'ink';\n\nconst Counter = () => {\n\tconst [counter, setCounter] = useState(0);\n\n\tuseEffect(() => {\n\t\tconst timer = setInterval(() => {\n\t\t\tsetCounter(previousCounter => previousCounter + 1);\n\t\t}, 100);\n\n\t\treturn () => {\n\t\t\tclearInterval(timer);\n\t\t};\n\t}, []);\n\n\treturn <Text color=\"green\">{counter} tests passed</Text>;\n};\n\nrender(<Counter />);",
+      "language": "jsx"
+    },
+    {
+      "code": "npx create-ink-app my-ink-cli",
+      "language": "unknown"
+    },
+    {
+      "code": "npx create-ink-app --typescript my-ink-cli",
+      "language": "unknown"
+    },
+    {
+      "code": "npm install --save-dev @babel/preset-react",
+      "language": "powershell"
+    },
+    {
+      "code": "{\n\t\"presets\": [\"@babel/preset-react\"]\n}",
+      "language": "json"
+    },
+    {
+      "code": "import React from 'react';\nimport {render, Text} from 'ink';\n\nconst Demo = () => <Text>Hello World</Text>;\n\nrender(<Demo />);",
+      "language": "jsx"
+    },
+    {
+      "code": "npx babel source.js -o cli.js",
+      "language": "unknown"
+    },
+    {
+      "code": "import {render, Text} from 'ink';\n\nconst Example = () => (\n\t<>\n\t\t<Text color=\"green\">I am green</Text>\n\t\t<Text color=\"black\" backgroundColor=\"white\">\n\t\t\tI am black on white\n\t\t</Text>\n\t\t<Text color=\"#ffffff\">I am white</Text>\n\t\t<Text bold>I am bold</Text>\n\t\t<Text italic>I am italic</Text>\n\t\t<Text underline>I am underline</Text>\n\t\t<Text strikethrough>I am strikethrough</Text>\n\t\t<Text inverse>I am inversed</Text>\n\t</>\n);\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "<Text color=\"green\">Green</Text>\n<Text color=\"#005cc5\">Blue</Text>\n<Text color=\"rgb(232, 131, 136)\">Red</Text>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Text backgroundColor=\"green\" color=\"white\">Green</Text>\n<Text backgroundColor=\"#005cc5\" color=\"white\">Blue</Text>\n<Text backgroundColor=\"rgb(232, 131, 136)\" color=\"white\">Red</Text>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Text color=\"red\" dimColor>\n\tDimmed Red\n</Text>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Text inverse color=\"yellow\">\n\tInversed Yellow\n</Text>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={7}>\n\t<Text>Hello World</Text>\n</Box>\n//=> 'Hello\\nWorld'\n\n// `truncate` is an alias to `truncate-end`\n<Box width={7}>\n\t<Text wrap=\"truncate\">Hello World</Text>\n</Box>\n//=> 'Hello…'\n\n<Box width={7}>\n\t<Text wrap=\"truncate-middle\">Hello World</Text>\n</Box>\n//=> 'He…ld'\n\n<Box width={7}>\n\t<Text wrap=\"truncate-start\">Hello World</Text>\n</Box>\n//=> '…World'",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, Box, Text} from 'ink';\n\nconst Example = () => (\n\t<Box margin={2}>\n\t\t<Text>This is a box with margin</Text>\n\t</Box>\n);\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={4}>\n\t<Text>X</Text>\n</Box>\n//=> 'X   '",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={10}>\n\t<Box width=\"50%\">\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>Y</Text>\n</Box>\n//=> 'X    Y'",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box height={4}>\n\t<Text>X</Text>\n</Box>\n//=> 'X\\n\\n\\n'",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box height={6} flexDirection=\"column\">\n\t<Box height=\"50%\">\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>Y</Text>\n</Box>\n//=> 'X\\n\\n\\nY\\n\\n'",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box paddingTop={2}><Text>Top</Text></Box>\n<Box paddingBottom={2}><Text>Bottom</Text></Box>\n<Box paddingLeft={2}><Text>Left</Text></Box>\n<Box paddingRight={2}><Text>Right</Text></Box>\n<Box paddingX={2}><Text>Left and right</Text></Box>\n<Box paddingY={2}><Text>Top and bottom</Text></Box>\n<Box padding={2}><Text>Top, bottom, left and right</Text></Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box marginTop={2}><Text>Top</Text></Box>\n<Box marginBottom={2}><Text>Bottom</Text></Box>\n<Box marginLeft={2}><Text>Left</Text></Box>\n<Box marginRight={2}><Text>Right</Text></Box>\n<Box marginX={2}><Text>Left and right</Text></Box>\n<Box marginY={2}><Text>Top and bottom</Text></Box>\n<Box margin={2}><Text>Top, bottom, left and right</Text></Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box gap={1} width={3} flexWrap=\"wrap\">\n\t<Text>A</Text>\n\t<Text>B</Text>\n\t<Text>C</Text>\n</Box>\n// A B\n//\n// C",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box columnGap={1}>\n\t<Text>A</Text>\n\t<Text>B</Text>\n</Box>\n// A B",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box flexDirection=\"column\" rowGap={1}>\n\t<Text>A</Text>\n\t<Text>B</Text>\n</Box>\n// A\n//\n// B",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box>\n\t<Text>Label:</Text>\n\t<Box flexGrow={1}>\n\t\t<Text>Fills all remaining space</Text>\n\t</Box>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={20}>\n\t<Box flexShrink={2} width={10}>\n\t\t<Text>Will be 1/4</Text>\n\t</Box>\n\t<Box width={10}>\n\t\t<Text>Will be 3/4</Text>\n\t</Box>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={6}>\n\t<Box flexBasis={3}>\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>Y</Text>\n</Box>\n//=> 'X  Y'",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={6}>\n\t<Box flexBasis=\"50%\">\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>Y</Text>\n</Box>\n//=> 'X  Y'",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box>\n\t<Box marginRight={1}>\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>Y</Text>\n</Box>\n// X Y\n\n<Box flexDirection=\"row-reverse\">\n\t<Text>X</Text>\n\t<Box marginRight={1}>\n\t\t<Text>Y</Text>\n\t</Box>\n</Box>\n// Y X\n\n<Box flexDirection=\"column\">\n\t<Text>X</Text>\n\t<Text>Y</Text>\n</Box>\n// X\n// Y\n\n<Box flexDirection=\"column-reverse\">\n\t<Text>X</Text>\n\t<Text>Y</Text>\n</Box>\n// Y\n// X",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box width={2} flexWrap=\"wrap\">\n\t<Text>A</Text>\n\t<Text>BC</Text>\n</Box>\n// A\n// B C",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box flexDirection=\"column\" height={2} flexWrap=\"wrap\">\n\t<Text>A</Text>\n\t<Text>B</Text>\n\t<Text>C</Text>\n</Box>\n// A C\n// B",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box alignItems=\"flex-start\">\n\t<Box marginRight={1}>\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>\n\t\tA\n\t\t<Newline/>\n\t\tB\n\t\t<Newline/>\n\t\tC\n\t</Text>\n</Box>\n// X A\n//   B\n//   C\n\n<Box alignItems=\"center\">\n\t<Box marginRight={1}>\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>\n\t\tA\n\t\t<Newline/>\n\t\tB\n\t\t<Newline/>\n\t\tC\n\t</Text>\n</Box>\n//   A\n// X B\n//   C\n\n<Box alignItems=\"flex-end\">\n\t<Box marginRight={1}>\n\t\t<Text>X</Text>\n\t</Box>\n\t<Text>\n\t\tA\n\t\t<Newline/>\n\t\tB\n\t\t<Newline/>\n\t\tC\n\t</Text>\n</Box>\n//   A\n//   B\n// X C",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box height={3}>\n\t<Box alignSelf=\"flex-start\">\n\t\t<Text>X</Text>\n\t</Box>\n</Box>\n// X\n//\n//\n\n<Box height={3}>\n\t<Box alignSelf=\"center\">\n\t\t<Text>X</Text>\n\t</Box>\n</Box>\n//\n// X\n//\n\n<Box height={3}>\n\t<Box alignSelf=\"flex-end\">\n\t\t<Text>X</Text>\n\t</Box>\n</Box>\n//\n//\n// X",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box justifyContent=\"flex-start\">\n\t<Text>X</Text>\n</Box>\n// [X      ]\n\n<Box justifyContent=\"center\">\n\t<Text>X</Text>\n</Box>\n// [   X   ]\n\n<Box justifyContent=\"flex-end\">\n\t<Text>X</Text>\n</Box>\n// [      X]\n\n<Box justifyContent=\"space-between\">\n\t<Text>X</Text>\n\t<Text>Y</Text>\n</Box>\n// [X      Y]\n\n<Box justifyContent=\"space-around\">\n\t<Text>X</Text>\n\t<Text>Y</Text>\n</Box>\n// [  X   Y  ]\n\n<Box justifyContent=\"space-evenly\">\n\t<Text>X</Text>\n\t<Text>Y</Text>\n</Box>\n// [   X   Y   ]",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box flexDirection=\"column\">\n\t<Box>\n\t\t<Box borderStyle=\"single\" marginRight={2}>\n\t\t\t<Text>single</Text>\n\t\t</Box>\n\n\t\t<Box borderStyle=\"double\" marginRight={2}>\n\t\t\t<Text>double</Text>\n\t\t</Box>\n\n\t\t<Box borderStyle=\"round\" marginRight={2}>\n\t\t\t<Text>round</Text>\n\t\t</Box>\n\n\t\t<Box borderStyle=\"bold\">\n\t\t\t<Text>bold</Text>\n\t\t</Box>\n\t</Box>\n\n\t<Box marginTop={1}>\n\t\t<Box borderStyle=\"singleDouble\" marginRight={2}>\n\t\t\t<Text>singleDouble</Text>\n\t\t</Box>\n\n\t\t<Box borderStyle=\"doubleSingle\" marginRight={2}>\n\t\t\t<Text>doubleSingle</Text>\n\t\t</Box>\n\n\t\t<Box borderStyle=\"classic\">\n\t\t\t<Text>classic</Text>\n\t\t</Box>\n\t</Box>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box\n\tborderStyle={{\n\t\ttopLeft: '↘',\n\t\ttop: '↓',\n\t\ttopRight: '↙',\n\t\tleft: '→',\n\t\tbottomLeft: '↗',\n\t\tbottom: '↑',\n\t\tbottomRight: '↖',\n\t\tright: '←'\n\t}}\n>\n\t<Text>Custom</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderColor=\"green\">\n\t<Text>Green Rounded Box</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderTopColor=\"green\">\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderRightColor=\"green\">\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderBottomColor=\"green\">\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderLeftColor=\"green\">\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderDimColor>\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderTopDimColor>\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderBottomDimColor>\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderLeftDimColor>\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box borderStyle=\"round\" borderRightDimColor>\n\t<Text>Hello world</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box flexDirection=\"column\">\n\t<Box backgroundColor=\"red\" width={20} height={5} alignSelf=\"flex-start\">\n\t\t<Text>Red background</Text>\n\t</Box>\n\n\t<Box backgroundColor=\"#FF8800\" width={20} height={3} marginTop={1} alignSelf=\"flex-start\">\n\t\t<Text>Orange background</Text>\n\t</Box>\n\n\t<Box backgroundColor=\"rgb(0, 255, 0)\" width={20} height={3} marginTop={1} alignSelf=\"flex-start\">\n\t\t<Text>Green background</Text>\n\t</Box>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box backgroundColor=\"blue\" alignSelf=\"flex-start\">\n\t<Text>Blue inherited </Text>\n\t<Text backgroundColor=\"yellow\">Yellow override </Text>\n\t<Text>Blue inherited again</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box backgroundColor=\"cyan\" borderStyle=\"round\" padding={1} alignSelf=\"flex-start\">\n\t<Text>Background with border and padding</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, Text, Newline} from 'ink';\n\nconst Example = () => (\n\t<Text>\n\t\t<Text color=\"green\">Hello</Text>\n\t\t<Newline />\n\t\t<Text color=\"red\">World</Text>\n\t</Text>\n);\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "Hello\nWorld",
+      "language": "unknown"
+    },
+    {
+      "code": "import {render, Box, Text, Spacer} from 'ink';\n\nconst Example = () => (\n\t<Box>\n\t\t<Text>Left</Text>\n\t\t<Spacer />\n\t\t<Text>Right</Text>\n\t</Box>\n);\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, Box, Text, Spacer} from 'ink';\n\nconst Example = () => (\n\t<Box flexDirection=\"column\" height={10}>\n\t\t<Text>Top</Text>\n\t\t<Spacer />\n\t\t<Text>Bottom</Text>\n\t</Box>\n);\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "import React, {useState, useEffect} from 'react';\nimport {render, Static, Box, Text} from 'ink';\n\nconst Example = () => {\n\tconst [tests, setTests] = useState([]);\n\n\tuseEffect(() => {\n\t\tlet completedTests = 0;\n\t\tlet timer;\n\n\t\tconst run = () => {\n\t\t\t// Fake 10 completed tests\n\t\t\tif (completedTests++ < 10) {\n\t\t\t\tsetTests(previousTests => [\n\t\t\t\t\t...previousTests,\n\t\t\t\t\t{\n\t\t\t\t\t\tid: previousTests.length,\n\t\t\t\t\t\ttitle: `Test #${previousTests.length + 1}`\n\t\t\t\t\t}\n\t\t\t\t]);\n\n\t\t\t\ttimer = setTimeout(run, 100);\n\t\t\t}\n\t\t};\n\n\t\trun();\n\n\t\treturn () => {\n\t\t\tclearTimeout(timer);\n\t\t};\n\t}, []);\n\n\treturn (\n\t\t<>\n\t\t\t{/* This part will be rendered once to the terminal */}\n\t\t\t<Static items={tests}>\n\t\t\t\t{test => (\n\t\t\t\t\t<Box key={test.id}>\n\t\t\t\t\t\t<Text color=\"green\">✔ {test.title}</Text>\n\t\t\t\t\t</Box>\n\t\t\t\t)}\n\t\t\t</Static>\n\n\t\t\t{/* This part keeps updating as state changes */}\n\t\t\t<Box marginTop={1}>\n\t\t\t\t<Text dimColor>Completed tests: {tests.length}</Text>\n\t\t\t</Box>\n\t\t</>\n\t);\n};\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "<Static items={...} style={{padding: 1}}>\n\t{...}\n</Static>",
+      "language": "json"
+    },
+    {
+      "code": "<Static items={['a', 'b', 'c']}>\n\t{(item, index) => {\n\t\t// This function is called for every item in ['a', 'b', 'c']\n\t\t// `item` is 'a', 'b', 'c'\n\t\t// `index` is 0, 1, 2\n\t\treturn (\n\t\t\t<Box key={index}>\n\t\t\t\t<Text>Item: {item}</Text>\n\t\t\t</Box>\n\t\t);\n\t}}\n</Static>",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, Transform} from 'ink';\n\nconst Example = () => (\n\t<Transform transform={output => output.toUpperCase()}>\n\t\t<Text>Hello World</Text>\n\t</Transform>\n);\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, Transform} from 'ink';\n\nconst HangingIndent = ({content, indent = 4, children, ...props}) => (\n\t<Transform\n\t\ttransform={(line, index) =>\n\t\t\tindex === 0 ? line : ' '.repeat(indent) + line\n\t\t}\n\t\t{...props}\n\t>\n\t\t{children}\n\t</Transform>\n);\n\nconst text =\n\t'WHEN I WROTE the following pages, or rather the bulk of them, ' +\n\t'I lived alone, in the woods, a mile from any neighbor, in a ' +\n\t'house which I had built myself, on the shore of Walden Pond, ' +\n\t'in Concord, Massachusetts, and earned my living by the labor ' +\n\t'of my hands only. I lived there two years and two months. At ' +\n\t'present I am a sojourner in civilized life again.';\n\n// Other text properties are allowed as well\nrender(\n\t<HangingIndent bold dimColor indent={4}>\n\t\t{text}\n\t</HangingIndent>\n);",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useInput} from 'ink';\n\nconst UserInput = () => {\n\tuseInput((input, key) => {\n\t\tif (input === 'q') {\n\t\t\t// Exit program\n\t\t}\n\n\t\tif (key.leftArrow) {\n\t\t\t// Left arrow key pressed\n\t\t}\n\t});\n\n\treturn …\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "import {useApp} from 'ink';\n\nconst Example = () => {\n\tconst {exit} = useApp();\n\n\t// Exit the app after 5 seconds\n\tuseEffect(() => {\n\t\tsetTimeout(() => {\n\t\t\texit();\n\t\t}, 5000);\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useStdin} from 'ink';\n\nconst Example = () => {\n\tconst {stdin} = useStdin();\n\n\treturn …\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "import {useStdin} from 'ink';\n\nconst Example = () => {\n\tconst {isRawModeSupported} = useStdin();\n\n\treturn isRawModeSupported ? (\n\t\t<MyInputComponent />\n\t) : (\n\t\t<MyComponentThatDoesntUseInput />\n\t);\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useStdin} from 'ink';\n\nconst Example = () => {\n\tconst {setRawMode} = useStdin();\n\n\tuseEffect(() => {\n\t\tsetRawMode(true);\n\n\t\treturn () => {\n\t\t\tsetRawMode(false);\n\t\t};\n\t});\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useStdout} from 'ink';\n\nconst Example = () => {\n\tconst {stdout} = useStdout();\n\n\treturn …\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "import {useStdout} from 'ink';\n\nconst Example = () => {\n\tconst {write} = useStdout();\n\n\tuseEffect(() => {\n\t\t// Write a single message to stdout, above Ink's output\n\t\twrite('Hello from Ink to stdout\\n');\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useStderr} from 'ink';\n\nconst Example = () => {\n\tconst {stderr} = useStderr();\n\n\treturn …\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "import {useStderr} from 'ink';\n\nconst Example = () => {\n\tconst {write} = useStderr();\n\n\tuseEffect(() => {\n\t\t// Write a single message to stderr, above Ink's output\n\t\twrite('Hello from Ink to stderr\\n');\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, useFocus, Text} from 'ink';\n\nconst Example = () => {\n\tconst {isFocused} = useFocus();\n\n\treturn <Text>{isFocused ? 'I am focused' : 'I am not focused'}</Text>;\n};\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useFocusManager} from 'ink';\n\nconst Example = () => {\n\tconst {enableFocus} = useFocusManager();\n\n\tuseEffect(() => {\n\t\tenableFocus();\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useFocusManager} from 'ink';\n\nconst Example = () => {\n\tconst {disableFocus} = useFocusManager();\n\n\tuseEffect(() => {\n\t\tdisableFocus();\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useFocusManager} from 'ink';\n\nconst Example = () => {\n\tconst {focusNext} = useFocusManager();\n\n\tuseEffect(() => {\n\t\tfocusNext();\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useFocusManager} from 'ink';\n\nconst Example = () => {\n\tconst {focusPrevious} = useFocusManager();\n\n\tuseEffect(() => {\n\t\tfocusPrevious();\n\t}, []);\n\n\treturn …\n};",
+      "language": "jsx"
+    },
+    {
+      "code": "import {useFocusManager, useInput} from 'ink';\n\nconst Example = () => {\n\tconst {focus} = useFocusManager();\n\n\tuseInput(input => {\n\t\tif (input === 's') {\n\t\t\t// Focus the component with focus ID 'someId'\n\t\t\tfocus('someId');\n\t\t}\n\t});\n\n\treturn …\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "import {useIsScreenReaderEnabled, Text} from 'ink';\n\nconst Example = () => {\n\tconst isScreenReaderEnabled = useIsScreenReaderEnabled();\n\n\treturn (\n\t\t<Text>\n\t\t\t{isScreenReaderEnabled\n\t\t\t\t? 'Screen reader is enabled'\n\t\t\t\t: 'Screen reader is disabled'}\n\t\t</Text>\n\t);\n};",
+      "language": "typescript"
+    },
+    {
+      "code": "// Update props of the root node\nconst {rerender} = render(<Counter count={1} />);\nrerender(<Counter count={2} />);\n\n// Replace root node\nconst {rerender} = render(<OldCounter />);\nrerender(<NewCounter />);",
+      "language": "jsx"
+    },
+    {
+      "code": "const {unmount} = render(<MyApp />);\nunmount();",
+      "language": "jsx"
+    },
+    {
+      "code": "const {unmount, waitUntilExit} = render(<MyApp />);\n\nsetTimeout(unmount, 1000);\n\nawait waitUntilExit(); // resolves after `unmount()` is called",
+      "language": "jsx"
+    },
+    {
+      "code": "const {clear} = render(<MyApp />);\nclear();",
+      "language": "jsx"
+    },
+    {
+      "code": "import {render, measureElement, Box, Text} from 'ink';\n\nconst Example = () => {\n\tconst ref = useRef();\n\n\tuseEffect(() => {\n\t\tconst {width, height} = measureElement(ref.current);\n\t\t// width = 100, height = 1\n\t}, []);\n\n\treturn (\n\t\t<Box width={100}>\n\t\t\t<Box ref={ref}>\n\t\t\t\t<Text>This box will stretch to 100 width</Text>\n\t\t\t</Box>\n\t\t</Box>\n\t);\n};\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "import React from 'react';\nimport {Text} from 'ink';\nimport {render} from 'ink-testing-library';\n\nconst Test = () => <Text>Hello World</Text>;\nconst {lastFrame} = render(<Test />);\n\nlastFrame() === 'Hello World'; //=> true",
+      "language": "jsx"
+    },
+    {
+      "code": "DEV=true my-cli",
+      "language": "unknown"
+    },
+    {
+      "code": "npx react-devtools",
+      "language": "unknown"
+    },
+    {
+      "code": "render(<MyApp />, {isScreenReaderEnabled: true});",
+      "language": "jsx"
+    },
+    {
+      "code": "<Box aria-role=\"checkbox\" aria-state={{checked: true}}>\n\t<Text>Accept terms and conditions</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "(checked) checkbox: Accept terms and conditions",
+      "language": "unknown"
+    },
+    {
+      "code": "<Box>\n\t<Box width=\"50%\" height={1} backgroundColor=\"green\" />\n\t<Text aria-label=\"Progress: 50%\">50%</Text>\n</Box>",
+      "language": "jsx"
+    },
+    {
+      "code": "npm run example examples/[example name]\n# e.g. npm run example examples/borders",
+      "language": "markdown"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://github.com/vadimdemedes/ink/blob/master/readme.md"
+  ]
+}

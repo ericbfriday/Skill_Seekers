@@ -1,0 +1,135 @@
+{
+  "url": "https://webtui.ironclad.sh/components/tooltip",
+  "title": "Tooltip",
+  "content": "Displays information in a popup when a specified trigger is focused or hovered over\n\nUse baseline-* values to position the content relative to the edges of the tooltip\n\nThis image from the Popover page shows the values and positions that can be used in the position- property\n\nTo extend the Tooltip stylesheet, define a CSS rule on the components layer",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Tooltip",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "Positioning",
+      "id": "positioning"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    },
+    {
+      "level": "h3",
+      "text": "Properties",
+      "id": "properties"
+    },
+    {
+      "level": "h3",
+      "text": "Extending",
+      "id": "extending"
+    },
+    {
+      "level": "h3",
+      "text": "Scope",
+      "id": "scope"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@import '@webtui/css/components/tooltip.css';",
+      "language": "python"
+    },
+    {
+      "code": "@import '@webtui/css/components/tooltip.css';",
+      "language": "python"
+    },
+    {
+      "code": "<div is-=\"tooltip\">\n    <div is-=\"tooltip-trigger\">Tooltip trigger</div>\n    <div is-=\"tooltip-content\">\n        <p>Tooltip content</p>\n    </div>\n</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"tooltip\">\n    <div is-=\"tooltip-trigger\">Tooltip trigger</div>\n    <div is-=\"tooltip-content\">\n        <p>Tooltip content</p>\n    </div>\n</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "#my-custom-tooltip {\n    --tooltip-offset-x: 1ch;\n    --tooltip-offset-y: 1lh;\n    --tooltip-delay: 0.5s;\n}",
+      "language": "css"
+    },
+    {
+      "code": "#my-custom-tooltip {\n    --tooltip-offset-x: 1ch;\n    --tooltip-offset-y: 1lh;\n    --tooltip-delay: 0.5s;\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer components {\n    [is-~='tooltip'] {\n        &[variant-='inverted'] {\n            /* ... */\n        }\n\n        /* ... */\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "@layer components {\n    [is-~='tooltip'] {\n        &[variant-='inverted'] {\n            /* ... */\n        }\n\n        /* ... */\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "[is-~='tooltip'] {\n    [is-~='tooltip-trigger'] {\n        /* ... */\n    }\n    [is-~='tooltip-content'] {\n        /* ... */\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "[is-~='tooltip'] {\n    [is-~='tooltip-trigger'] {\n        /* ... */\n    }\n    [is-~='tooltip-content'] {\n        /* ... */\n    }\n}",
+      "language": "json"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

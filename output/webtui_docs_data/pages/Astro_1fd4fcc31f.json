@@ -1,0 +1,131 @@
+{
+  "url": "https://webtui.ironclad.sh/installation/astro",
+  "title": "Astro",
+  "content": "Install the base WebTUI package with your preferred package manager\n\nDefine the order of layers and import the base stylesheet in your global CSS file\n\nImport additional utilities, components, and themes the CSS file\n\nImport the global CSS file in your root layout file in the frontmatter section\n\nAstro scopes styles to specific islands instead of globally\n\nImport the desired file in the frontmatter section of your component\n\nAstro scopes CSS in <style> tags to specific components instead of globally [docs]\n\nAdd the is:global modifier to the <style> tag if you intend to import a CSS file from WebTUI\n\nModify astro.config.mjs and enable noExternal for @webtui/css if you intend to import the Full Library [docs]",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Astro",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Scoping",
+      "id": "scoping"
+    },
+    {
+      "level": "h3",
+      "text": "Frontmatter Imports",
+      "id": "frontmatter-imports"
+    },
+    {
+      "level": "h3",
+      "text": "<style> tag",
+      "id": "style-tag"
+    },
+    {
+      "level": "h3",
+      "text": "Full Library Import",
+      "id": "full-library-import"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "bun i @webtui/css\nnpm i @webtui/css\nyarn add @webtui/css\npnpm install @webtui/css",
+      "language": "python"
+    },
+    {
+      "code": "bun i @webtui/css\nnpm i @webtui/css\nyarn add @webtui/css\npnpm install @webtui/css",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n\n/* Utils */\n@import '@webtui/css/utils/box.css';\n\n/* Components */\n@import '@webtui/css/components/button.css';\n@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n\n/* Utils */\n@import '@webtui/css/utils/box.css';\n\n/* Components */\n@import '@webtui/css/components/button.css';\n@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "---\nimport '../styles/global.css'\n---",
+      "language": "yaml"
+    },
+    {
+      "code": "---\nimport '../styles/global.css'\n---",
+      "language": "yaml"
+    },
+    {
+      "code": "---\nimport '@webtui/css/components/button.css'\n---",
+      "language": "python"
+    },
+    {
+      "code": "---\nimport '@webtui/css/components/button.css'\n---",
+      "language": "python"
+    },
+    {
+      "code": "<style is:global>\n    @import '@webtui/css/components/button.css';\n</style>",
+      "language": "jsx"
+    },
+    {
+      "code": "<style is:global>\n    @import '@webtui/css/components/button.css';\n</style>",
+      "language": "jsx"
+    },
+    {
+      "code": "import { defineConfig } from 'astro/config'\n\nexport default defineConfig({\n    vite: {\n        ssr: {\n            noExternal: ['package-name'],\n        },\n    },\n})",
+      "language": "sql"
+    },
+    {
+      "code": "import { defineConfig } from 'astro/config'\n\nexport default defineConfig({\n    vite: {\n        ssr: {\n            noExternal: ['package-name'],\n        },\n    },\n})",
+      "language": "sql"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "url": "https://webtui.ironclad.sh/plugins/theme-everforest",
+  "title": "Everforest Theme",
+  "content": "A port of the Everforest color palette to WebTUI.\n\nInstall the theme with your preferred package manager\n\nEnsure you import the theme after all the other stylesheets from @webtui/css or the styles will not be applied.\n\nSet the data-webtui-theme attribute on the <html> tag or a container element.\n\nTo only apply the theme to a specific element:\n\nSupports dark and light modes, each with hard, medium, and soft contrast levels.\n\nComponents affected/modified by the theme:\n\nAdds additional variants to badges matching everforest accent colors.\n\nAdds additional variants to buttons matching everforest accent colors.\n\nAdds the following CSS variables within the base layer, each of which change based on the theme variant\n\nThe base background/foreground colors use the following CSS variables from the Everforest palette",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Everforest Theme",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Installation",
+      "id": "installation"
+    },
+    {
+      "level": "h2",
+      "text": "Variants",
+      "id": "variants"
+    },
+    {
+      "level": "h2",
+      "text": "Components",
+      "id": "components"
+    },
+    {
+      "level": "h3",
+      "text": "Typography",
+      "id": "typography"
+    },
+    {
+      "level": "h3",
+      "text": "Badge",
+      "id": "badge"
+    },
+    {
+      "level": "h3",
+      "text": "Button",
+      "id": "button"
+    },
+    {
+      "level": "h2",
+      "text": "CSS Variables",
+      "id": "css-variables"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "bun i @webtui/theme-everforest\nnpm i @webtui/theme-everforest\nyarn add @webtui/theme-everforest\npnpm i @webtui/theme-everforest",
+      "language": "python"
+    },
+    {
+      "code": "bun i @webtui/theme-everforest\nnpm i @webtui/theme-everforest\nyarn add @webtui/theme-everforest\npnpm i @webtui/theme-everforest",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n@import '@webtui/css/components/typography.css';\n/* ... */\n\n@import '@webtui/theme-everforest';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n@import '@webtui/css/components/typography.css';\n/* ... */\n\n@import '@webtui/theme-everforest';",
+      "language": "python"
+    },
+    {
+      "code": "<html data-webtui-theme=\"everforest-dark-medium\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<html data-webtui-theme=\"everforest-dark-medium\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<html data-webtui-theme=\"dark\">\n    <!-- Example base theme -->\n    <body>\n        <div data-webtui-theme=\"everforest-light-hard\">\n            <!-- everforest light-hard styles applied here -->\n        </div>\n        <div data-webtui-theme=\"everforest-dark-soft\">\n            <!-- everforest dark-soft styles applied here -->\n        </div>\n    </body>\n</html>",
+      "language": "html"
+    },
+    {
+      "code": "<html data-webtui-theme=\"dark\">\n    <!-- Example base theme -->\n    <body>\n        <div data-webtui-theme=\"everforest-light-hard\">\n            <!-- everforest light-hard styles applied here -->\n        </div>\n        <div data-webtui-theme=\"everforest-dark-soft\">\n            <!-- everforest dark-soft styles applied here -->\n        </div>\n    </body>\n</html>",
+      "language": "html"
+    },
+    {
+      "code": "<!-- Dark Variants -->\n<html data-webtui-theme=\"everforest-dark-hard\"></html>\n<!-- Default: everforest-dark or everforest -->\n<html data-webtui-theme=\"everforest-dark-medium\"></html>\n\n<html data-webtui-theme=\"everforest-dark-soft\"></html>\n\n<!-- Light Variants -->\n<html data-webtui-theme=\"everforest-light-hard\"></html>\n\n<html data-webtui-theme=\"everforest-light-medium\"></html>\n<!-- Default: everforest-light -->\n<html data-webtui-theme=\"everforest-light-soft\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<!-- Dark Variants -->\n<html data-webtui-theme=\"everforest-dark-hard\"></html>\n<!-- Default: everforest-dark or everforest -->\n<html data-webtui-theme=\"everforest-dark-medium\"></html>\n\n<html data-webtui-theme=\"everforest-dark-soft\"></html>\n\n<!-- Light Variants -->\n<html data-webtui-theme=\"everforest-light-hard\"></html>\n\n<html data-webtui-theme=\"everforest-light-medium\"></html>\n<!-- Default: everforest-light -->\n<html data-webtui-theme=\"everforest-light-soft\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<h1>Heading 1</h1>\n<!-- ... -->\n<h6>Heading 6</h6>\n\n<p><a href=\"https://example.com\">Link</a> <code>Inline Code</code></p>",
+      "language": "jsx"
+    },
+    {
+      "code": "<h1>Heading 1</h1>\n<!-- ... -->\n<h6>Heading 6</h6>\n\n<p><a href=\"https://example.com\">Link</a> <code>Inline Code</code></p>",
+      "language": "jsx"
+    },
+    {
+      "code": "<span is-=\"badge\" variant-=\"red\">red</span>\n<!-- ... -->\n<span is-=\"badge\" variant-=\"aqua\">aqua</span>\n<span is-=\"badge\" variant-=\"orange\">orange</span>",
+      "language": "jsx"
+    },
+    {
+      "code": "<span is-=\"badge\" variant-=\"red\">red</span>\n<!-- ... -->\n<span is-=\"badge\" variant-=\"aqua\">aqua</span>\n<span is-=\"badge\" variant-=\"orange\">orange</span>",
+      "language": "jsx"
+    },
+    {
+      "code": "<button variant-=\"red\">red</button>\n<!-- ... -->\n<button variant-=\"aqua\">aqua</button>\n<button variant-=\"orange\">orange</button>",
+      "language": "jsx"
+    },
+    {
+      "code": "<button variant-=\"red\">red</button>\n<!-- ... -->\n<button variant-=\"aqua\">aqua</button>\n<button variant-=\"orange\">orange</button>",
+      "language": "jsx"
+    },
+    {
+      "code": "[data-webtui-theme='everforest-*-*'] {\n    --red: #e67e80;\n    --orange: #e69875;\n    --yellow: #dbbc7f;\n    --green: #a7c080;\n    --blue: #7fbbb3;\n    --aqua: #83c092;\n    --purple: #d699b6;\n    --fg: #d3c6aa;\n    --statusline1: #a7c080;\n    --statusline2: #d3c6aa;\n    --statusline3: #e67e80;\n    --gray0: #7a8478;\n    --gray1: #859289;\n    --gray2: #9da9a0;\n\n    --bg-dim: #232a2e;\n    --bg0: #2d353b;\n    --bg1: #343f44;\n    --bg2: #3d484d;\n    --bg3: #475258;\n    --bg4: #4f585e;\n    --bg5: #56635f;\n    --bg-red: #4c3743;\n    --bg-visual: #493b40;\n    --bg-yellow: #45443c;\n    --bg-green: #3c4841;\n    --bg-blue: #384b55;\n}",
+      "language": "css"
+    },
+    {
+      "code": "[data-webtui-theme='everforest-*-*'] {\n    --red: #e67e80;\n    --orange: #e69875;\n    --yellow: #dbbc7f;\n    --green: #a7c080;\n    --blue: #7fbbb3;\n    --aqua: #83c092;\n    --purple: #d699b6;\n    --fg: #d3c6aa;\n    --statusline1: #a7c080;\n    --statusline2: #d3c6aa;\n    --statusline3: #e67e80;\n    --gray0: #7a8478;\n    --gray1: #859289;\n    --gray2: #9da9a0;\n\n    --bg-dim: #232a2e;\n    --bg0: #2d353b;\n    --bg1: #343f44;\n    --bg2: #3d484d;\n    --bg3: #475258;\n    --bg4: #4f585e;\n    --bg5: #56635f;\n    --bg-red: #4c3743;\n    --bg-visual: #493b40;\n    --bg-yellow: #45443c;\n    --bg-green: #3c4841;\n    --bg-blue: #384b55;\n}",
+      "language": "css"
+    },
+    {
+      "code": "[data-webtui-theme='everforest-*-*'] {\n    --background0: var(--bg0);\n    --background1: var(--bg1);\n    --background2: var(--bg2);\n    --background3: var(--bg3);\n\n    --foreground0: var(--fg);\n    --foreground1: var(--gray2);\n    --foreground2: var(--gray1);\n}",
+      "language": "css"
+    },
+    {
+      "code": "[data-webtui-theme='everforest-*-*'] {\n    --background0: var(--bg0);\n    --background1: var(--bg1);\n    --background2: var(--bg2);\n    --background3: var(--bg3);\n\n    --foreground0: var(--fg);\n    --foreground1: var(--gray2);\n    --foreground2: var(--gray1);\n}",
+      "language": "css"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

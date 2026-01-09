@@ -1,0 +1,150 @@
+{
+  "url": "https://webtui.ironclad.sh/components/typography",
+  "title": "Typography",
+  "content": "The Typography stylesheet provides styles for headings and inline elements\n\nIncludes <strong>, <em>, <code>, and <a> tags\n\nAdd the marker- attribute to a <ul> element to customize its list markers\n\nUse the open keyword at the start and/or end of the marker- attribute to leave the top/bottom tree markers open\n\nApply typography styles to an element’s children",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Typography",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "<h1>-<h6>",
+      "id": "h1-h6"
+    },
+    {
+      "level": "h3",
+      "text": "<p>",
+      "id": "p"
+    },
+    {
+      "level": "h3",
+      "text": "Inline Elements",
+      "id": "inline-elements"
+    },
+    {
+      "level": "h3",
+      "text": "<blockquote>",
+      "id": "blockquote"
+    },
+    {
+      "level": "h3",
+      "text": "<ol>",
+      "id": "ol"
+    },
+    {
+      "level": "h3",
+      "text": "<ul>",
+      "id": "ul"
+    },
+    {
+      "level": "h4",
+      "text": "<ul> Markers",
+      "id": "ul-markers"
+    },
+    {
+      "level": "h3",
+      "text": "[is-=\"typography-block\"]",
+      "id": "is-typography-block"
+    },
+    {
+      "level": "h2",
+      "text": "Scope",
+      "id": "scope"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "<ul marker-=\"bullet\">\n    <ul marker-=\"tree\"></ul>\n</ul>",
+      "language": "jsx"
+    },
+    {
+      "code": "<ul marker-=\"bullet\">\n    <ul marker-=\"tree\"></ul>\n</ul>",
+      "language": "jsx"
+    },
+    {
+      "code": "<ul marker-=\"tree open\">\n    <ul marker-=\"open tree\">\n        <ul marker-=\"open tree open\"></ul>\n    </ul>\n</ul>",
+      "language": "jsx"
+    },
+    {
+      "code": "<ul marker-=\"tree open\">\n    <ul marker-=\"open tree\">\n        <ul marker-=\"open tree open\"></ul>\n    </ul>\n</ul>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"typography-block\">Typography block</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"typography-block\">Typography block</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "h1,\nh2,\nh3,\nh4,\nh5 {\n    /* ... */\n}\n\nul {\n    /* ... */\n}\nol {\n    /* ... */\n}\n\np,\nblockquote,\nli,\n[is-~='typography-block'] {\n    /* ... */\n\n    strong {\n        /* ... */\n    }\n    a {\n        /* ... */\n    }\n    code {\n        /* ... */\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "h1,\nh2,\nh3,\nh4,\nh5 {\n    /* ... */\n}\n\nul {\n    /* ... */\n}\nol {\n    /* ... */\n}\n\np,\nblockquote,\nli,\n[is-~='typography-block'] {\n    /* ... */\n\n    strong {\n        /* ... */\n    }\n    a {\n        /* ... */\n    }\n    code {\n        /* ... */\n    }\n}",
+      "language": "json"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

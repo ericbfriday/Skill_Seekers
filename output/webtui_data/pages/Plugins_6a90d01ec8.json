@@ -1,0 +1,69 @@
+{
+  "url": "https://webtui.ironclad.sh/start/plugins",
+  "title": "Plugins",
+  "content": "Plugins are external stylesheets that are designed to work alongside @webtui/css\n\nNone yet, be the first!",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Plugins",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Official Plugins",
+      "id": "official-plugins"
+    },
+    {
+      "level": "h3",
+      "text": "Themes",
+      "id": "themes"
+    },
+    {
+      "level": "h2",
+      "text": "Community Plugins",
+      "id": "community-plugins"
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

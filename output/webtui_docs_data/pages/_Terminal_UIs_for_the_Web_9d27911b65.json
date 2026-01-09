@@ -1,0 +1,74 @@
+{
+  "url": "https://webtui.ironclad.sh/",
+  "title": " Terminal UIs for the  Web",
+  "content": "WebTUI is a modular CSS library that brings the beauty of Terminal UIs to the browser\n\nHTML tags and attributes determine the behavior and appearance of different components\n\nThe dash at the end of each attribute name (-), makes WebTUI compatible with frameworks like React\n\nWebTUI is built with Pure CSS and does not require any JavaScript\n\nImport and use only what you need\n\nInstall beautiful pre-built color themes or create your own\n\nCan anyone point me to some code to determine if a number in JavaScript is even or odd?\n\nAwesome projects built with WebTUI\n\nWebTUI can be supported via Github Sponsors\n\nThanks to all our generous supporters, including:\n\nModular CSS Library that brings the beauty of Terminal UIs to the browser",
+  "headings": [
+    {
+      "level": "h1",
+      "text": " Terminal UIs for the  Web",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Semantic Approach",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Pure, Modular CSS",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": " Easily Themable",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": " Gallery",
+      "id": ""
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

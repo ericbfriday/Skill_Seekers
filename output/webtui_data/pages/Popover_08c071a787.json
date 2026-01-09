@@ -1,0 +1,169 @@
+{
+  "url": "https://webtui.ironclad.sh/components/popover",
+  "title": "Popover",
+  "content": "Creates a popover component powered by the Details and Summary elements\n\nUse the position- property to control the position of the popover\n\nPass two values into position- to set the horizontal and vertical position anchor\n\nUse baseline-* values to position the content relative to the edges of the popover\n\nThe image below shows the values and positions that can be used in the position- property\n\nElements using the box- utility that appear after the popover in the html markup will appear above the popover content no matter what z-index you provide\n\nAs a workaround, you can set the flex-direction to row-reverse or column-reverse on the parent element of the popover\n\nTo extend the Popover stylesheet, define a CSS rule on the components layer",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Popover",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "Positioning",
+      "id": "positioning"
+    },
+    {
+      "level": "h3",
+      "text": "Backdrop",
+      "id": "backdrop"
+    },
+    {
+      "level": "h2",
+      "text": "Caveats",
+      "id": "caveats"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    },
+    {
+      "level": "h3",
+      "text": "Properties",
+      "id": "properties"
+    },
+    {
+      "level": "h3",
+      "text": "Extending",
+      "id": "extending"
+    },
+    {
+      "level": "h3",
+      "text": "Scope",
+      "id": "scope"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@import '@webtui/css/components/popover.css';",
+      "language": "python"
+    },
+    {
+      "code": "@import '@webtui/css/components/popover.css';",
+      "language": "python"
+    },
+    {
+      "code": "<details is-=\"popover\">\n    <summary>Popover</summary>\n    <div>Popover content</div>\n</details>",
+      "language": "jsx"
+    },
+    {
+      "code": "<details is-=\"popover\">\n    <summary>Popover</summary>\n    <div>Popover content</div>\n</details>",
+      "language": "jsx"
+    },
+    {
+      "code": "<details is-=\"popover\" position-=\"<anchor>\"></details>\n<details is-=\"popover\" position-=\"<x-anchor> <y-anchor>\"></details>\n\n<details is-=\"popover\" position-=\"center\"></details>\n<details is-=\"popover\" position-=\"start end\"></details>",
+      "language": "jsx"
+    },
+    {
+      "code": "<details is-=\"popover\" position-=\"<anchor>\"></details>\n<details is-=\"popover\" position-=\"<x-anchor> <y-anchor>\"></details>\n\n<details is-=\"popover\" position-=\"center\"></details>\n<details is-=\"popover\" position-=\"start end\"></details>",
+      "language": "jsx"
+    },
+    {
+      "code": "<style>\n    .column {\n        display: flex;\n        flex-direction: column;\n    }\n</style>\n\n<div class=\"column\">\n    <details is-=\"popover\">\n        <summary>Popover</summary>\n        <div>Popover content</div>\n    </details>\n    <div box-=\"square\">\n        Will appear above the open popover since defined after it in the html\n    </div>\n</div>",
+      "language": "css"
+    },
+    {
+      "code": "<style>\n    .column {\n        display: flex;\n        flex-direction: column;\n    }\n</style>\n\n<div class=\"column\">\n    <details is-=\"popover\">\n        <summary>Popover</summary>\n        <div>Popover content</div>\n    </details>\n    <div box-=\"square\">\n        Will appear above the open popover since defined after it in the html\n    </div>\n</div>",
+      "language": "css"
+    },
+    {
+      "code": "<style>\n    .column-reverse {\n        display: flex;\n        flex-direction: column-reverse;\n    }\n</style>\n\n<div class=\"column-reverse\">\n    <div box-=\"square\">\n        Will appear behind the open popover since defined before it in the html\n    </div>\n    <details is-=\"popover\">\n        <summary>Popover</summary>\n        <div>Popover content</div>\n    </details>\n</div>",
+      "language": "css"
+    },
+    {
+      "code": "<style>\n    .column-reverse {\n        display: flex;\n        flex-direction: column-reverse;\n    }\n</style>\n\n<div class=\"column-reverse\">\n    <div box-=\"square\">\n        Will appear behind the open popover since defined before it in the html\n    </div>\n    <details is-=\"popover\">\n        <summary>Popover</summary>\n        <div>Popover content</div>\n    </details>\n</div>",
+      "language": "css"
+    },
+    {
+      "code": "#my-custom-popover {\n    --popover-backdrop-color: rgba(0, 0, 0, 0.5);\n    --popover-offset-x: 1ch;\n    --popover-offset-y: 1lh;\n}",
+      "language": "css"
+    },
+    {
+      "code": "#my-custom-popover {\n    --popover-backdrop-color: rgba(0, 0, 0, 0.5);\n    --popover-offset-x: 1ch;\n    --popover-offset-y: 1lh;\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer components {\n    details[is-~='popover'] {\n        &[variant-='inverted'] {\n            /* ... */\n        }\n\n        /* ... */\n    }\n}",
+      "language": "python"
+    },
+    {
+      "code": "@layer components {\n    details[is-~='popover'] {\n        &[variant-='inverted'] {\n            /* ... */\n        }\n\n        /* ... */\n    }\n}",
+      "language": "python"
+    },
+    {
+      "code": "details[is-~='popover'] {\n    /* ... */\n}",
+      "language": "unknown"
+    },
+    {
+      "code": "details[is-~='popover'] {\n    /* ... */\n}",
+      "language": "unknown"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

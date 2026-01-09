@@ -1,0 +1,87 @@
+{
+  "url": "https://webtui.ironclad.sh/installation/nextjs",
+  "title": "Next.js",
+  "content": "Install the base WebTUI package with your preferred package manager\n\nDefine the order of layers and import the base stylesheet in globals.css\n\nImport additional utilities, components, and themes in globals.css\n\nESM imports can be used to scope styles to specific components",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Next.js",
+      "id": ""
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "bun i @webtui/css\nnpm i @webtui/css\nyarn add @webtui/css\npnpm install @webtui/css",
+      "language": "python"
+    },
+    {
+      "code": "bun i @webtui/css\nnpm i @webtui/css\nyarn add @webtui/css\npnpm install @webtui/css",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n\n/* Utils */\n@import '@webtui/css/utils/box.css';\n\n/* Components */\n@import '@webtui/css/components/button.css';\n@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n\n/* Utils */\n@import '@webtui/css/utils/box.css';\n\n/* Components */\n@import '@webtui/css/components/button.css';\n@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "import '@webtui/css/components/button.css'\n\ntype Props = {\n    /* ... */\n}\n\nexport default function Button(props: Props) {\n    return <button>{props.children}</button>\n}",
+      "language": "typescript"
+    },
+    {
+      "code": "import '@webtui/css/components/button.css'\n\ntype Props = {\n    /* ... */\n}\n\nexport default function Button(props: Props) {\n    return <button>{props.children}</button>\n}",
+      "language": "typescript"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}
