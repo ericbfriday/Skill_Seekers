@@ -1,0 +1,308 @@
+{
+  "name": "webtui",
+  "description": "WebTUI CSS library for terminal-style UIs in the browser. Use for TUI-inspired components, ASCII box borders, monospace typography, theming with Catppuccin/Mocha/Dracula/Nord, and semantic HTML-based styling without JavaScript.",
+  "merge_mode": "rule-based",
+  "sources": [
+    {
+      "type": "documentation",
+      "name": "WebTUI Documentation",
+      "base_url": "https://webtui.ironclad.sh/",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "main, article, [class*='content']",
+        "title": "h1",
+        "code_blocks": "pre code, pre"
+      },
+      "url_patterns": {
+        "include": [
+          "/start",
+          "/components",
+          "/plugins",
+          "/installation",
+          "/contributing"
+        ],
+        "exclude": [
+          "/showcase",
+          "/examples",
+          "#"
+        ]
+      },
+      "categories": {
+        "getting_started": [
+          "intro",
+          "installation",
+          "tuis-vs-guis",
+          "quickstart"
+        ],
+        "components": [
+          "button",
+          "badge",
+          "checkbox",
+          "dialog",
+          "input",
+          "popover",
+          "pre",
+          "progress",
+          "radio",
+          "range",
+          "separator",
+          "spinner",
+          "switch",
+          "table",
+          "textarea",
+          "tooltip",
+          "accordion",
+          "typography",
+          "view"
+        ],
+        "theming": [
+          "theming",
+          "theme",
+          "colors",
+          "dark",
+          "light",
+          "css-variables"
+        ],
+        "utilities": [
+          "ascii-boxes",
+          "box",
+          "utils"
+        ],
+        "plugins": [
+          "plugin",
+          "catppuccin",
+          "gruvbox",
+          "nord",
+          "vitesse",
+          "everforest",
+          "nerd-font"
+        ],
+        "frameworks": [
+          "nextjs",
+          "vite",
+          "astro"
+        ],
+        "contributing": [
+          "contributing",
+          "style-guide"
+        ]
+      },
+      "rate_limit": 0.5,
+      "max_pages": 100
+    },
+    {
+      "type": "github",
+      "repo": "ironclad/webtui",
+      "include_issues": true,
+      "max_issues": 50,
+      "issue_labels": [
+        "bug",
+        "question",
+        "help wanted"
+      ],
+      "include_changelog": true,
+      "include_releases": true,
+      "include_code": true,
+      "code_analysis_depth": "surface",
+      "file_patterns": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "readme.md",
+        "examples/**/*.tsx",
+        "docs/**/*.md"
+      ],
+      "exclude_patterns": [
+        "test/**/*",
+        "node_modules/**/*",
+        "*.test.*",
+        "*.spec.*"
+      ]
+    }
+  ],
+  "webtui_components": {
+    "_comment": "Quick reference for WebTUI components",
+    "Button": {
+      "description": "Clickable button component",
+      "key_props": [
+        "onClick",
+        "variant",
+        "size",
+        "disabled",
+        "loading"
+      ],
+      "variants": [
+        "primary",
+        "secondary",
+        "danger",
+        "ghost"
+      ]
+    },
+    "Checkbox": {
+      "description": "Checkbox input component",
+      "key_props": [
+        "checked",
+        "onCheckedChange",
+        "label",
+        "disabled",
+        "indeterminate"
+      ]
+    },
+    "Input": {
+      "description": "Text input field",
+      "key_props": [
+        "value",
+        "onChange",
+        "placeholder",
+        "disabled",
+        "required"
+      ]
+    },
+    "Progress": {
+      "description": "Progress bar component",
+      "key_props": [
+        "value",
+        "max",
+        "showValue",
+        "variant"
+      ],
+      "variants": [
+        "default",
+        "success",
+        "warning",
+        "error"
+      ]
+    },
+    "Spinner": {
+      "description": "Animated loading spinner",
+      "key_props": [
+        "label",
+        "type",
+        "speed"
+      ],
+      "types": [
+        "dots",
+        "line",
+        "dotsBounce",
+        "pulse"
+      ]
+    },
+    "Table": {
+      "description": "Table component with borders",
+      "key_props": [
+        "columns",
+        "rows",
+        "data",
+        "border",
+        "variant"
+      ],
+      "variants": [
+        "simple",
+        "outline"
+      ]
+    }
+  },
+  "webtui_themes": {
+    "_comment": "Available theme presets",
+    "catppuccin": {
+      "description": "Catppuccin color scheme",
+      "variants": [
+        "mocha",
+        "latte",
+        "frappe",
+        "macchiato",
+        "cappuccino"
+      ]
+    },
+    "dracula": {
+      "description": "Dracula color scheme",
+      "description": "Dark theme with high contrast colors"
+    },
+    "nord": {
+      "description": "Nord color scheme",
+      "description": "Arctic, bluish color palette"
+    },
+    "gruvbox": {
+      "description": "Gruvbox color scheme",
+      "variants": [
+        "dark",
+        "light"
+      ]
+    }
+  },
+  "webtui_utilities": {
+    "_comment": "Utility functions and helpers",
+    "ascii-boxes": {
+      "description": "ASCII box drawing functions",
+      "functions": [
+        "single",
+        "double",
+        "round",
+        "bold",
+        "thick",
+        "dashed"
+      ]
+    },
+    "box": {
+      "description": "Box container component",
+      "key_props": [
+        "border",
+        "padding",
+        "margin",
+        "flexDirection",
+        "alignItems",
+        "justifyContent"
+      ]
+    },
+    "utils": {
+      "description": "General utility functions",
+      "functions": [
+        "clamp",
+        "isNumber",
+        "isEmpty",
+        "truncate",
+        "slugify"
+      ]
+    }
+  },
+  "styling_gotchas": {
+    "_comment": "Styling-specific constraints and gotchas",
+    "css_variables": [
+      "CSS variables should be defined in :root or inline",
+      "Variable names use kebab-case (e.g., --primary-color)",
+      "Variables cascade properly through CSS specificity",
+      "Custom properties can't use reserved keywords like --var-, @--"
+    ],
+    "box_drawing": [
+      "Terminal font must be monospace for proper box alignment",
+      "Box characters vary by terminal - test across different terminals",
+      "Some characters may not render correctly in all fonts (use common characters: │─┌┐└┘)",
+      "Double-line boxes work best for borders (║═╗╝╚)"
+    ]
+  },
+  "styling_gotchas": {
+    "_comment": "Styling-specific constraints and gotchas",
+    "css_variables": [
+      "CSS variables should be defined in :root or inline",
+      "Variable names use kebab-case (e.g., --primary-color)",
+      "Variables cascade properly through CSS specificity",
+      "Custom properties can't use reserved keywords like --var-, @--"
+    ],
+    "box_drawing": [
+      "Terminal font must be monospace for proper box alignment",
+      "Box characters vary by terminal - test across different terminals",
+      "Some characters may not render correctly in all fonts (use common characters: │─┌┐└┘)",
+      "Double-line boxes work best for borders (║═╗╝╚)"
+    ],
+    "typography": [
+      "Line height should be 1.2-1.5x font size for readability",
+      "Avoid mixing different monospace fonts (stick to one per UI)",
+      "Bold and dim should be used sparingly for emphasis",
+      "Color contrast ratios should meet WCAG AA standards (4.5:1)"
+    ],
+    "responsive_considerations": [
+      "TUI layouts use absolute positioning with explicit dimensions",
+      "No automatic wrapping - text-overflow must be handled explicitly",
+      "Terminal resizing requires re-measuring and re-rendering components"
+    ]
+  }
+}
