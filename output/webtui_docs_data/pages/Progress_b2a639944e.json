@@ -1,0 +1,153 @@
+{
+  "url": "https://webtui.ironclad.sh/components/progress",
+  "title": "Progress",
+  "content": "Displays a progress bar\n\nNote: The progress bar component automatically rounds the progress display value to the nearest character width\n\nUnfortunately, due to gecko-based browsers not supporting modern attr() usage, you have to use CSS variables for controlling the progress value.\n\nTo dynamically update the progress value with JavaScript:\n\nImportant: Since CSS doesn’t have a way to arbitrarily repeat text a number of times, you will have to repeat a character an arbitrary amount of times for --progress-value-content or --progress-empty-content\n\nTo extend the Progress stylesheet, define a CSS rule on the components layer",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Progress",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "Color",
+      "id": "color"
+    },
+    {
+      "level": "h3",
+      "text": "Text content",
+      "id": "text-content"
+    },
+    {
+      "level": "h3",
+      "text": "Hybrid",
+      "id": "hybrid"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    },
+    {
+      "level": "h3",
+      "text": "Properties",
+      "id": "properties"
+    },
+    {
+      "level": "h3",
+      "text": "Extending",
+      "id": "extending"
+    },
+    {
+      "level": "h3",
+      "text": "Scope",
+      "id": "scope"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@import '@webtui/css/components/progress.css';",
+      "language": "python"
+    },
+    {
+      "code": "@import '@webtui/css/components/progress.css';",
+      "language": "python"
+    },
+    {
+      "code": "<div is-=\"progress\" style=\"--progress-value: 50;\">50%</div>\n<div is-=\"progress\" style=\"--progress-value: 2; --progress-max: 5;\">2/5</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"progress\" style=\"--progress-value: 50;\">50%</div>\n<div is-=\"progress\" style=\"--progress-value: 2; --progress-max: 5;\">2/5</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "document\n    .getElementById('my-progress-element')\n    .style.setProperty('--progress-max', '100')\ndocument\n    .getElementById('my-progress-element')\n    .style.setProperty('--progress-value', '50')",
+      "language": "unknown"
+    },
+    {
+      "code": "document\n    .getElementById('my-progress-element')\n    .style.setProperty('--progress-max', '100')\ndocument\n    .getElementById('my-progress-element')\n    .style.setProperty('--progress-value', '50')",
+      "language": "unknown"
+    },
+    {
+      "code": "progress {\n    --progress-value: 50;\n    --progress-max: 100;\n    --progress-value-background: var(--background2);\n    --progress-value-color: var(--foreground0);\n    --progress-value-content: '[#######################';\n    --progress-empty-background: var(--background1);\n    --progress-empty-color: var(--foreground0);\n    --progress-empty-content: '.......................]';\n}",
+      "language": "css"
+    },
+    {
+      "code": "progress {\n    --progress-value: 50;\n    --progress-max: 100;\n    --progress-value-background: var(--background2);\n    --progress-value-color: var(--foreground0);\n    --progress-value-content: '[#######################';\n    --progress-empty-background: var(--background1);\n    --progress-empty-color: var(--foreground0);\n    --progress-empty-content: '.......................]';\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer components {\n    [is-~='progress'] {\n        &[variant='yarn'] {\n            --progress-value-content: '[#######################';\n            --progress-empty-content: '.......................]';\n        }\n\n        &[variant='npm'] {\n            --progress-value-content: '[████████████████████';\n            --progress-empty-content: '░░░░░░░░░░░░░░░░░░░░]';\n        }\n\n        /* ... */\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer components {\n    [is-~='progress'] {\n        &[variant='yarn'] {\n            --progress-value-content: '[#######################';\n            --progress-empty-content: '.......................]';\n        }\n\n        &[variant='npm'] {\n            --progress-value-content: '[████████████████████';\n            --progress-empty-content: '░░░░░░░░░░░░░░░░░░░░]';\n        }\n\n        /* ... */\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "[is-~='progress'] {\n    /* ... */\n}",
+      "language": "json"
+    },
+    {
+      "code": "[is-~='progress'] {\n    /* ... */\n}",
+      "language": "json"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

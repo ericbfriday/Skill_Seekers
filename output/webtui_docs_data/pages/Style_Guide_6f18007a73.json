@@ -1,0 +1,78 @@
+{
+  "url": "https://webtui.ironclad.sh/contributing/style-guide",
+  "title": "Style Guide",
+  "content": "The style guide for code contributed to WebTUI\n\nAll selectors in components, utilities, and plugins should be nested within a CSS @layer block\n\nIf your Pull Request modifies or adds a new component or utility, please ensure that you add or update the corresponding documentation page",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Style Guide",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "CSS Units",
+      "id": "css-units"
+    },
+    {
+      "level": "h2",
+      "text": "Selectors",
+      "id": "selectors"
+    },
+    {
+      "level": "h2",
+      "text": "Documentation",
+      "id": "documentation"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@layer components {\n    input[type='file'],\n    [is-=~'fileinput'] {\n        /* ... */\n    }\n}\n\n@layer utils {\n    [is-~='tooltip'] {\n        /* ... */\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "@layer components {\n    input[type='file'],\n    [is-=~'fileinput'] {\n        /* ... */\n    }\n}\n\n@layer utils {\n    [is-~='tooltip'] {\n        /* ... */\n    }\n}",
+      "language": "json"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "name": "webtui",
+  "total_pages": 38,
+  "base_url": "https://webtui.ironclad.sh/",
+  "llms_txt_detected": false,
+  "llms_txt_variant": null,
+  "pages": [
+    {
+      "title": "Introduction",
+      "url": "https://webtui.ironclad.sh/start/intro"
+    },
+    {
+      "title": "Installation",
+      "url": "https://webtui.ironclad.sh/start/installation"
+    },
+    {
+      "title": "Theming",
+      "url": "https://webtui.ironclad.sh/start/theming"
+    },
+    {
+      "title": "ASCII Boxes",
+      "url": "https://webtui.ironclad.sh/start/ascii-boxes"
+    },
+    {
+      "title": "Button",
+      "url": "https://webtui.ironclad.sh/components/button"
+    },
+    {
+      "title": "Typography",
+      "url": "https://webtui.ironclad.sh/components/typography"
+    },
+    {
+      "title": "Accordion",
+      "url": "https://webtui.ironclad.sh/components/accordion"
+    },
+    {
+      "title": "Badge",
+      "url": "https://webtui.ironclad.sh/components/badge"
+    },
+    {
+      "title": "Checkbox",
+      "url": "https://webtui.ironclad.sh/components/checkbox"
+    },
+    {
+      "title": "Dialog",
+      "url": "https://webtui.ironclad.sh/components/dialog"
+    },
+    {
+      "title": "Input",
+      "url": "https://webtui.ironclad.sh/components/input"
+    },
+    {
+      "title": "Popover",
+      "url": "https://webtui.ironclad.sh/components/popover"
+    },
+    {
+      "title": "Pre",
+      "url": "https://webtui.ironclad.sh/components/pre"
+    },
+    {
+      "title": "Progress",
+      "url": "https://webtui.ironclad.sh/components/progress"
+    },
+    {
+      "title": "Radio",
+      "url": "https://webtui.ironclad.sh/components/radio"
+    },
+    {
+      "title": "Range",
+      "url": "https://webtui.ironclad.sh/components/range"
+    },
+    {
+      "title": "Separator",
+      "url": "https://webtui.ironclad.sh/components/separator"
+    },
+    {
+      "title": "Spinner",
+      "url": "https://webtui.ironclad.sh/components/spinner"
+    },
+    {
+      "title": "Switch",
+      "url": "https://webtui.ironclad.sh/components/switch"
+    },
+    {
+      "title": "Table",
+      "url": "https://webtui.ironclad.sh/components/table"
+    },
+    {
+      "title": "Textarea",
+      "url": "https://webtui.ironclad.sh/components/textarea"
+    },
+    {
+      "title": "Tooltip",
+      "url": "https://webtui.ironclad.sh/components/tooltip"
+    },
+    {
+      "title": "View",
+      "url": "https://webtui.ironclad.sh/components/view"
+    },
+    {
+      "title": "Nerd Font Plugin",
+      "url": "https://webtui.ironclad.sh/plugins/plugin-nf"
+    },
+    {
+      "title": "Catppuccin Theme",
+      "url": "https://webtui.ironclad.sh/plugins/theme-catppuccin"
+    },
+    {
+      "title": "Everforest Theme",
+      "url": "https://webtui.ironclad.sh/plugins/theme-everforest"
+    },
+    {
+      "title": "Gruvbox Theme",
+      "url": "https://webtui.ironclad.sh/plugins/theme-gruvbox"
+    },
+    {
+      "title": "Vitesse Theme",
+      "url": "https://webtui.ironclad.sh/plugins/theme-vitesse"
+    },
+    {
+      "title": "Nord Theme",
+      "url": "https://webtui.ironclad.sh/plugins/theme-nord"
+    },
+    {
+      "title": "Changelog",
+      "url": "https://webtui.ironclad.sh/start/changelog"
+    },
+    {
+      "title": "Plugins",
+      "url": "https://webtui.ironclad.sh/start/plugins"
+    },
+    {
+      "title": "Contributing",
+      "url": "https://webtui.ironclad.sh/contributing/contributing"
+    },
+    {
+      "title": "Style Guide",
+      "url": "https://webtui.ironclad.sh/contributing/style-guide"
+    },
+    {
+      "title": "Developing Plugins",
+      "url": "https://webtui.ironclad.sh/plugins/plugin-dev"
+    },
+    {
+      "title": "TUIs vs GUIs",
+      "url": "https://webtui.ironclad.sh/start/tuis-vs-guis"
+    },
+    {
+      "title": "Next.js",
+      "url": "https://webtui.ironclad.sh/installation/nextjs"
+    },
+    {
+      "title": "Vite",
+      "url": "https://webtui.ironclad.sh/installation/vite"
+    },
+    {
+      "title": "Astro",
+      "url": "https://webtui.ironclad.sh/installation/astro"
+    }
+  ]
+}

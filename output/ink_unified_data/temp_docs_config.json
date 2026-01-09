@@ -1,0 +1,86 @@
+{
+  "name": "ink_docs",
+  "base_url": "https://github.com/vadimdemedes/ink",
+  "selectors": {
+    "main_content": "article, .markdown-body, main",
+    "title": "h1, h2",
+    "code_blocks": "pre code, .highlight"
+  },
+  "url_patterns": {
+    "include": [
+      "/blob/master/readme",
+      "/wiki",
+      "/blob/master/docs"
+    ],
+    "exclude": [
+      "/issues",
+      "/pull",
+      "/releases",
+      "/commits",
+      "/branches"
+    ]
+  },
+  "categories": {
+    "getting_started": [
+      "install",
+      "quick",
+      "start",
+      "intro",
+      "getting-started"
+    ],
+    "core_components": [
+      "box",
+      "text",
+      "newline",
+      "transform",
+      "static"
+    ],
+    "hooks": [
+      "useInput",
+      "useApp",
+      "useStdin",
+      "useStdout",
+      "useStderr",
+      "useFocus",
+      "useFocusManager"
+    ],
+    "rendering": [
+      "render",
+      "instance",
+      "unmount",
+      "waitUntilExit",
+      "clear",
+      "rerender"
+    ],
+    "layout": [
+      "flexbox",
+      "flexDirection",
+      "flexGrow",
+      "flexShrink",
+      "alignItems",
+      "justifyContent",
+      "width",
+      "height",
+      "padding",
+      "margin"
+    ],
+    "styling": [
+      "color",
+      "backgroundColor",
+      "bold",
+      "italic",
+      "underline",
+      "strikethrough",
+      "dimColor",
+      "inverse"
+    ],
+    "testing": [
+      "ink-testing-library",
+      "test",
+      "render",
+      "lastFrame"
+    ]
+  },
+  "rate_limit": 0.5,
+  "max_pages": 100
+}

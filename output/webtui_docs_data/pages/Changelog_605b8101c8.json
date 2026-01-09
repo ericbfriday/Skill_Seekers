@@ -1,0 +1,221 @@
+{
+  "url": "https://webtui.ironclad.sh/start/changelog",
+  "title": "Changelog",
+  "content": "You can no longer use the <progress> HTML element to display a styled progress bar due to incompatibilities with Gecko-based browsers. Use something like a <div> that supports CSS pseudo-elements.\n\nAdditionally, you can no longer use the value and max attributes to control the progress bar. Use the --progress-value and --progress-max instead.\n\nTo control the progress bar dynamically with JavaScript:\n\nThe markdown-like # markers on heading elements <h1>-<h6> have been removed\n\nIf you intend to keep this behavior, use the following CSS code\n\nPrior to this release, --box-border-color, --table-border-color, and --separator-color always defaulted to --foreground0.\n\nNow all child elements of an element with any of these CSS variables will inherit the value from its closest ancestor\n\nThe defaults for these variables can be controlled from :root\n\nThe default size for pre elements has been changed to make them shorter\n\nIn versions prior to 0.1.0, a second keyword was added to the box- utility property to control whether the box should pad the top and/or bottom lines\n\nThis has been replaced with the shear- property\n\nSince the selector for box- no longer allows more than one keyword, most elements using the box- utility will be affected by this change\n\nThe default button variant has been changed to make the button shorter\n\nThe default button variant is still three lines tall but appears to be shorter as its background doesn’t take up the full height of three lines",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Changelog",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "0.1.6",
+      "id": "016"
+    },
+    {
+      "level": "h3",
+      "text": "Migration Guide from 0.1.5",
+      "id": "migration-guide-from-015"
+    },
+    {
+      "level": "h2",
+      "text": "0.1.5",
+      "id": "015"
+    },
+    {
+      "level": "h2",
+      "text": "0.1.4",
+      "id": "014"
+    },
+    {
+      "level": "h2",
+      "text": "0.1.3",
+      "id": "013"
+    },
+    {
+      "level": "h2",
+      "text": "0.1.2",
+      "id": "012"
+    },
+    {
+      "level": "h3",
+      "text": "Migration Guide from < 0.1.1",
+      "id": "migration-guide-from--011"
+    },
+    {
+      "level": "h4",
+      "text": "Heading Markers",
+      "id": "heading-markers"
+    },
+    {
+      "level": "h4",
+      "text": "Inherited Color Variables",
+      "id": "inherited-color-variables"
+    },
+    {
+      "level": "h2",
+      "text": "0.1.1",
+      "id": "011"
+    },
+    {
+      "level": "h3",
+      "text": "Migration Guide from 0.1.0",
+      "id": "migration-guide-from-010"
+    },
+    {
+      "level": "h4",
+      "text": "Pre Size",
+      "id": "pre-size"
+    },
+    {
+      "level": "h2",
+      "text": "0.1.0",
+      "id": "010"
+    },
+    {
+      "level": "h3",
+      "text": "Migration Guide from 0.0.x",
+      "id": "migration-guide-from-00x"
+    },
+    {
+      "level": "h4",
+      "text": "Box Containment",
+      "id": "box-containment"
+    },
+    {
+      "level": "h4",
+      "text": "Button Variants",
+      "id": "button-variants"
+    },
+    {
+      "level": "h2",
+      "text": "0.0.6",
+      "id": "006"
+    },
+    {
+      "level": "h2",
+      "text": "0.0.5",
+      "id": "005"
+    },
+    {
+      "level": "h2",
+      "text": "0.0.4",
+      "id": "004"
+    },
+    {
+      "level": "h2",
+      "text": "0.0.3",
+      "id": "003"
+    },
+    {
+      "level": "h2",
+      "text": "0.0.2",
+      "id": "002"
+    },
+    {
+      "level": "h2",
+      "text": "0.0.1",
+      "id": "001"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "<div is-=\"progress\" style=\"--progress-value: 50;\">50%</div>\n<div is-=\"progress\" style=\"--progress-value: 8; --progress-max: 10;\">8/10</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"progress\" style=\"--progress-value: 50;\">50%</div>\n<div is-=\"progress\" style=\"--progress-value: 8; --progress-max: 10;\">8/10</div>",
+      "language": "jsx"
+    },
+    {
+      "code": "document\n    .getElementById('my-progress-element')\n    .style.setProperty('--progress-max', '100')",
+      "language": "unknown"
+    },
+    {
+      "code": "document\n    .getElementById('my-progress-element')\n    .style.setProperty('--progress-max', '100')",
+      "language": "unknown"
+    },
+    {
+      "code": "h1::before {\n    content: '# ';\n}\nh2::before {\n    content: '## ';\n}\nh3::before {\n    content: '### ';\n}\nh4::before {\n    content: '#### ';\n}\nh5::before {\n    content: '##### ';\n}\nh6::before {\n    content: '###### ';\n}",
+      "language": "yaml"
+    },
+    {
+      "code": "h1::before {\n    content: '# ';\n}\nh2::before {\n    content: '## ';\n}\nh3::before {\n    content: '### ';\n}\nh4::before {\n    content: '#### ';\n}\nh5::before {\n    content: '##### ';\n}\nh6::before {\n    content: '###### ';\n}",
+      "language": "yaml"
+    },
+    {
+      "code": "<body style=\"--box-border-color: red;\">\n    <div box-=\"square\">red border</div>\n    <div box-=\"square\" style=\"--box-border-color: blue;\">blue border</div>\n    <div style=\"--box-border-color: green;\">\n        <div box-=\"square\">green border</div>\n    </div>\n</body>",
+      "language": "jsx"
+    },
+    {
+      "code": "<body style=\"--box-border-color: red;\">\n    <div box-=\"square\">red border</div>\n    <div box-=\"square\" style=\"--box-border-color: blue;\">blue border</div>\n    <div style=\"--box-border-color: green;\">\n        <div box-=\"square\">green border</div>\n    </div>\n</body>",
+      "language": "jsx"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        --box-border-color: var(--background1);\n        --table-border-color: var(--background2);\n        --separator-color: var(--cyan);\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        --box-border-color: var(--background1);\n        --table-border-color: var(--background2);\n        --separator-color: var(--cyan);\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "<div box-=\"square contain:!top\"></div>\n<div box-=\"square contain:!bottom\"></div>\n<div box-=\"square contain:none\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div box-=\"square contain:!top\"></div>\n<div box-=\"square contain:!bottom\"></div>\n<div box-=\"square contain:none\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div box-=\"square\" shear-=\"top\"></div>\n<div box-=\"square\" shear-=\"bottom\"></div>\n<div box-=\"square\" shear-=\"both\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div box-=\"square\" shear-=\"top\"></div>\n<div box-=\"square\" shear-=\"bottom\"></div>\n<div box-=\"square\" shear-=\"both\"></div>",
+      "language": "jsx"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

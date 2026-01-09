@@ -1,0 +1,155 @@
+{
+  "url": "https://webtui.ironclad.sh/components/separator",
+  "title": "Separator",
+  "content": "A horizontal or vertical separator\n\nIf direction- is not specified, separators are horizontal by default.\n\nUse the cap- attribute to control how the ends of the separator behave\n\ncap-=\"bisect\" extends the edges of the separator by 0.5ch making it ideal to use alongside the box- utility\n\ncap-=\"edge\" clips off the edges of the separator by 0.5ch making it ideal for corners\n\nYou can specify two values for the cap- attribute to control the start and end of the separator\n\nUse the following custom CSS properties to style separators\n\nTo extend the Separator stylesheet, define a CSS rule on the components layer",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Separator",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "Vertical",
+      "id": "vertical"
+    },
+    {
+      "level": "h3",
+      "text": "Caps",
+      "id": "caps"
+    },
+    {
+      "level": "h4",
+      "text": "Bisecting Caps",
+      "id": "bisecting-caps"
+    },
+    {
+      "level": "h4",
+      "text": "Edge Caps",
+      "id": "edge-caps"
+    },
+    {
+      "level": "h4",
+      "text": "Start and End Caps",
+      "id": "start-and-end-caps"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    },
+    {
+      "level": "h3",
+      "text": "Properties",
+      "id": "properties"
+    },
+    {
+      "level": "h3",
+      "text": "Extending",
+      "id": "extending"
+    },
+    {
+      "level": "h3",
+      "text": "Scope",
+      "id": "scope"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@import '@webtui/css/components/separator.css';",
+      "language": "python"
+    },
+    {
+      "code": "@import '@webtui/css/components/separator.css';",
+      "language": "python"
+    },
+    {
+      "code": "<!-- Horizontal -->\n<div is-=\"separator\"></div>\n<div is-=\"separator\" direction-=\"horizontal\"></div>\n<div is-=\"separator\" direction-=\"x\"></div>\n\n<!-- Vertical -->\n<div is-=\"separator\" direction-=\"vertical\"></div>\n<div is-=\"separator\" direction-=\"y\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<!-- Horizontal -->\n<div is-=\"separator\"></div>\n<div is-=\"separator\" direction-=\"horizontal\"></div>\n<div is-=\"separator\" direction-=\"x\"></div>\n\n<!-- Vertical -->\n<div is-=\"separator\" direction-=\"vertical\"></div>\n<div is-=\"separator\" direction-=\"y\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"separator\" cap-=\"edge bisect\"></div>\n<div is-=\"separator\" cap-=\"default edge\"></div>\n<div is-=\"separator\" cap-=\"bisect default\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "<div is-=\"separator\" cap-=\"edge bisect\"></div>\n<div is-=\"separator\" cap-=\"default edge\"></div>\n<div is-=\"separator\" cap-=\"bisect default\"></div>",
+      "language": "jsx"
+    },
+    {
+      "code": "@layer components {\n    input[type='checkbox'] {\n        /* ... */\n    }\n}",
+      "language": "python"
+    },
+    {
+      "code": "@layer components {\n    input[type='checkbox'] {\n        /* ... */\n    }\n}",
+      "language": "python"
+    },
+    {
+      "code": "input[type='checkbox'] {\n    /* ... */\n}",
+      "language": "unknown"
+    },
+    {
+      "code": "input[type='checkbox'] {\n    /* ... */\n}",
+      "language": "unknown"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

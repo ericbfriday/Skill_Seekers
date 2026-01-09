@@ -1,0 +1,86 @@
+{
+  "url": "https://webtui.ironclad.sh/contributing/contributing",
+  "title": "Contributing",
+  "content": "If you are interested in contributing, please ensure that you have read the Style Guide\n\nIf you need help on something, join the Discord Server\n\nEnsure Bun is installed\n\nBug reports, feature requests, and improvements are all welcome as issues.\n\nIf you need help, join the Discord Server\n\nEnsure that there is a relevant issue before you open a Pull Request. If there isn’t, open one\n\nLink the relevant issue in your Pull Request with Fixes #issue-number or Closes #issue-number\n\nEnsure that the code in your Pull Request abides by the Style Guide",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Contributing",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Local Development",
+      "id": "local-development"
+    },
+    {
+      "level": "h2",
+      "text": "Issues",
+      "id": "issues"
+    },
+    {
+      "level": "h2",
+      "text": "Pull Requests",
+      "id": "pull-requests"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "git clone https://github.com/webtui/webtui",
+      "language": "unknown"
+    },
+    {
+      "code": "git clone https://github.com/webtui/webtui",
+      "language": "unknown"
+    },
+    {
+      "code": "bun run dev",
+      "language": "unknown"
+    },
+    {
+      "code": "bun run dev",
+      "language": "unknown"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

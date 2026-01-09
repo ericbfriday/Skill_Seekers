@@ -1,0 +1,125 @@
+{
+  "url": "https://webtui.ironclad.sh/start/theming",
+  "title": "Theming",
+  "content": "Theming can be done by editing the CSS variables in the base stylesheet, or if you install a theme plugin\n\n@webtui/css ships with a set of CSS variables that control font styles and background/foreground colors\n\nThese can be customized with the CSS :root selector on the base layer\n\nThe base theme consists of four background levels and three foreground levels\n\nAdditional color accents/variants can be added to components individually with CSS or by importing a theme plugin\n\nShown below is a screenshot showing the background and foreground colors of a basic light theme, dark theme, Nord, and Catppuccin\n\n@webtui/css ships with a basic light and dark theme\n\nTo enable the dark theme, simply add data-webtui-theme=\"dark\" to the <html> tag, or any element that should inherit the theme colors\n\nTheme plugins change the base colors and often include additional color variants and styles for individual components\n\nCheck out the Plugins page for a list of available themes\n\nSome themes provide different accent colors such as --red, --green, etc\n\nNot all themes use the same accent names (e.g. --blue vs --aqua)\n\nIf you intend to use multiple themes, you can use CSS variable fallbacks to use the desired accent color",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Theming",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "CSS Variables",
+      "id": "css-variables"
+    },
+    {
+      "level": "h3",
+      "text": "Font Styles",
+      "id": "font-styles"
+    },
+    {
+      "level": "h3",
+      "text": "Colors",
+      "id": "colors"
+    },
+    {
+      "level": "h3",
+      "text": "Light & Dark",
+      "id": "light--dark"
+    },
+    {
+      "level": "h2",
+      "text": "Theme Plugins",
+      "id": "theme-plugins"
+    },
+    {
+      "level": "h3",
+      "text": "Using Multiple Theme Accents",
+      "id": "using-multiple-theme-accents"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@layer base {\n    :root {\n        --font-size: 18px;\n        --font-family: 'JetBrainsMono', monospace;\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        --font-size: 18px;\n        --font-family: 'JetBrainsMono', monospace;\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        --font-size: 16px;\n        --line-height: 1.3;\n        /* Font weight for bold text */\n        --font-weight-bold: 700;\n        /* Font weight for regular text */\n        --font-weight-normal: 400;\n        --font-family: monospace;\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        --font-size: 16px;\n        --line-height: 1.3;\n        /* Font weight for bold text */\n        --font-weight-bold: 700;\n        /* Font weight for regular text */\n        --font-weight-normal: 400;\n        --font-family: monospace;\n    }\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        /* Default background color */\n        --background0: #fff;\n        /* Background levels 1-3 */\n        --background1: #ddd;\n        --background2: #bbb;\n        --background3: #999;\n\n        /* Default foreground color */\n        --foreground0: #000;\n        /* Foreground levels 1-2 */\n        --foreground1: #444;\n        --foreground2: #888;\n\n        /* Border colors for various components/utils */\n        --box-border-color: var(--foreground0);\n        --table-border-color: var(--foreground0);\n        --separator-color: var(--foreground0);\n    }\n}",
+      "language": "python"
+    },
+    {
+      "code": "@layer base {\n    :root {\n        /* Default background color */\n        --background0: #fff;\n        /* Background levels 1-3 */\n        --background1: #ddd;\n        --background2: #bbb;\n        --background3: #999;\n\n        /* Default foreground color */\n        --foreground0: #000;\n        /* Foreground levels 1-2 */\n        --foreground1: #444;\n        --foreground2: #888;\n\n        /* Border colors for various components/utils */\n        --box-border-color: var(--foreground0);\n        --table-border-color: var(--foreground0);\n        --separator-color: var(--foreground0);\n    }\n}",
+      "language": "python"
+    },
+    {
+      "code": "<html data-webtui-theme=\"dark\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<html data-webtui-theme=\"dark\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "#my-element {\n    color: var(--gb-aqua, var(--blue, var(--cyan)));\n}",
+      "language": "css"
+    },
+    {
+      "code": "#my-element {\n    color: var(--gb-aqua, var(--blue, var(--cyan)));\n}",
+      "language": "css"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

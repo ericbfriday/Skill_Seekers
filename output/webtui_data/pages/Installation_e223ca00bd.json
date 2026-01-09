@@ -1,0 +1,167 @@
+{
+  "url": "https://webtui.ironclad.sh/start/installation",
+  "title": "Installation",
+  "content": "This guide covers how to install WebTUI with CSS, ESM, and CDN imports\n\nFor framework-specific guides, check out the Installation section\n\nInstall the base WebTUI package with your preferred package manager\n\nDefine the order of layers in your global CSS file using the @layer at-rule [MDN Reference]\n\nEnsure you define the layer order before importing the base stylesheet\n\nImport the desired utilities, components, and themes after the base stylesheet\n\nIf you aren’t using a bundler, see Using a CDN instead\n\nStylesheets can be imported via ESM if your bundler supports it\n\nEnsure you have previously defined the order of layers in your global CSS file\n\nIf you aren’t using a bundler, you can import the CSS files from a CDN like JSDelivr\n\nBrowse all the available CSS files on the JSDelivr page\n\nIndividual css module imports are preferred in production to avoid importing unused CSS\n\nFor development, you can import the entire library\n\nImport the library using the direct package name after defining the order of layers\n\nIf you aren’t using a bundler, see CDN\n\nImport the library using the direct package name\n\nImport the /dist/full.css path instead of the base path\n\nOptionally, you can use a <link> tag",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Installation",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Installation",
+      "id": "installation"
+    },
+    {
+      "level": "h2",
+      "text": "Using CSS",
+      "id": "using-css"
+    },
+    {
+      "level": "h2",
+      "text": "Using ESM",
+      "id": "using-esm"
+    },
+    {
+      "level": "h2",
+      "text": "Using a CDN",
+      "id": "using-a-cdn"
+    },
+    {
+      "level": "h2",
+      "text": "Full Library Import",
+      "id": "full-library-import"
+    },
+    {
+      "level": "h3",
+      "text": "CSS",
+      "id": "css"
+    },
+    {
+      "level": "h3",
+      "text": "ESM",
+      "id": "esm"
+    },
+    {
+      "level": "h3",
+      "text": "CDN",
+      "id": "cdn"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "bun i @webtui/css\nnpm i @webtui/css\nyarn add @webtui/css\npnpm install @webtui/css",
+      "language": "python"
+    },
+    {
+      "code": "bun i @webtui/css\nnpm i @webtui/css\nyarn add @webtui/css\npnpm install @webtui/css",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n\n/* Utils */\n@import '@webtui/css/utils/box.css';\n\n/* Components */\n@import '@webtui/css/components/button.css';\n@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n\n/* Utils */\n@import '@webtui/css/utils/box.css';\n\n/* Components */\n@import '@webtui/css/components/button.css';\n@import '@webtui/css/components/typography.css';",
+      "language": "python"
+    },
+    {
+      "code": "import '@webtui/css/components/button.css'\n\ntype Props = {\n    /* ... */\n}\n\nexport default function Button(props: Props) {\n    return <button>{props.children}</button>\n}",
+      "language": "typescript"
+    },
+    {
+      "code": "import '@webtui/css/components/button.css'\n\ntype Props = {\n    /* ... */\n}\n\nexport default function Button(props: Props) {\n    return <button>{props.children}</button>\n}",
+      "language": "typescript"
+    },
+    {
+      "code": "<style>\n    @layer base, utils, components;\n\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/base.css';\n\n    /* Utils */\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/utils/box.css';\n\n    /* Components */\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/components/button.css';\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/components/typography.css';\n</style>",
+      "language": "typescript"
+    },
+    {
+      "code": "<style>\n    @layer base, utils, components;\n\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/base.css';\n\n    /* Utils */\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/utils/box.css';\n\n    /* Components */\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/components/button.css';\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/components/typography.css';\n</style>",
+      "language": "typescript"
+    },
+    {
+      "code": "<style>\n    @import '@webtui/css';\n</style>",
+      "language": "typescript"
+    },
+    {
+      "code": "<style>\n    @import '@webtui/css';\n</style>",
+      "language": "typescript"
+    },
+    {
+      "code": "import '@webtui/css'",
+      "language": "python"
+    },
+    {
+      "code": "import '@webtui/css'",
+      "language": "python"
+    },
+    {
+      "code": "<style>\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/full.css';\n</style>",
+      "language": "typescript"
+    },
+    {
+      "code": "<style>\n    @import 'https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/full.css';\n</style>",
+      "language": "typescript"
+    },
+    {
+      "code": "<link\n    rel=\"stylesheet\"\n    href=\"https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/full.css\" />",
+      "language": "jsx"
+    },
+    {
+      "code": "<link\n    rel=\"stylesheet\"\n    href=\"https://cdn.jsdelivr.net/npm/@webtui/[email protected]/dist/full.css\" />",
+      "language": "jsx"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

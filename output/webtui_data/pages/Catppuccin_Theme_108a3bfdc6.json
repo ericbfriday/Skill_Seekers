@@ -1,0 +1,170 @@
+{
+  "url": "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+  "title": "Catppuccin Theme",
+  "content": "A port of the Catppuccin color palette to WebTUI\n\nInstall the theme with your preferred package manager\n\nEnsure you import the theme after all the other stylesheets from @webtui/css or the styles will not be applied\n\nSet the data-webtui-theme attribute to the <html> tag\n\nTo only apply the theme to a specific element, use the same attribute\n\nSupports all four Catppuccin theme flavors.\n\nComponents affected/modified by the theme\n\nAdds additional variants to badges matching all custom accent colors\n\nAdds additional variants to buttons matching all custom accent colors\n\nAdds the following CSS variables to the base layer\n\nThe base background/foreground colors use the following CSS variables from the Catppuccin palette",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Catppuccin Theme",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Installation",
+      "id": "installation"
+    },
+    {
+      "level": "h2",
+      "text": "Flavors",
+      "id": "flavors"
+    },
+    {
+      "level": "h2",
+      "text": "Components",
+      "id": "components"
+    },
+    {
+      "level": "h3",
+      "text": "Typography",
+      "id": "typography"
+    },
+    {
+      "level": "h3",
+      "text": "Badge",
+      "id": "badge"
+    },
+    {
+      "level": "h3",
+      "text": "Button",
+      "id": "button"
+    },
+    {
+      "level": "h2",
+      "text": "CSS Variables",
+      "id": "css-variables"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "bun i @webtui/theme-catppuccin\nnpm i @webtui/theme-catppuccin\nyarn add @webtui/theme-catppuccin\npnpm i @webtui/theme-catppuccin",
+      "language": "python"
+    },
+    {
+      "code": "bun i @webtui/theme-catppuccin\nnpm i @webtui/theme-catppuccin\nyarn add @webtui/theme-catppuccin\npnpm i @webtui/theme-catppuccin",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n@import '@webtui/css/components/typography.css';\n/* ... */\n\n@import '@webtui/theme-catppuccin';",
+      "language": "python"
+    },
+    {
+      "code": "@layer base, utils, components;\n\n@import '@webtui/css/base.css';\n@import '@webtui/css/components/typography.css';\n/* ... */\n\n@import '@webtui/theme-catppuccin';",
+      "language": "python"
+    },
+    {
+      "code": "<html data-webtui-theme=\"catppuccin-mocha\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<html data-webtui-theme=\"catppuccin-mocha\"></html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<html data-webtui-theme=\"dark\">\n    <body>\n        <div data-webtui-theme=\"catppuccin-mocha\">\n            <!-- ... -->\n        </div>\n    </body>\n</html>",
+      "language": "html"
+    },
+    {
+      "code": "<html data-webtui-theme=\"dark\">\n    <body>\n        <div data-webtui-theme=\"catppuccin-mocha\">\n            <!-- ... -->\n        </div>\n    </body>\n</html>",
+      "language": "html"
+    },
+    {
+      "code": "<!-- `catppuccin` defaults to `catppuccin-mocha` -->\n<html data-webtui-theme=\"catppuccin\">\n    <html data-webtui-theme=\"catppuccin-mocha\">\n        <html data-webtui-theme=\"catppuccin-macchiato\">\n            <html data-webtui-theme=\"catppuccin-frappe\">\n                <html data-webtui-theme=\"catppuccin-latte\"></html>\n            </html>\n        </html>\n    </html>\n</html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<!-- `catppuccin` defaults to `catppuccin-mocha` -->\n<html data-webtui-theme=\"catppuccin\">\n    <html data-webtui-theme=\"catppuccin-mocha\">\n        <html data-webtui-theme=\"catppuccin-macchiato\">\n            <html data-webtui-theme=\"catppuccin-frappe\">\n                <html data-webtui-theme=\"catppuccin-latte\"></html>\n            </html>\n        </html>\n    </html>\n</html>",
+      "language": "jsx"
+    },
+    {
+      "code": "<h1>Heading 1</h1>\n<!-- ... -->\n<h6>Heading 6</h6>\n\n<p><a href=\"https://example.com\">Link</a> <code>Inline Code</code></p>",
+      "language": "jsx"
+    },
+    {
+      "code": "<h1>Heading 1</h1>\n<!-- ... -->\n<h6>Heading 6</h6>\n\n<p><a href=\"https://example.com\">Link</a> <code>Inline Code</code></p>",
+      "language": "jsx"
+    },
+    {
+      "code": "<span is-=\"badge\" variant-=\"rosewater\">rosewater</span>\n<span is-=\"badge\" variant-=\"flamingo\">flamingo</span>\n<!-- ... -->\n<span is-=\"badge\" variant-=\"blue\">blue</span>\n<span is-=\"badge\" variant-=\"lavender\">lavender</span>",
+      "language": "jsx"
+    },
+    {
+      "code": "<span is-=\"badge\" variant-=\"rosewater\">rosewater</span>\n<span is-=\"badge\" variant-=\"flamingo\">flamingo</span>\n<!-- ... -->\n<span is-=\"badge\" variant-=\"blue\">blue</span>\n<span is-=\"badge\" variant-=\"lavender\">lavender</span>",
+      "language": "jsx"
+    },
+    {
+      "code": "<button variant-=\"rosewater\">rosewater</button>\n<button variant-=\"flamingo\">flamingo</button>\n<!-- ... -->\n<button variant-=\"blue\">blue</button>\n<button variant-=\"lavender\">lavender</button>",
+      "language": "jsx"
+    },
+    {
+      "code": "<button variant-=\"rosewater\">rosewater</button>\n<button variant-=\"flamingo\">flamingo</button>\n<!-- ... -->\n<button variant-=\"blue\">blue</button>\n<button variant-=\"lavender\">lavender</button>",
+      "language": "jsx"
+    },
+    {
+      "code": "[data-webtui-theme='catppuccin-*'] {\n    /* Accent Colors */\n    --rosewater: #f5e0dc;\n    --flamingo: #f2cdcd;\n    --pink: #f5c2e7;\n    --mauve: #cba6f7;\n    --red: #f38ba8;\n    --maroon: #eba0ac;\n    --peach: #fab387;\n    --yellow: #f9e2af;\n    --green: #a6e3a1;\n    --teal: #94e2d5;\n    --sky: #89dceb;\n    --sapphire: #74c7ec;\n    --blue: #89b4fa;\n    --lavender: #b4befe;\n\n    /* Background / Foreground Colors */\n    --text: #cdd6f4;\n    --subtext1: #bac2de;\n    --subtext0: #a6adc8;\n    --overlay2: #9399b2;\n    --overlay1: #7f849c;\n    --overlay0: #6c7086;\n    --surface2: #585b70;\n    --surface1: #45475a;\n    --surface0: #313244;\n    --base: #1e1e2e;\n    --mantle: #181825;\n    --crust: #11111b;\n}",
+      "language": "json"
+    },
+    {
+      "code": "[data-webtui-theme='catppuccin-*'] {\n    /* Accent Colors */\n    --rosewater: #f5e0dc;\n    --flamingo: #f2cdcd;\n    --pink: #f5c2e7;\n    --mauve: #cba6f7;\n    --red: #f38ba8;\n    --maroon: #eba0ac;\n    --peach: #fab387;\n    --yellow: #f9e2af;\n    --green: #a6e3a1;\n    --teal: #94e2d5;\n    --sky: #89dceb;\n    --sapphire: #74c7ec;\n    --blue: #89b4fa;\n    --lavender: #b4befe;\n\n    /* Background / Foreground Colors */\n    --text: #cdd6f4;\n    --subtext1: #bac2de;\n    --subtext0: #a6adc8;\n    --overlay2: #9399b2;\n    --overlay1: #7f849c;\n    --overlay0: #6c7086;\n    --surface2: #585b70;\n    --surface1: #45475a;\n    --surface0: #313244;\n    --base: #1e1e2e;\n    --mantle: #181825;\n    --crust: #11111b;\n}",
+      "language": "json"
+    },
+    {
+      "code": "[data-webtui-theme='catppuccin-*'] {\n    --background0: var(--base);\n    --background1: var(--surface0);\n    --background2: var(--surface1);\n    --background3: var(--surface2);\n\n    --foreground0: var(--text);\n    --foreground1: var(--subtext1);\n    --foreground2: var(--overlay2);\n}",
+      "language": "css"
+    },
+    {
+      "code": "[data-webtui-theme='catppuccin-*'] {\n    --background0: var(--base);\n    --background1: var(--surface0);\n    --background2: var(--surface1);\n    --background3: var(--surface2);\n\n    --foreground0: var(--text);\n    --foreground1: var(--subtext1);\n    --foreground2: var(--overlay2);\n}",
+      "language": "css"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

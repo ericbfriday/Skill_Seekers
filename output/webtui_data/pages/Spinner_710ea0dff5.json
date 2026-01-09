@@ -1,0 +1,145 @@
+{
+  "url": "https://webtui.ironclad.sh/components/spinner",
+  "title": "Spinner",
+  "content": "To extend the Spinner stylesheet, define a CSS rule on the components layer",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Spinner",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "Variants",
+      "id": "variants"
+    },
+    {
+      "level": "h3",
+      "text": "Speed",
+      "id": "speed"
+    },
+    {
+      "level": "h3",
+      "text": "Direction",
+      "id": "direction"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    },
+    {
+      "level": "h3",
+      "text": "Properties",
+      "id": "properties"
+    },
+    {
+      "level": "h3",
+      "text": "Extending",
+      "id": "extending"
+    },
+    {
+      "level": "h3",
+      "text": "Scope",
+      "id": "scope"
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "@import '@webtui/css/components/spinner.css';",
+      "language": "python"
+    },
+    {
+      "code": "@import '@webtui/css/components/spinner.css';",
+      "language": "python"
+    },
+    {
+      "code": "<span is-=\"spinner\"></span>",
+      "language": "jsx"
+    },
+    {
+      "code": "<span is-=\"spinner\"></span>",
+      "language": "jsx"
+    },
+    {
+      "code": ".my-spinner {\n    --spinner-chars: '◐◓◑◒';\n    --spinner-steps: 4;\n    --spinner-duration: 1s;\n}",
+      "language": "css"
+    },
+    {
+      "code": ".my-spinner {\n    --spinner-chars: '◐◓◑◒';\n    --spinner-steps: 4;\n    --spinner-duration: 1s;\n}",
+      "language": "css"
+    },
+    {
+      "code": "@layer components {\n    [is-='spinner'] {\n        &[variant-='numbers'] {\n            --spinner-chars: '0123456789';\n            --spinner-steps: 10;\n        }\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "@layer components {\n    [is-='spinner'] {\n        &[variant-='numbers'] {\n            --spinner-chars: '0123456789';\n            --spinner-steps: 10;\n        }\n    }\n}",
+      "language": "json"
+    },
+    {
+      "code": "[is-='spinner'] {\n    /* ... */\n}",
+      "language": "json"
+    },
+    {
+      "code": "[is-='spinner'] {\n    /* ... */\n}",
+      "language": "json"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://webtui.ironclad.sh/start/intro",
+    "https://webtui.ironclad.sh/components/accordion",
+    "https://webtui.ironclad.sh/components/badge",
+    "https://webtui.ironclad.sh/components/button",
+    "https://webtui.ironclad.sh/components/checkbox",
+    "https://webtui.ironclad.sh/components/dialog",
+    "https://webtui.ironclad.sh/components/input",
+    "https://webtui.ironclad.sh/components/popover",
+    "https://webtui.ironclad.sh/components/pre",
+    "https://webtui.ironclad.sh/components/progress",
+    "https://webtui.ironclad.sh/components/radio",
+    "https://webtui.ironclad.sh/components/range",
+    "https://webtui.ironclad.sh/components/separator",
+    "https://webtui.ironclad.sh/components/spinner",
+    "https://webtui.ironclad.sh/components/switch",
+    "https://webtui.ironclad.sh/components/table",
+    "https://webtui.ironclad.sh/components/textarea",
+    "https://webtui.ironclad.sh/components/tooltip",
+    "https://webtui.ironclad.sh/components/typography",
+    "https://webtui.ironclad.sh/components/view",
+    "https://webtui.ironclad.sh/plugins/plugin-nf",
+    "https://webtui.ironclad.sh/plugins/theme-catppuccin",
+    "https://webtui.ironclad.sh/plugins/theme-everforest",
+    "https://webtui.ironclad.sh/plugins/theme-gruvbox",
+    "https://webtui.ironclad.sh/plugins/theme-vitesse",
+    "https://webtui.ironclad.sh/plugins/theme-nord",
+    "https://webtui.ironclad.sh/start/ascii-boxes",
+    "https://webtui.ironclad.sh/start/changelog",
+    "https://webtui.ironclad.sh/start/plugins",
+    "https://webtui.ironclad.sh/contributing/contributing",
+    "https://webtui.ironclad.sh/contributing/style-guide",
+    "https://webtui.ironclad.sh/plugins/plugin-dev",
+    "https://webtui.ironclad.sh/start/tuis-vs-guis",
+    "https://webtui.ironclad.sh/installation/nextjs",
+    "https://webtui.ironclad.sh/installation/vite",
+    "https://webtui.ironclad.sh/start/theming",
+    "https://webtui.ironclad.sh/start/installation",
+    "https://webtui.ironclad.sh/installation/astro"
+  ]
+}

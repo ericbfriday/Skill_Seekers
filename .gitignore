@@ -25,9 +25,9 @@ venv/
 ENV/
 env/
 
-# Output directory
-output/
-*.zip
+# Output directory (managed via individual ignores)
+# output/
+# *.zip
 
 # IDE
 .vscode/
