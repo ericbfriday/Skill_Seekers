@@ -1,0 +1,13 @@
+{
+  "name": "django_docs_only_docs",
+  "total_pages": 1,
+  "base_url": "https://docs.djangoproject.com/en/stable/",
+  "llms_txt_detected": true,
+  "llms_txt_variant": null,
+  "pages": [
+    {
+      "title": "<!DOCTYPE html>",
+      "url": "llms-txt#<!doctype-html>"
+    }
+  ]
+}

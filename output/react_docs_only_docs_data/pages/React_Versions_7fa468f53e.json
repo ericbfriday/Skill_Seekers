@@ -1,0 +1,119 @@
+{
+  "url": "https://react.dev/versions",
+  "title": "React Versions",
+  "content": "The React docs at react.dev provide documentation for the latest version of React.\n\nWe aim to keep the docs updated within major versions, and do not publish versions for each minor or patch version. When a new major is released, we archive the docs for the previous version as x.react.dev. See our versioning policy for more info.\n\nYou can find an archive of previous major versions below.\n\nIn 2023, we launched our new docs for React 18 as react.dev. The legacy React 18 docs are available at legacy.reactjs.org. Versions 17 and below are hosted on legacy sites.\n\nFor versions older than React 15, see 15.react.dev.\n\nReact was open-sourced on May 29, 2013. The initial commit is: 75897c: Initial public release\n\nSee the first blog post: Why did we build React?\n\nReact was open sourced at Facebook Seattle in 2013:",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "React Versions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Latest version: 19.2",
+      "id": "latest-version"
+    },
+    {
+      "level": "h2",
+      "text": "Previous versions",
+      "id": "previous-versions"
+    },
+    {
+      "level": "h3",
+      "text": "Note",
+      "id": ""
+    },
+    {
+      "level": "h4",
+      "text": "Legacy Docs",
+      "id": "legacy-docs"
+    },
+    {
+      "level": "h2",
+      "text": "Changelog",
+      "id": "changelog"
+    },
+    {
+      "level": "h3",
+      "text": "React 19",
+      "id": "react-19"
+    },
+    {
+      "level": "h3",
+      "text": "React 18",
+      "id": "react-18"
+    },
+    {
+      "level": "h3",
+      "text": "React 17",
+      "id": "react-17"
+    },
+    {
+      "level": "h3",
+      "text": "React 16",
+      "id": "react-16"
+    },
+    {
+      "level": "h3",
+      "text": "React 15",
+      "id": "react-15"
+    },
+    {
+      "level": "h3",
+      "text": "React 0.14",
+      "id": "react-14"
+    },
+    {
+      "level": "h3",
+      "text": "React 0.13",
+      "id": "react-13"
+    },
+    {
+      "level": "h3",
+      "text": "React 0.12",
+      "id": "react-12"
+    },
+    {
+      "level": "h3",
+      "text": "React 0.11",
+      "id": "react-11"
+    },
+    {
+      "level": "h3",
+      "text": "React 0.10 and below",
+      "id": "react-10-and-below"
+    },
+    {
+      "level": "h3",
+      "text": "Initial Commit",
+      "id": "initial-commit"
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://react.dev/",
+    "https://react.dev/versions",
+    "https://react.dev/learn",
+    "https://react.dev/reference/react",
+    "https://react.dev/community",
+    "https://react.dev/blog",
+    "https://react.dev/learn/installation",
+    "https://react.dev/learn/setup",
+    "https://react.dev/learn/react-compiler",
+    "https://react.dev/learn/describing-the-ui",
+    "https://react.dev/learn/adding-interactivity",
+    "https://react.dev/learn/managing-state",
+    "https://react.dev/learn/escape-hatches",
+    "https://react.dev/reference/react/components",
+    "https://react.dev/reference/react/apis",
+    "https://react.dev/reference/react/legacy",
+    "https://react.dev/reference/react-dom/components",
+    "https://react.dev/reference/react-dom",
+    "https://react.dev/reference/react-dom/client",
+    "https://react.dev/reference/react-dom/server",
+    "https://react.dev/reference/react-compiler/configuration",
+    "https://react.dev/reference/react-compiler/directives",
+    "https://react.dev/reference/react-compiler/compiling-libraries"
+  ]
+}
