@@ -1,0 +1,30 @@
+{
+  "name": "react_docs_only",
+  "description": "React documentation knowledge base scraped from official docs. Use when working with React API and understanding React concepts.",
+  "merge_mode": "rule-based",
+  "sources": [
+    {
+      "type": "documentation",
+      "base_url": "https://react.dev/",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "article",
+        "title": "h1",
+        "code_blocks": "pre code"
+      },
+      "url_patterns": {
+        "include": [],
+        "exclude": ["/blog/", "/community/"]
+      },
+      "categories": {
+        "getting_started": ["learn", "installation", "quick-start"],
+        "components": ["components", "props", "state"],
+        "hooks": ["hooks", "usestate", "useeffect", "usecontext"],
+        "api": ["api", "reference"],
+        "advanced": ["context", "refs", "portals", "suspense"]
+      },
+      "rate_limit": 0.5,
+      "max_pages": 200
+    }
+  ]
+}
