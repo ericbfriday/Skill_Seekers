@@ -66,3 +66,10 @@ USER_GUIDE.md
 
 # UV package manager
 uv.lock
+
+# Environment files with secrets
+.env
+.env.*
+!.env.example
+.env.local
+.env.txt

@@ -1,0 +1,312 @@
+{
+  "url": "https://github.com/vadimdemedes/ink-ui",
+  "title": "Navigation Menu",
+  "content": "There was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\n💄 Ink-redible command-line interfaces made easy\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\nCollection of customizable UI components for CLIs made with Ink.\n\nThis assumes you've already set up Ink. The easiest way to get started is create-ink-app.\n\nTextInput is used for entering any single-line input with an optional autocomplete.\n\nEmailInput is used for entering an email. After \"@\" character is entered, domain can be autocompleted from the list of most popular email providers.\n\nPasswordInput is used for entering sensitive data, like passwords, API keys and so on. It works the same way as TextInput, except input value is masked and replaced with asterisks (\"*\").\n\nConfirmInput shows a common \"Y/n\" input to confirm or cancel an operation your CLI wants to perform.\n\nSelect shows a scrollable list of options for a user to choose from.\n\nMultiSelect is similar to Select, except user can choose multiple options.\n\nSpinner indicates that something is being processed and CLI is waiting for it to complete.\n\nProgressBar is an extended version of Spinner, where it's possible to calculate a progress percentage.\n\nBadge can be used to indicate a status of a certain item, usually positioned nearby the element it's related to.\n\nStatusMessage can also be used to indicate a status, but when longer explanation of such status is required.\n\nAlert is used to focus user's attention to important messages.\n\nUnorderedList is used to show lists of items.\n\nOrderedList is used to show lists of numbered items.\n\nAll component have their styles defined in a theme, which is accessible to components via React context. Ink UI ships with a default theme and it can be customized or replaced with a different theme altogether.\n\nLet's get a quick look on how to customize a Spinner's component theme. Here's how it looks by default:\n\nFirst, look up component's default theme, which will give an overview which parts does this component consist of. Documentation of each component includes a link to component's theme.ts file on top. In the case of Spinner, it's source/components/spinner/theme.ts.\n\nHere's the part we care about:\n\nThis component theme hints that Spinner has 3 parts: container, frame and a label. So to customize the color of the spinner itself, we'd want to change the color prop returned from the frame function.\n\nTo customize the default theme, use extendTheme function and make that custom theme available to children components via ThemeProvider.\n\nWith custom theme applied, Spinner now renders a magenta spinner, instead of the default blue one.\n\nThere are also cases where styles change based on some condition. For example, StatusMessage changes the color of an icon based on the variant prop.\n\nHere's a sample code from its theme.\n\nSince each field in styles object is a function, it can return different styles based on the props that were passed in or a state of a component.\n\nComponent themes can also include configuration for rendering a component in a config object, that's not related to styling. For example, UnorderedList specifies a marker, which is a character that's rendered before each list item.\n\nHere's a sample code from its theme.\n\nChanging marker to '+' would render this:\n\nComponents shipped in Ink UI automatically read the necessary styles and configuration from a theme. However, if you're adding a new custom component and a theme for it, use useComponentTheme hook to access it.\n\n💄 Ink-redible command-line interfaces made easy\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.\n\nThere was an error while loading. Please reload this page.",
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "License",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h1",
+      "text": "vadimdemedes/ink-ui",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Folders and files",
+      "id": "folders-and-files"
+    },
+    {
+      "level": "h2",
+      "text": "Latest commit",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "History",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Repository files navigation",
+      "id": ""
+    },
+    {
+      "level": "h1",
+      "text": "Ink UI",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Install",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Components",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Text input",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Email input",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Password input",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Confirm input",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Select",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Multi select",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Spinner",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Progress bar",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Badge",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Status message",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Alert",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Unordered list",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Ordered list",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Theming",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "About",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Topics",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Resources",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "License",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Code of conduct",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Contributing",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Stars",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Watchers",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Forks",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Releases 2",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Sponsor this project",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Uh oh!",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Packages 0",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Used by 832",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Contributors 2",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Languages",
+      "id": ""
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "npm install @inkjs/ui",
+      "language": "python"
+    },
+    {
+      "code": "import {TextInput} from '@inkjs/ui';\n\n<TextInput\n\tplaceholder=\"Enter your name...\"\n\tonSubmit={name => {\n\t\t// `name` contains user input\n\t}}\n/>;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {EmailInput} from '@inkjs/ui';\n\n<EmailInput\n\tplaceholder=\"Enter email...\"\n\tonSubmit={email => {\n\t\t// `email` contains user input\n\t}}\n/>;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {PasswordInput} from '@inkjs/ui';\n\n<PasswordInput\n\tplaceholder=\"Enter password...\"\n\tonSubmit={password => {\n\t\t// `password` contains user input\n\t}}\n/>;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {ConfirmInput} from '@inkjs/ui';\n\n<ConfirmInput\n\tonConfirm={() => {\n\t\t// confirmed\n\t}}\n\tonCancel={() => {\n\t\t// cancelled\n\t}}\n/>;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {Select} from '@inkjs/ui';\n\n<Select\n\toptions={[\n\t\t{\n\t\t\tlabel: 'Red',\n\t\t\tvalue: 'red',\n\t\t},\n\t\t{\n\t\t\tlabel: 'Green',\n\t\t\tvalue: 'green',\n\t\t},\n\t\t{\n\t\t\tlabel: 'Yellow',\n\t\t\tvalue: 'yellow',\n\t\t},\n\t\t/* ... */\n\t]}\n\tonChange={newValue => {\n\t\t// `newValue` equals the `value` field of the selected option\n\t\t// For example, \"yellow\"\n\t}}\n/>;",
+      "language": "sql"
+    },
+    {
+      "code": "import {MultiSelect} from '@inkjs/ui';\n\n<MultiSelect\n\toptions={[\n\t\t{\n\t\t\tlabel: 'Red',\n\t\t\tvalue: 'red',\n\t\t},\n\t\t{\n\t\t\tlabel: 'Green',\n\t\t\tvalue: 'green',\n\t\t},\n\t\t{\n\t\t\tlabel: 'Yellow',\n\t\t\tvalue: 'yellow',\n\t\t},\n\t\t/* ... */\n\t]}\n\tonChange={newValue => {\n\t\t// `newValue` is an array of `value` fields of the selected options\n\t\t// For example, [\"green\", \"yellow\"]\n\t}}\n/>;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {Spinner} from '@inkjs/ui';\n\n<Spinner label=\"Loading\" />;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {ProgressBar} from '@inkjs/ui';\n\n// `progress` must be a number between 0 and 100\n<ProgressBar value={progress} />;",
+      "language": "jsx"
+    },
+    {
+      "code": "import {Badge} from '@inkjs/ui';\n\n<Badge color=\"green\">Pass</Badge>\n<Badge color=\"red\">Fail</Badge>\n<Badge color=\"yellow\">Warn</Badge>\n<Badge color=\"blue\">Todo</Badge>",
+      "language": "jsx"
+    },
+    {
+      "code": "import {StatusMessage} from '@inkjs/ui';\n\n<StatusMessage variant=\"success\">\n\tNew version is deployed to production\n</StatusMessage>\n\n<StatusMessage variant=\"error\">\n  Failed to deploy a new version of this app\n</StatusMessage>\n\n<StatusMessage variant=\"warning\">\n    Health checks aren't configured\n</StatusMessage>\n\n<StatusMessage variant=\"info\">\n    This version is already deployed\n</StatusMessage>",
+      "language": "jsx"
+    },
+    {
+      "code": "import {Alert} from '@inkjs/ui';\n\n<Alert variant=\"success\">\n    A new version of this CLI is available\n</Alert>\n\n<Alert variant=\"error\">\n    Your license is expired\n</Alert>\n\n<Alert variant=\"warning\">\n    Current version of this CLI has been deprecated\n</Alert>\n\n<Alert variant=\"info\">\n    API won't be available tomorrow night\n</Alert>",
+      "language": "jsx"
+    },
+    {
+      "code": "import {UnorderedList} from '@inkjs/ui';\n\n<UnorderedList>\n\t<UnorderedList.Item>\n\t\t<Text>Red</Text>\n\t</UnorderedList.Item>\n\n\t<UnorderedList.Item>\n\t\t<Text>Green</Text>\n\n\t\t<UnorderedList>\n\t\t\t<UnorderedList.Item>\n\t\t\t\t<Text>Light</Text>\n\t\t\t</UnorderedList.Item>\n\n\t\t\t<UnorderedList.Item>\n\t\t\t\t<Text>Dark</Text>\n\t\t\t</UnorderedList.Item>\n\t\t</UnorderedList>\n\t</UnorderedList.Item>\n\n\t<UnorderedList.Item>\n\t\t<Text>Blue</Text>\n\t</UnorderedList.Item>\n</UnorderedList>;",
+      "language": "sql"
+    },
+    {
+      "code": "import {OrderedList} from '@inkjs/ui';\n\n<OrderedList>\n\t<OrderedList.Item>\n\t\t<Text>Red</Text>\n\t</OrderedList.Item>\n\n\t<OrderedList.Item>\n\t\t<Text>Green</Text>\n\n\t\t<OrderedList>\n\t\t\t<OrderedList.Item>\n\t\t\t\t<Text>Light</Text>\n\t\t\t</OrderedList.Item>\n\n\t\t\t<OrderedList.Item>\n\t\t\t\t<Text>Dark</Text>\n\t\t\t</OrderedList.Item>\n\t\t</OrderedList>\n\t</OrderedList.Item>\n\n\t<OrderedList.Item>\n\t\t<Text>Blue</Text>\n\t</OrderedList.Item>\n</OrderedList>;",
+      "language": "sql"
+    },
+    {
+      "code": "const theme = {\n\tstyles: {\n\t\tcontainer: (): BoxProps => ({\n\t\t\tgap: 1,\n\t\t}),\n\t\tframe: (): TextProps => ({\n\t\t\tcolor: 'blue',\n\t\t}),\n\t\tlabel: (): TextProps => ({}),\n\t},\n} satisfies ComponentTheme;\n\nexport default theme;",
+      "language": "javascript"
+    },
+    {
+      "code": "import {render, type TextProps} from 'ink';\nimport {Spinner, ThemeProvider, extendTheme, defaultTheme} from '@inkjs/ui';\n\nconst customTheme = extendTheme(defaultTheme, {\n\tcomponents: {\n\t\tSpinner: {\n\t\t\tstyles: {\n\t\t\t\tframe: (): TextProps => ({\n\t\t\t\t\tcolor: 'magenta',\n\t\t\t\t}),\n\t\t\t},\n\t\t},\n\t},\n});\n\nfunction Example() {\n\treturn (\n\t\t<ThemeProvider theme={customTheme}>\n\t\t\t<Spinner label=\"Loading\" />\n\t\t</ThemeProvider>\n\t);\n}\n\nrender(<Example />);",
+      "language": "jsx"
+    },
+    {
+      "code": "const colorByVariant = {\n\tsuccess: 'green',\n\terror: 'red',\n\twarning: 'yellow',\n\tinfo: 'blue',\n};\n\nconst theme = {\n\tstyles: {\n\t\ticon: ({variant}) => ({\n\t\t\tcolor: colorByVariant[variant],\n\t\t}),\n\t},\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "const theme = {\n\tconfig: () => ({\n\t\tmarker: '─',\n\t}),\n};",
+      "language": "javascript"
+    },
+    {
+      "code": "import React, {render, Text, type TextProps} from 'ink';\nimport {\n\tThemeProvider,\n\tdefaultTheme,\n\textendTheme,\n\tuseComponentTheme,\n\ttype ComponentTheme,\n} from '@inkjs/ui';\n\nconst customLabelTheme = {\n\tstyles: {\n\t\tlabel: (): TextProps => ({\n\t\t\tcolor: 'green',\n\t\t}),\n\t},\n} satisfies ComponentTheme;\n\ntype CustomLabelTheme = typeof customLabelTheme;\n\nconst customTheme = extendTheme(defaultTheme, {\n\tcomponents: {\n\t\tCustomLabel: customLabelTheme,\n\t},\n});\n\nfunction CustomLabel() {\n\tconst {styles} = useComponentTheme<CustomLabelTheme>('CustomLabel');\n\n\treturn <Text {...styles.label()}>Hello world</Text>;\n}\n\nfunction Example() {\n\treturn (\n\t\t<ThemeProvider theme={customTheme}>\n\t\t\t<CustomLabel />\n\t\t</ThemeProvider>\n\t);\n}\n\nrender(<Example />);",
+      "language": "typescript"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://github.com/vadimdemedes/ink-ui/blob/main/readme.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/text-input.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/email-input.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/password-input.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/confirm-input.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/select.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/multi-select.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/spinner.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/progress-bar.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/badge.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/status-message.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/alert.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/unordered-list.md",
+    "https://github.com/vadimdemedes/ink-ui/blob/main/docs/ordered-list.md"
+  ]
+}

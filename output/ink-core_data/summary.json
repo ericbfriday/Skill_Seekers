@@ -1,0 +1,17 @@
+{
+  "name": "ink-core",
+  "total_pages": 2,
+  "base_url": "https://github.com/vadimdemedes/ink",
+  "llms_txt_detected": false,
+  "llms_txt_variant": null,
+  "pages": [
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink/blob/master/readme.md"
+    }
+  ]
+}

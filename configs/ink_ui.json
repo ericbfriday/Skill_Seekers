@@ -1,0 +1,24 @@
+{
+  "name": "ink-ui",
+  "description": "Ink-UI component library. Pre-built UI components for Ink CLIs: text inputs, select dropdowns, spinners, progress bars, alerts, and theming support.",
+  "base_url": "https://github.com/vadimdemedes/ink-ui",
+  "extract_api": true,
+  "selectors": {
+    "main_content": "article, .markdown-body, main",
+    "title": "h1, h2",
+    "code_blocks": "pre code, .highlight"
+  },
+  "url_patterns": {
+    "include": ["/blob/main/readme", "/blob/main/docs", "/wiki"],
+    "exclude": ["/issues", "/pull", "/releases", "/commits"]
+  },
+  "categories": {
+    "text_inputs": ["TextInput", "PasswordInput", "EmailInput"],
+    "selection": ["Select", "MultiSelect", "ConfirmInput"],
+    "feedback": ["Spinner", "ProgressBar", "StatusMessage", "Alert", "Badge"],
+    "lists": ["UnorderedList", "OrderedList"],
+    "theming": ["ThemeProvider", "defaultTheme", "extendTheme", "useTheme"]
+  },
+  "rate_limit": 0.5,
+  "max_pages": 75
+}

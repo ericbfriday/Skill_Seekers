@@ -1,0 +1,59 @@
+{
+  "name": "ink",
+  "description": "Ink (React for CLIs) and Ink-UI component library. Use for building interactive command-line applications with React components, flexbox terminal layouts, keyboard input handling, and pre-built UI components like spinners, inputs, and selects.",
+  "merge_mode": "rule-based",
+  "sources": [
+    {
+      "type": "documentation",
+      "name": "Ink Core",
+      "base_url": "https://github.com/vadimdemedes/ink",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "article, .markdown-body, main",
+        "title": "h1, h2",
+        "code_blocks": "pre code, .highlight"
+      },
+      "url_patterns": {
+        "include": ["/blob/master/readme", "/wiki", "/blob/master/docs"],
+        "exclude": ["/issues", "/pull", "/releases", "/commits", "/branches"]
+      },
+      "categories": {
+        "getting_started": ["install", "quick", "start", "intro", "getting-started"],
+        "core_components": ["box", "text", "newline", "transform", "static"],
+        "hooks": ["useInput", "useApp", "useStdin", "useStdout", "useStderr", "useFocus", "useFocusManager"],
+        "rendering": ["render", "instance", "unmount", "waitUntilExit", "clear", "rerender"],
+        "layout": ["flexbox", "flexDirection", "flexGrow", "flexShrink", "alignItems", "justifyContent", "width", "height", "padding", "margin"],
+        "styling": ["color", "backgroundColor", "bold", "italic", "underline", "strikethrough", "dimColor", "inverse"],
+        "testing": ["ink-testing-library", "test", "render", "lastFrame"]
+      },
+      "rate_limit": 0.5,
+      "max_pages": 100
+    },
+    {
+      "type": "documentation",
+      "name": "Ink-UI Components",
+      "base_url": "https://github.com/vadimdemedes/ink-ui",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "article, .markdown-body, main",
+        "title": "h1, h2",
+        "code_blocks": "pre code, .highlight"
+      },
+      "url_patterns": {
+        "include": ["/blob/main/readme", "/blob/main/docs", "/wiki"],
+        "exclude": ["/issues", "/pull", "/releases", "/commits"]
+      },
+      "categories": {
+        "text_inputs": ["TextInput", "PasswordInput", "EmailInput"],
+        "selection": ["Select", "MultiSelect", "ConfirmInput"],
+        "feedback": ["Spinner", "ProgressBar", "StatusMessage", "Alert", "Badge"],
+        "lists": ["UnorderedList", "OrderedList"],
+        "theming": ["ThemeProvider", "defaultTheme", "extendTheme", "useTheme"]
+      },
+      "rate_limit": 0.5,
+      "max_pages": 75
+    }
+  ],
+  "rate_limit": 0.5,
+  "max_pages": 250
+}

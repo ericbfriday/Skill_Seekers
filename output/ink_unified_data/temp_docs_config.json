@@ -1,6 +1,6 @@
 {
   "name": "ink_docs",
-  "base_url": "https://github.com/vadimdemedes/ink",
+  "base_url": "https://github.com/vadimdemedes/ink-ui",
   "selectors": {
     "main_content": "article, .markdown-body, main",
     "title": "h1, h2",
@@ -8,79 +8,46 @@
   },
   "url_patterns": {
     "include": [
-      "/blob/master/readme",
-      "/wiki",
-      "/blob/master/docs"
+      "/blob/main/readme",
+      "/blob/main/docs",
+      "/wiki"
     ],
     "exclude": [
       "/issues",
       "/pull",
       "/releases",
-      "/commits",
-      "/branches"
+      "/commits"
     ]
   },
   "categories": {
-    "getting_started": [
-      "install",
-      "quick",
-      "start",
-      "intro",
-      "getting-started"
+    "text_inputs": [
+      "TextInput",
+      "PasswordInput",
+      "EmailInput"
     ],
-    "core_components": [
-      "box",
-      "text",
-      "newline",
-      "transform",
-      "static"
+    "selection": [
+      "Select",
+      "MultiSelect",
+      "ConfirmInput"
     ],
-    "hooks": [
-      "useInput",
-      "useApp",
-      "useStdin",
-      "useStdout",
-      "useStderr",
-      "useFocus",
-      "useFocusManager"
+    "feedback": [
+      "Spinner",
+      "ProgressBar",
+      "StatusMessage",
+      "Alert",
+      "Badge"
     ],
-    "rendering": [
-      "render",
-      "instance",
-      "unmount",
-      "waitUntilExit",
-      "clear",
-      "rerender"
+    "lists": [
+      "UnorderedList",
+      "OrderedList"
     ],
-    "layout": [
-      "flexbox",
-      "flexDirection",
-      "flexGrow",
-      "flexShrink",
-      "alignItems",
-      "justifyContent",
-      "width",
-      "height",
-      "padding",
-      "margin"
-    ],
-    "styling": [
-      "color",
-      "backgroundColor",
-      "bold",
-      "italic",
-      "underline",
-      "strikethrough",
-      "dimColor",
-      "inverse"
-    ],
-    "testing": [
-      "ink-testing-library",
-      "test",
-      "render",
-      "lastFrame"
+    "theming": [
+      "ThemeProvider",
+      "defaultTheme",
+      "extendTheme",
+      "useTheme"
     ]
   },
   "rate_limit": 0.5,
-  "max_pages": 100
+  "max_pages": 75
 }

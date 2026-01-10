@@ -1,0 +1,69 @@
+{
+  "name": "ink-ui",
+  "total_pages": 15,
+  "base_url": "https://github.com/vadimdemedes/ink-ui",
+  "llms_txt_detected": false,
+  "llms_txt_variant": null,
+  "pages": [
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/readme.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/text-input.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/email-input.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/password-input.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/confirm-input.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/select.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/multi-select.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/spinner.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/progress-bar.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/badge.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/status-message.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/alert.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/unordered-list.md"
+    },
+    {
+      "title": "Navigation Menu",
+      "url": "https://github.com/vadimdemedes/ink-ui/blob/main/docs/ordered-list.md"
+    }
+  ]
+}
