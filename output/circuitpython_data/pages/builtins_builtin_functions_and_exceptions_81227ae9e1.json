@@ -1,0 +1,57 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+  "title": "builtins – builtin functions and exceptions",
+  "content": "All builtin functions and exceptions are described here. They are also available via the builtins module.\n\nFor more information about built-ins, see the following CPython documentation:\n\nBuiltin CPython Functions\n\nBuiltin CPython Exceptions\n\nBuiltin CPython Constants\n\nNot all of these functions, types, exceptions, and constants are turned on in all CircuitPython ports, for space reasons.\n\nSee CPython documentation: bytearray.\n\nSee CPython documentation: bytes.\n\nThe argument name should be a string, and this function deletes the named attribute from the object given by obj.\n\nfrozenset() is not enabled on the smallest CircuitPython boards for space reasons.\n\nreversed() is not enabled on the smallest CircuitPython boards for space reasons.\n\nThe slice builtin is the type that slice objects have.\n\nReloadException is used internally to deal with soft restarts.\n\nNot a part of the CPython standard library\n\nSee CPython documentation: SystemExit.\n\nSee CPython documentation: TypeError.",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "builtins – builtin functions and exceptions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Functions and types",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Exceptions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Constants",
+      "id": ""
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+  ]
+}

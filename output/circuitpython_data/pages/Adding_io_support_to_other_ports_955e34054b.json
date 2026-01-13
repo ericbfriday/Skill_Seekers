@@ -1,0 +1,68 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+  "title": "Adding *io support to other ports",
+  "content": "digitalio provides a well-defined, cross-port hardware abstraction layer built to support different devices and their drivers. It’s backed by the Common HAL, a C api suitable for supporting different hardware in a similar manner. By sharing this C api, developers can support new hardware easily and cross-port functionality to the new hardware.\n\nThese instructions also apply to analogio, busio, pulseio and touchio. Most drivers depend on analogio, digitalio and busio so start with those.\n\nCommon HAL related files are found in these locations:\n\nshared-bindings Shared home for the Python <-> C bindings which includes inline RST documentation for the created interfaces. The common hal functions are defined in the .h files of the corresponding C files.\n\nshared-module Shared home for C code built on the Common HAL and used by all ports. This code only uses common_hal methods defined in shared-bindings.\n\n<port>/common-hal Port-specific implementation of the Common HAL.\n\nEach folder has the substructure of / and they should match 1:1. __init__.c is used for module globals that are not classes (similar to __init__.py).\n\nThe first step is to hook the shared-bindings into your build for the modules you wish to support. Here’s an example of this step for the atmel-samd/Makefile:\n\nThe Makefile defines the modules to build and adds the sources to include the shared-bindings version and the common-hal version within the port specific directory. You may comment out certain subfolders to reduce the number of modules to add but don’t comment out individual classes. It won’t compile then.\n\nModules are registered by the macro MP_REGISTER_MODULE from py/obj.h. The macro takes two arguments: the module name as a QSTR and the module object itself. The board module is registered like so:\n\nAt this point in the port, nothing will compile yet, because there’s still work to be done to fix missing sources, compile issues, and link issues. I suggest start with a common-hal directory from another port that implements it such as atmel-samd or esp8266, deleting the function contents and stubbing out any return statements. Once that is done, you should be able to compile cleanly and import the modules, but nothing will work (though you are getting closer).\n\nThe last step is actually implementing each function in a port specific way. I can’t help you with this. :-) If you have any questions how a Common HAL function should work then see the corresponding .h file in shared-bindings.\n\nWoohoo! You are almost done. After you implement everything, lots of drivers and sample code should just work. There are a number of drivers and examples written for Adafruit’s Feather ecosystem. Here are places to start:\n\nAdafruit repos with CircuitPython topic\n\nAdafruit driver bundle",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Adding *io support to other ports",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "File layout",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Adding support",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Modifying the build",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Hooking the modules in",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Implementing the Common HAL",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Testing",
+      "id": ""
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "SRC_BINDINGS = \\\n\tboard/__init__.c \\\n\tmicrocontroller/__init__.c \\\n\tmicrocontroller/Pin.c \\\n\tanalogio/__init__.c \\\n\tanalogio/AnalogIn.c \\\n\tanalogio/AnalogOut.c \\\n\tdigitalio/__init__.c \\\n\tdigitalio/DigitalInOut.c \\\n\tpulseio/__init__.c \\\n\tpulseio/PulseIn.c \\\n\tpulseio/PulseOut.c \\\n\tpulseio/PWMOut.c \\\n\tbusio/__init__.c \\\n\tbusio/I2C.c \\\n\tbusio/SPI.c \\\n\tbusio/UART.c \\\n\tneopixel_write/__init__.c \\\n\ttime/__init__.c \\\n\tusb_hid/__init__.c \\\n\tusb_hid/Device.c\n\nSRC_BINDINGS_EXPANDED = $(addprefix shared-bindings/, $(SRC_BINDINGS)) \\\n                        $(addprefix common-hal/, $(SRC_BINDINGS))\n\n# Add the resulting objects to the full list\nOBJ += $(addprefix $(BUILD)/, $(SRC_BINDINGS_EXPANDED:.c=.o))\n# Add the sources for QSTR generation\nSRC_QSTR += $(SRC_C) $(SRC_BINDINGS_EXPANDED) $(STM_SRC_C)",
+      "language": "markdown"
+    },
+    {
+      "code": "MP_REGISTER_MODULE(MP_QSTR_board, board_module);",
+      "language": "unknown"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+  ]
+}

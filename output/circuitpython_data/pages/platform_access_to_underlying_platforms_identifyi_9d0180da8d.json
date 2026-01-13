@@ -1,0 +1,47 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+  "title": "platform – access to underlying platform’s identifying data",
+  "content": "This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: platform.\n\nThis module tries to retrieve as much platform-identifying data as possible. It makes this information available via function APIs.\n\nReturns a string identifying the underlying platform. This string is composed of several substrings in the following order, delimited by dashes (-):\n\nthe name of the platform system (e.g. Unix, Windows or MicroPython)\n\nthe MicroPython version\n\nthe architecture of the platform\n\nthe version of the underlying platform\n\nthe concatenation of the name of the libc that MicroPython is linked to and its corresponding version.\n\nFor example, this could be \"MicroPython-1.20.0-xtensa-IDFv4.2.4-with-newlib3.0.0\".\n\nReturns a string identifying the compiler used for compiling MicroPython.\n\nReturns a tuple of strings (lib, version), where lib is the name of the libc that MicroPython is linked to, and version the corresponding version of this libc.",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "platform – access to underlying platform’s identifying data",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Functions",
+      "id": ""
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+  ]
+}

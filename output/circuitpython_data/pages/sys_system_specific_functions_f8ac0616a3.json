@@ -1,0 +1,58 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+  "title": "sys – system specific functions",
+  "content": "This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: sys.\n\nTerminate current program with a given exit code. Underlyingly, this function raise as SystemExit exception. If an argument is given, its value given as an argument to SystemExit.\n\nThis function is deprecated and will be removed starting in CircuitPython 10.x, traceback.print_exception() should be used instead.\n\nPrint exception with a traceback to a file-like object file (or sys.stdout by default).\n\nDifference to CPython\n\nThis is simplified version of a function which appears in the traceback module in CPython. Unlike traceback.print_exception(), this function takes just exception value instead of exception type, exception value, and traceback object; file argument should be positional; further arguments are not supported.\n\nA mutable list of arguments the current program was started with.\n\nThe byte order of the system (\"little\" or \"big\").\n\nObject with information about the current Python implementation. For CircuitPython, it has following attributes:\n\nname - string “circuitpython”\n\nversion - tuple (major, minor, micro), e.g. (1, 7, 0)\n\n_machine - string describing the underlying machine\n\n_mpy - supported mpy file-format version (optional attribute)\n\nThis object is the recommended way to distinguish CircuitPython from other Python implementations (note that it still may not exist in the very minimal ports).\n\nDifference to CPython\n\nCPython mandates more attributes for this object, but the actual useful bare minimum is implemented in CircuitPython.\n\nMaximum value which a native integer type can hold on the current platform, or maximum value representable by the CircuitPython integer type, if it’s smaller than platform max value (that is the case for CircuitPython ports without long int support).\n\nThis attribute is useful for detecting “bitness” of a platform (32-bit vs 64-bit, etc.). It’s recommended to not compare this attribute to some value directly, but instead count number of bits in it:\n\nDictionary of loaded modules. On some ports, it may not include builtin modules.\n\nA mutable list of directories to search for imported modules.\n\nDifference to CPython\n\nOn MicroPython, an entry with the value \".frozen\" will indicate that import should search frozen modules at that point in the search. If no frozen module is found then search will not look for a directory called .frozen, instead it will continue with the next entry in sys.path.\n\nThe platform that CircuitPython is running on. For OS/RTOS ports, this is usually an identifier of the OS, e.g. \"linux\". For baremetal ports it is an identifier of the chip on a board, e.g. \"MicroChip SAMD51\". It thus can be used to distinguish one board from another. If you need to check whether your program runs on CircuitPython (vs other Python implementation), use sys.implementation instead.\n\nStandard error stream.\n\nStandard input stream.\n\nStandard output stream.\n\nPython language version that this implementation conforms to, as a string.\n\nPython language version that this implementation conforms to, as a tuple of ints.\n\nDifference to CPython\n\nOnly the first three version numbers (major, minor, micro) are supported and they can be referenced only by index, not by name.",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "sys – system specific functions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Functions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Constants",
+      "id": ""
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "bits = 0\nv = sys.maxsize\nwhile v:\n    bits += 1\n    v >>= 1\nif bits > 32:\n    # 64-bit (or more) platform\n    ...\nelse:\n    # 32-bit (or less) platform\n    # Note that on 32-bit platform, value of bits may be less than 32\n    # (e.g. 31) due to peculiarities described above, so use \"> 16\",\n    # \"> 32\", \"> 64\" style of comparisons.",
+      "language": "yaml"
+    }
+  ],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/traceback/index.html"
+  ]
+}

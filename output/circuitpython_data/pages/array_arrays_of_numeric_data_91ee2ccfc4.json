@@ -1,0 +1,47 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+  "title": "array – arrays of numeric data",
+  "content": "This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: array.\n\nSupported format codes: b, B, h, H, i, I, l, L, q, Q, f, d (the latter 2 depending on the floating-point support).\n\nCreate array with elements of given type. Initial contents of the array are given by an iterable. If it is not provided, an empty array is created.\n\nIn addition to the methods below, array objects also implement the buffer protocol. This means the contents of the entire array can be accessed as raw bytes via a memoryview or other interfaces which use this protocol.\n\nAppend new element val to the end of array, growing it.\n\nAppend new elements as contained in iterable to the end of array, growing it.\n\nIndexed read of the array, called as a[index] (where a is an array). Returns a value if index is an int and an array if index is a slice. Negative indices count from the end and IndexError is thrown if the index is out of range.\n\nNote: __getitem__ cannot be called directly (a.__getitem__(index) fails) and is not present in __dict__, however a[index] does work.\n\nIndexed write into the array, called as a[index] = value (where a is an array). value is a single value if index is an int and an array if index is a slice. Negative indices count from the end and IndexError is thrown if the index is out of range.\n\nNote: __setitem__ cannot be called directly (a.__setitem__(index, value) fails) and is not present in __dict__, however a[index] = value does work.\n\nReturns the number of items in the array, called as len(a) (where a is an array).\n\nNote: __len__ cannot be called directly (a.__len__() fails) and the method is not present in __dict__, however len(a) does work.\n\nReturn a new array that is the concatenation of the array with other, called as a + other (where a and other are both arrays).\n\nNote: __add__ cannot be called directly (a.__add__(other) fails) and is not present in __dict__, however a + other does work.\n\nConcatenates the array with other in-place, called as a += other (where a and other are both arrays). Equivalent to extend(other).\n\nNote: __iadd__ cannot be called directly (a.__iadd__(other) fails) and is not present in __dict__, however a += other does work.\n\nReturns the string representation of the array, called as str(a) or repr(a)` (where a is an array). Returns the string \"array(<type>, [<elements>])\", where <type> is the type code letter for the array and <elements> is a comma separated list of the elements of the array.\n\nNote: __repr__ cannot be called directly (a.__repr__() fails) and is not present in __dict__, however str(a) and repr(a) both work.",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "array – arrays of numeric data",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Classes",
+      "id": ""
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+  ]
+}

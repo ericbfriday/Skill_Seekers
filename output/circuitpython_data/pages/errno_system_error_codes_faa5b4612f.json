@@ -1,0 +1,65 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+  "title": "errno – system error codes",
+  "content": "This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: errno.\n\nThis module provides access to symbolic error codes for OSError exception. Some codes are not available on the smallest CircuitPython builds, such as SAMD21, for space reasons.\n\nError codes, based on ANSI C/POSIX standard. All error codes start with “E”. Errors are usually accessible as exc.errno where exc is an instance of OSError. Usage example:\n\nDictionary mapping numeric error codes to strings with symbolic error code (see above):",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "errno – system error codes",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Constants",
+      "id": ""
+    }
+  ],
+  "code_samples": [
+    {
+      "code": "try:\n    os.mkdir(\"my_dir\")\nexcept OSError as exc:\n    if exc.errno == errno.EEXIST:\n        print(\"Directory already exists\")",
+      "language": "yaml"
+    },
+    {
+      "code": ">>> print(errno.errorcode[errno.EEXIST])\nEEXIST",
+      "language": "swift"
+    }
+  ],
+  "patterns": [
+    {
+      "description": "errno – system error codes This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: errno. This module provides access to symbolic error codes for OSError exception. Some codes are not available on the smallest CircuitPython builds, such as SAMD21, for space reasons. Constants EEXIST, EAGAIN, etc. Error codes, based on ANSI C/POSIX standard. All error codes start with “E”. Errors are usually accessible as exc.errno where exc is an instance of OSError. Usage example: try: os.mkdir(\"my_dir\") except OSError as exc: if exc.errno == errno.EEXIST: print(\"Directory already exists\") errno.errorcode Dictionary mapping numeric error codes to strings with symbolic error code (see above): >>> print(errno.errorcode[errno.EEXIST]) EEXIST",
+      "code": "errno"
+    },
+    {
+      "description": "Error codes, based on ANSI C/POSIX standard. All error codes start with “E”. Errors are usually accessible as exc.errno where exc is an instance of OSError. Usage example:",
+      "code": "exc.errno"
+    }
+  ],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "circuitpython",
+  "description": "Complete CircuitPython knowledge base combining official documentation and source code analysis. Provides beginner-friendly microcontroller programming guidance, hardware I/O API reference (digitalio, analogio, bus protocols), library documentation, and conflict detection between documented APIs and actual implementation.",
+  "merge_mode": "rule-based",
+  "sources": [
+    {
+      "type": "documentation",
+      "name": "CircuitPython Official Documentation",
+      "base_url": "https://docs.circuitpython.org/en/latest/",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "article, .document, main, div[role='main']",
+        "title": "h1, h2",
+        "code_blocks": "pre code, .highlight pre, .literal-block"
+      },
+      "url_patterns": {
+        "include": ["/docs/", "/shared-bindings/", "/library/"],
+        "exclude": ["/search.html", "/genindex.html", "/_static/", "/_images/", "/.git"]
+      },
+      "categories": {
+        "getting_started": ["getting started", "tutorial", "beginner", "quickstart", "install", "setup"],
+        "core_modules": ["shared-bindings", "digitalio", "analogio", "busio", "wifi", "ble"],
+        "libraries": ["library", "json", "re", "sys", "heapq", "gc"],
+        "hardware_io": ["io", "gpio", "pwm", "adc", "i2c", "spi", "uart"],
+        "storage": ["storage", "filesystem", "file", "flash", "mount"],
+        "network": ["network", "wifi", "ble", "socket", "http", "mqtt"],
+        "display": ["display", "oled", "lcd", "led", "matrix", "framebuffer"],
+        "audio": ["audio", "sound", "i2s", "dac", "wave"],
+        "sensors": ["sensor", "temperature", "humidity", "accelerometer"],
+        "troubleshooting": ["troubleshoot", "debug", "faq", "error"]
+      },
+      "rate_limit": 0.3,
+      "max_pages": 800
+    },
+    {
+      "type": "github",
+      "repo": "adafruit/circuitpython",
+      "include_code": true,
+      "code_analysis_depth": "surface",
+      "include_issues": true,
+      "max_issues": 150,
+      "include_changelog": true,
+      "include_releases": true,
+      "file_patterns": [
+        "shared-bindings/**/*.py",
+        "lib/**/*.py",
+        "ports/**/*.py",
+        "ports/nrf/**/*.py",
+        "ports/rp2/**/*.py",
+        "ports/atmel-samd/**/*.py",
+        "ports/stm/**/*.py"
+      ],
+      "categories": {
+        "implementation": ["implementation", "source code", "c extension", "native", "mpy"],
+        "api_reference": ["function", "class", "method", "property", "signature", "parameter"],
+        "examples": ["example", "sample", "demo", "test", "tutorial"],
+        "boards": ["board", "port", "board configuration", "variant", "mcu"],
+        "internal": ["shared", "helper", "utility", "common", "base"]
+      }
+    }
+  ],
+  "rate_limit": 0.3,
+  "max_pages": 1200
+}

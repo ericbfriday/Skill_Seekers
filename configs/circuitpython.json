@@ -1,0 +1,57 @@
+{
+  "name": "circuitpython",
+  "description": "CircuitPython - Python programming for microcontrollers. Use for programming Adafruit boards, hardware I/O (digitalio, analogio, bus protocols), beginner-friendly microcontroller coding, REPL interaction, and working with 600+ supported boards including Raspberry Pi Pico, Feather, and other microcontrollers.",
+  "base_url": "https://docs.circuitpython.org/en/latest/",
+  "start_urls": [
+    "https://docs.circuitpython.org/en/latest/",
+    "https://docs.circuitpython.org/en/latest/docs/",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/",
+    "https://docs.circuitpython.org/en/latest/library/",
+    "https://docs.circuitpython.org/en/latest/readme.html"
+  ],
+  "selectors": {
+    "main_content": "article, .document, main, div[role='main']",
+    "title": "h1, h2",
+    "code_blocks": "pre code, .highlight pre, .literal-block",
+    "navigation": "nav[role='doc-navigation'], .sidebar",
+    "breadcrumbs": ".breadcrumbs, nav.breadcrumbs"
+  },
+  "url_patterns": {
+    "include": [
+      "/docs/",
+      "/shared-bindings/",
+      "/library/",
+      "/tutorial/",
+      "/guide/"
+    ],
+    "exclude": [
+      "/search.html",
+      "/genindex.html",
+      "/py-modindex.html",
+      "/_static/",
+      "/_images/",
+      "/_downloads/",
+      "/.git"
+    ]
+  },
+  "categories": {
+    "getting_started": ["getting started", "tutorial", "beginner", "quickstart", "install", "setup", "hello world", "first"],
+    "core_modules": ["shared-bindings", "core", "modules", "hardware", "digitalio", "analogio", "busio", "wifi", "ble"],
+    "libraries": ["library", "libraries", "bundled", "standard", "json", "re", "sys", "heapq", "gc"],
+    "hardware_io": ["io", "input", "output", "gpio", "pwm", "adc", "i2c", "spi", "uart"],
+    "storage": ["storage", "filesystem", "file", "sd", "flash", "save", "mount", "vfs"],
+    "network": ["network", "wifi", "ble", "bluetooth", "socket", "ssl", "websocket", "http", "mqtt"],
+    "display": ["display", "screen", "oled", "lcd", "tft", "led", "matrix", "framebuffer", "pixel"],
+    "audio": ["audio", "sound", "i2s", "dac", "speaker", "microphone", "wave", "mp3"],
+    "sensors": ["sensor", "temperature", "humidity", "accelerometer", "gyroscope", "magnetometer", "light", "motion"],
+    "power": ["power", "battery", "sleep", "deep sleep", "low power", "wakeup", "touch"],
+    "advanced": ["advanced", "async", "native", "ctypes", "struct", "memoryview", "optimize"],
+    "troubleshooting": ["troubleshoot", "debug", "error", "problem", "issue", "faq", "common issue"]
+  },
+  "rate_limit": 0.3,
+  "max_pages": 800,
+  "checkpoint": {
+    "enabled": true,
+    "interval": 200
+  }
+}

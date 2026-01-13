@@ -1,0 +1,59 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+  "title": "Standard Libraries",
+  "content": "The libraries below implement a subset of the corresponding standard Python (CPython) library. They are implemented in C, not Python.\n\nCircuitPython’s long-term goal is that code written in CircuitPython using Python standard libraries will be runnable on CPython without changes.\n\nThese libraries are not enabled on CircuitPython builds with limited flash memory: binascii, errno, json, re.\n\nThese libraries are not currently enabled in any CircuitPython build, but may be in the future: platform\n\nA few string operations are not enabled on small builds due to limited flash memory: string.center(), string.partition(), string.splitlines(), string.reversed().\n\nFunctionality specific to the CircuitPython/MicroPython implementations is available in the following libraries.",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Standard Libraries",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Python standard libraries",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Omitted string functions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "CircuitPython/MicroPython-specific libraries",
+      "id": ""
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/micropython/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/help.html"
+  ]
+}

@@ -1,0 +1,677 @@
+{
+  "name": "circuitpython",
+  "total_pages": 167,
+  "base_url": "https://docs.circuitpython.org/en/latest/",
+  "llms_txt_detected": false,
+  "llms_txt_variant": null,
+  "pages": [
+    {
+      "title": "",
+      "url": "https://docs.circuitpython.org/en/latest/"
+    },
+    {
+      "title": "Adafruit CircuitPython API Reference",
+      "url": "https://docs.circuitpython.org/en/latest/docs/"
+    },
+    {
+      "title": "Core Modules",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/"
+    },
+    {
+      "title": "Core Modules",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/index.html"
+    },
+    {
+      "title": "Standard Libraries",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/index.html"
+    },
+    {
+      "title": "Supported Ports",
+      "url": "https://docs.circuitpython.org/en/latest/docs/supported_ports.html"
+    },
+    {
+      "title": "Troubleshooting",
+      "url": "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html"
+    },
+    {
+      "title": "Adafruit CircuitPython Libraries",
+      "url": "https://docs.circuitpython.org/en/latest/docs/libraries.html"
+    },
+    {
+      "title": "Workflows",
+      "url": "https://docs.circuitpython.org/en/latest/docs/workflows.html"
+    },
+    {
+      "title": "Environment Variables",
+      "url": "https://docs.circuitpython.org/en/latest/docs/environment.html"
+    },
+    {
+      "title": "Design Guide",
+      "url": "https://docs.circuitpython.org/en/latest/docs/design_guide.html"
+    },
+    {
+      "title": "Architecture",
+      "url": "https://docs.circuitpython.org/en/latest/docs/porting.html"
+    },
+    {
+      "title": "Adding *io support to other ports",
+      "url": "https://docs.circuitpython.org/en/latest/docs/common_hal.html"
+    },
+    {
+      "title": "Glossary",
+      "url": "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html"
+    },
+    {
+      "title": "MicroPython & CircuitPython License",
+      "url": "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+    },
+    {
+      "title": "_bleio – Bluetooth Low Energy (BLE) communication",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/_bleio/index.html"
+    },
+    {
+      "title": "_eve – Low-level BridgeTek EVE bindings",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/_eve/index.html"
+    },
+    {
+      "title": "_pew – LED matrix driver",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/_pew/index.html"
+    },
+    {
+      "title": "_pixelmap – A fast pixel mapping library",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/_pixelmap/index.html"
+    },
+    {
+      "title": "_stage – C-level helpers for animation of sprites on a stage",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/_stage/index.html"
+    },
+    {
+      "title": "adafruit_bus_device – Hardware accelerated external bus access",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/adafruit_bus_device/index.html"
+    },
+    {
+      "title": "adafruit_pixelbuf – A fast RGB(W) pixel buffer library for like NeoPixel and DotStar",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/adafruit_pixelbuf/index.html"
+    },
+    {
+      "title": "aesio – AES encryption routines",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/aesio/index.html"
+    },
+    {
+      "title": "alarm – Alarms and sleep",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/alarm/index.html"
+    },
+    {
+      "title": "analogbufio – Analog Buffered IO Hardware Support",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/analogbufio/index.html"
+    },
+    {
+      "title": "analogio – Analog hardware support",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/analogio/index.html"
+    },
+    {
+      "title": "atexit – Atexit Module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/atexit/index.html"
+    },
+    {
+      "title": "audiobusio – Support for audio input and output over digital buses",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiobusio/index.html"
+    },
+    {
+      "title": "audiocore – Support for audio samples",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiocore/index.html"
+    },
+    {
+      "title": "audiodelays – Support for audio delay effects",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiodelays/index.html"
+    },
+    {
+      "title": "audiofilters – Support for audio filter effects",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiofilters/index.html"
+    },
+    {
+      "title": "audiofreeverb – Support for audio freeverb effect",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiofreeverb/index.html"
+    },
+    {
+      "title": "audioio – Support for audio output",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audioio/index.html"
+    },
+    {
+      "title": "audiomixer – Support for audio mixing",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiomixer/index.html"
+    },
+    {
+      "title": "audiomp3 – Support for MP3-compressed audio files",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiomp3/index.html"
+    },
+    {
+      "title": "audiopwmio – Audio output via digital PWM",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/audiopwmio/index.html"
+    },
+    {
+      "title": "aurora_epaper – A framebuffer for Pervasive Displays Aurora E-paper displays.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/aurora_epaper/index.html"
+    },
+    {
+      "title": "bitbangio – Digital protocols implemented by the CPU",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/bitbangio/index.html"
+    },
+    {
+      "title": "bitmapfilter – Convolve an image with a kernel",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/bitmapfilter/index.html"
+    },
+    {
+      "title": "bitmaptools – Collection of bitmap manipulation tools",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/bitmaptools/index.html"
+    },
+    {
+      "title": "bitops – Routines for low-level manipulation of binary data",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/bitops/index.html"
+    },
+    {
+      "title": "board – Board specific pin names",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/board/index.html"
+    },
+    {
+      "title": "busdisplay",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/busdisplay/index.html"
+    },
+    {
+      "title": "busio – Hardware accelerated external bus access",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/busio/index.html"
+    },
+    {
+      "title": "camera – Support for camera input",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/camera/index.html"
+    },
+    {
+      "title": "canio – CAN bus access",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/canio/index.html"
+    },
+    {
+      "title": "codeop – Utilities to compile possibly incomplete Python source code.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/codeop/index.html"
+    },
+    {
+      "title": "countio – Support for edge counting",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/countio/index.html"
+    },
+    {
+      "title": "cyw43 – A class that represents a GPIO pin attached to the wifi chip.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/cyw43/index.html"
+    },
+    {
+      "title": "digitalio – Basic digital pin support",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/digitalio/index.html"
+    },
+    {
+      "title": "displayio – High level, display object compositing system",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/displayio/index.html"
+    },
+    {
+      "title": "dotclockframebuffer – Native helpers for driving parallel displays",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/dotclockframebuffer/index.html"
+    },
+    {
+      "title": "dualbank – Dualbank Module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/dualbank/index.html"
+    },
+    {
+      "title": "epaperdisplay",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/epaperdisplay/index.html"
+    },
+    {
+      "title": "espcamera – Wrapper for the espcamera library",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/espcamera/index.html"
+    },
+    {
+      "title": "espidf – Return the total size of the ESP-IDF, which includes the CircuitPython heap.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/espidf/index.html"
+    },
+    {
+      "title": "espnow – ESP-NOW Module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/espnow/index.html"
+    },
+    {
+      "title": "espulp – ESP Ultra Low Power Processor Module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/espulp/index.html"
+    },
+    {
+      "title": "floppyio – Read flux transition information into the buffer.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/floppyio/index.html"
+    },
+    {
+      "title": "fontio – Core font related data structures",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/fontio/index.html"
+    },
+    {
+      "title": "fourwire – Connects to a BusDisplay over a four wire bus",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/fourwire/index.html"
+    },
+    {
+      "title": "framebufferio – Native framebuffer display driving",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/framebufferio/index.html"
+    },
+    {
+      "title": "frequencyio – Support for frequency based protocols",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/frequencyio/index.html"
+    },
+    {
+      "title": "getpass – Getpass Module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/getpass/index.html"
+    },
+    {
+      "title": "gifio – Access GIF-format images",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/gifio/index.html"
+    },
+    {
+      "title": "gnss – Global Navigation Satellite System",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/gnss/index.html"
+    },
+    {
+      "title": "hashlib – Hashing related functions",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/hashlib/index.html"
+    },
+    {
+      "title": "i2cdisplaybus – Communicates to a display IC over I2C",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/i2cdisplaybus/index.html"
+    },
+    {
+      "title": "i2ctarget – Two wire serial protocol target",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/i2ctarget/index.html"
+    },
+    {
+      "title": "imagecapture – Support for “Parallel capture” interfaces",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/imagecapture/index.html"
+    },
+    {
+      "title": "ipaddress",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ipaddress/index.html"
+    },
+    {
+      "title": "is31fl3741 – Creates an in-memory framebuffer for a IS31FL3741 device.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/is31fl3741/index.html"
+    },
+    {
+      "title": "jpegio – Support for JPEG image decoding",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/jpegio/index.html"
+    },
+    {
+      "title": "keypad – Support for scanning keys and key matrices",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/keypad/index.html"
+    },
+    {
+      "title": "keypad_demux – Support for scanning key matrices that use a demultiplexer",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/keypad_demux/index.html"
+    },
+    {
+      "title": "locale – Locale support module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/locale/index.html"
+    },
+    {
+      "title": "lvfontio – Core font related data structures for LVGL",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/lvfontio/index.html"
+    },
+    {
+      "title": "math – mathematical functions",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/math/index.html"
+    },
+    {
+      "title": "max3421e – Provide USB host via a connected MAX3421E chip.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/max3421e/index.html"
+    },
+    {
+      "title": "mdns – Multicast Domain Name Service",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/mdns/index.html"
+    },
+    {
+      "title": "memorymap – Raw memory map access",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/memorymap/index.html"
+    },
+    {
+      "title": "memorymonitor – Memory monitoring helpers",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/memorymonitor/index.html"
+    },
+    {
+      "title": "microcontroller – Pin references and cpu functionality",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/microcontroller/index.html"
+    },
+    {
+      "title": "micropython – Access and control MicroPython internals",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/micropython/index.html"
+    },
+    {
+      "title": "mipidsi – Low-level routines for interacting with MIPI DSI",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/mipidsi/index.html"
+    },
+    {
+      "title": "msgpack – Pack object in msgpack format",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/msgpack/index.html"
+    },
+    {
+      "title": "neopixel_write – Low-level neopixel implementation",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/neopixel_write/index.html"
+    },
+    {
+      "title": "nvm – Non-volatile memory",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/nvm/index.html"
+    },
+    {
+      "title": "onewireio – Low-level bit primitives for Maxim (formerly Dallas Semi) one-wire protocol.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/onewireio/index.html"
+    },
+    {
+      "title": "os – functions that an OS normally provides",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/os/index.html"
+    },
+    {
+      "title": "paralleldisplaybus – Native helpers for driving parallel displays",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/paralleldisplaybus/index.html"
+    },
+    {
+      "title": "picodvi – Low-level routines for interacting with PicoDVI Output",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/picodvi/index.html"
+    },
+    {
+      "title": "ps2io – Support for PS/2 protocol",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ps2io/index.html"
+    },
+    {
+      "title": "pulseio – Support for individual pulse based protocols",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/pulseio/index.html"
+    },
+    {
+      "title": "pwmio – Support for PWM based protocols",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/pwmio/index.html"
+    },
+    {
+      "title": "qrio – Low-level QR code decoding",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/qrio/index.html"
+    },
+    {
+      "title": "rainbowio",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/rainbowio/index.html"
+    },
+    {
+      "title": "random – pseudo-random numbers and choices",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/random/index.html"
+    },
+    {
+      "title": "rclcpy – Robot Operating System (ROS2) connectivity through micro-ROS",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/rclcpy/index.html"
+    },
+    {
+      "title": "rgbmatrix – Low-level routines for bitbanged LED matrices",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/rgbmatrix/index.html"
+    },
+    {
+      "title": "rotaryio – Support for reading rotation sensors",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/rotaryio/index.html"
+    },
+    {
+      "title": "rp2pio – Hardware interface to RP2 series’ programmable IO (PIO) peripheral.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/rp2pio/index.html"
+    },
+    {
+      "title": "rtc – Real Time Clock",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/rtc/index.html"
+    },
+    {
+      "title": "samd – SAMD implementation settings",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/samd/index.html"
+    },
+    {
+      "title": "sdcardio – Interface to an SD card via the SPI bus",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/sdcardio/index.html"
+    },
+    {
+      "title": "sdioio – Interface to an SD card via the SDIO bus",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/sdioio/index.html"
+    },
+    {
+      "title": "sharpdisplay – Support for Sharp Memory Display framebuffers",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/sharpdisplay/index.html"
+    },
+    {
+      "title": "socketpool",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/socketpool/index.html"
+    },
+    {
+      "title": "spitarget – Serial Peripheral Interface protocol target",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/spitarget/index.html"
+    },
+    {
+      "title": "ssl",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ssl/index.html"
+    },
+    {
+      "title": "storage – Storage management",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/storage/index.html"
+    },
+    {
+      "title": "struct – Manipulation of c-style data",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/struct/index.html"
+    },
+    {
+      "title": "supervisor – Supervisor settings",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/supervisor/index.html"
+    },
+    {
+      "title": "synthio – Support for multi-channel audio synthesis",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/synthio/index.html"
+    },
+    {
+      "title": "terminalio – Displays text in a TileGrid",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/terminalio/index.html"
+    },
+    {
+      "title": "tilepalettemapper – Remaps color indices from the source bitmap to alternate indices on a per-tile basis. This allows for altering coloring of tiles based on their tilegrid location. It also allows for using a limited color bitmap with a wider array of colors.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/tilepalettemapper/index.html"
+    },
+    {
+      "title": "time – time and timing related functions",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/time/index.html"
+    },
+    {
+      "title": "touchio – Touch related IO",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/touchio/index.html"
+    },
+    {
+      "title": "traceback – Traceback Module",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/traceback/index.html"
+    },
+    {
+      "title": "uheap – Heap size analysis",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/uheap/index.html"
+    },
+    {
+      "title": "ulab – Manipulate numeric data similar to numpy",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/index.html"
+    },
+    {
+      "title": "usb – PyUSB-compatible USB host API",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb/index.html"
+    },
+    {
+      "title": "usb_cdc – USB CDC Serial streams",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb_cdc/index.html"
+    },
+    {
+      "title": "usb_hid – USB Human Interface Device",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb_hid/index.html"
+    },
+    {
+      "title": "usb_host – USB Host",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb_host/index.html"
+    },
+    {
+      "title": "usb_midi – MIDI over USB",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb_midi/index.html"
+    },
+    {
+      "title": "usb_video – Allows streaming bitmaps to a host computer via USB",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb_video/index.html"
+    },
+    {
+      "title": "ustack – Stack information and analysis",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ustack/index.html"
+    },
+    {
+      "title": "vectorio – Lightweight 2D shapes for displays",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/vectorio/index.html"
+    },
+    {
+      "title": "videocore – Low-level routines for interacting with the Broadcom VideoCore GPU",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/videocore/index.html"
+    },
+    {
+      "title": "warnings – Warn about potential code issues.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/warnings/index.html"
+    },
+    {
+      "title": "watchdog – Watchdog Timer",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/watchdog/index.html"
+    },
+    {
+      "title": "wifi",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/wifi/index.html"
+    },
+    {
+      "title": "zlib – zlib decompression functionality",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/zlib/index.html"
+    },
+    {
+      "title": "help() – Built-in method to provide helpful information",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/help.html"
+    },
+    {
+      "title": "builtins – builtin functions and exceptions",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/builtins.html"
+    },
+    {
+      "title": "heapq – heap queue algorithm",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/heapq.html"
+    },
+    {
+      "title": "array – arrays of numeric data",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/array.html"
+    },
+    {
+      "title": "binascii – binary/ASCII conversions",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/binascii.html"
+    },
+    {
+      "title": "collections – collection and container types",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/collections.html"
+    },
+    {
+      "title": "errno – system error codes",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/errno.html"
+    },
+    {
+      "title": "gc – control the garbage collector",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/gc.html"
+    },
+    {
+      "title": "io – input/output streams",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/io.html"
+    },
+    {
+      "title": "json – JSON encoding and decoding",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/json.html"
+    },
+    {
+      "title": "platform – access to underlying platform’s identifying data",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/platform.html"
+    },
+    {
+      "title": "re – simple regular expressions",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/re.html"
+    },
+    {
+      "title": "select – wait for events on a set of streams",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/select.html"
+    },
+    {
+      "title": "sys – system specific functions",
+      "url": "https://docs.circuitpython.org/en/latest/docs/library/sys.html"
+    },
+    {
+      "title": "Adafruit CircuitPython API Reference",
+      "url": "https://docs.circuitpython.org/en/latest/docs/index.html"
+    },
+    {
+      "title": "Module Support Matrix - Which Modules Are Available on Which Boards",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/support_matrix.html"
+    },
+    {
+      "title": "adafruit_bus_device.i2c_device – I2C Device Manager",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/adafruit_bus_device/i2c_device/index.html"
+    },
+    {
+      "title": "adafruit_bus_device.spi_device – SPI Device Manager",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/adafruit_bus_device/spi_device/index.html"
+    },
+    {
+      "title": "alarm.pin – Trigger an alarm when a pin changes state.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/alarm/pin/index.html"
+    },
+    {
+      "title": "alarm.time – Trigger an alarm when the specified time is reached.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/alarm/time/index.html"
+    },
+    {
+      "title": "alarm.touch – Trigger an alarm when touch is detected.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/alarm/touch/index.html"
+    },
+    {
+      "title": "ulab.numpy – Numerical approximation methods",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/numpy/index.html"
+    },
+    {
+      "title": "ulab.scipy – Compatibility layer for scipy",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/scipy/index.html"
+    },
+    {
+      "title": "ulab.user – This module should hold arbitrary user-defined functions.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/user/index.html"
+    },
+    {
+      "title": "ulab.utils",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/utils/index.html"
+    },
+    {
+      "title": "usb.core – USB Core",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb/core/index.html"
+    },
+    {
+      "title": "usb.util – USB Util",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/usb/util/index.html"
+    },
+    {
+      "title": "terminalio – Displays text in a TileGrid",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/terminalio/"
+    },
+    {
+      "title": "ulab.numpy.carray – Return the real part of the complex argument, which can be either an ndarray, or a scalar.",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/numpy/carray/index.html"
+    },
+    {
+      "title": "ulab.numpy.fft – Frequency-domain functions",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/numpy/fft/index.html"
+    },
+    {
+      "title": "ulab.numpy.linalg",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/numpy/linalg/index.html"
+    },
+    {
+      "title": "ulab.scipy.linalg",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/scipy/linalg/index.html"
+    },
+    {
+      "title": "ulab.scipy.optimize",
+      "url": "https://docs.circuitpython.org/en/latest/shared-bindings/ulab/scipy/optimize/index.html"
+    }
+  ]
+}

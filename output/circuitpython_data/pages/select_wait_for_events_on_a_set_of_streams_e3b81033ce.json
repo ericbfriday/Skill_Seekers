@@ -1,0 +1,57 @@
+{
+  "url": "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+  "title": "select – wait for events on a set of streams",
+  "content": "This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: cpython:select.\n\nThis module provides functions to efficiently wait for events on multiple stream objects (select streams which are ready for operations).\n\nCreate an instance of the Poll class.\n\nWait for activity on a set of objects.\n\nThis function is provided by some MicroPython ports for compatibility and is not efficient. Usage of Poll is recommended instead.\n\nRegister stream obj for polling. eventmask is logical OR of:\n\nselect.POLLIN - data available for reading\n\nselect.POLLOUT - more data can be written\n\nNote that flags like select.POLLHUP and select.POLLERR are not valid as input eventmask (these are unsolicited events which will be returned from poll() regardless of whether they are asked for). This semantics is per POSIX.\n\neventmask defaults to select.POLLIN | select.POLLOUT.\n\nIt is OK to call this function multiple times for the same obj. Successive calls will update obj’s eventmask to the value of eventmask (i.e. will behave as modify()).\n\nUnregister obj from polling.\n\nModify the eventmask for obj. If obj is not registered, OSError is raised with error of ENOENT.\n\nWait for at least one of the registered objects to become ready or have an exceptional condition, with optional timeout in milliseconds (if timeout arg is not specified or -1, there is no timeout).\n\nReturns list of (obj, event, …) tuples. There may be other elements in tuple, depending on a platform and version, so don’t assume that its size is 2. The event element specifies which events happened with a stream and is a combination of select.POLL* constants described above. Note that flags select.POLLHUP and select.POLLERR can be returned at any time (even if were not asked for), and must be acted on accordingly (the corresponding stream unregistered from poll and likely closed), because otherwise all further invocations of poll() may return immediately with these flags set for this stream again.\n\nIn case of timeout, an empty list is returned.\n\nDifference to CPython\n\nTuples returned may contain more than 2 elements as described above.\n\nLike poll.poll(), but instead returns an iterator which yields a “callee-owned tuple”. This function provides an efficient, allocation-free way to poll on streams.\n\nIf flags is 1, one-shot behaviour for events is employed: streams for which events happened will have their event masks automatically reset (equivalent to poll.modify(obj, 0)), so new events for such a stream won’t be processed until new mask is set with poll.modify(). This behaviour is useful for asynchronous I/O schedulers.\n\nDifference to CPython\n\nThis function is a MicroPython extension.",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "select – wait for events on a set of streams",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "Functions",
+      "id": ""
+    },
+    {
+      "level": "h2",
+      "text": "class Poll",
+      "id": ""
+    },
+    {
+      "level": "h3",
+      "text": "Methods",
+      "id": ""
+    }
+  ],
+  "code_samples": [],
+  "patterns": [],
+  "links": [
+    "https://docs.circuitpython.org/en/latest/docs/index.html",
+    "https://docs.circuitpython.org/en/latest/shared-bindings/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/index.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/builtins.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/heapq.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/array.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/binascii.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/collections.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/errno.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/gc.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/io.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/json.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/platform.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/re.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/select.html",
+    "https://docs.circuitpython.org/en/latest/docs/library/sys.html",
+    "https://docs.circuitpython.org/en/latest/docs/supported_ports.html",
+    "https://docs.circuitpython.org/en/latest/docs/troubleshooting.html",
+    "https://docs.circuitpython.org/en/latest/docs/libraries.html",
+    "https://docs.circuitpython.org/en/latest/docs/workflows.html",
+    "https://docs.circuitpython.org/en/latest/docs/environment.html",
+    "https://docs.circuitpython.org/en/latest/docs/design_guide.html",
+    "https://docs.circuitpython.org/en/latest/docs/porting.html",
+    "https://docs.circuitpython.org/en/latest/docs/common_hal.html",
+    "https://docs.circuitpython.org/en/latest/docs/reference/glossary.html",
+    "https://docs.circuitpython.org/en/latest/docs/LICENSE.html"
+  ]
+}
