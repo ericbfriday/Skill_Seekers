@@ -1,0 +1,67 @@
+{
+  "name": "better-auth",
+  "description": "Better Auth - The most comprehensive authentication framework for TypeScript. Complete reference including official documentation and source code analysis. Covers email/password auth, social providers, 2FA, passkey, multi-tenancy, organization management, plugins, and advanced authentication features.",
+  "merge_mode": "rule-based",
+  "sources": [
+    {
+      "type": "documentation",
+      "name": "Better Auth Official Documentation",
+      "base_url": "https://www.better-auth.com/docs",
+      "extract_api": true,
+      "selectors": {
+        "main_content": "main, article, .content, .prose",
+        "title": "h1, h2",
+        "code_blocks": "pre code, .code-block, code"
+      },
+      "url_patterns": {
+        "include": ["/docs/", "/docs/concepts/", "/docs/authentication/", "/docs/databases/", "/docs/integrations/", "/docs/plugins/", "/docs/guides/", "/docs/reference/"],
+        "exclude": ["/blog/", "/community/", "/enterprise/", "/examples/", "/changelogs/"]
+      },
+      "categories": {
+        "getting_started": ["introduction", "quick-start", "installation", "setup", "beginner"],
+        "concepts": ["concepts", "overview", "architecture", "how-it-works"],
+        "authentication": ["authentication", "sign-in", "sign-up", "session", "email", "password"],
+        "social_auth": ["social", "oauth", "provider", "google", "github", "apple", "discord"],
+        "two_factor": ["2fa", "two-factor", "totp", "otp", "verification"],
+        "passkey": ["passkey", "webauthn", "fido", "biometric"],
+        "database": ["database", "adapter", "schema", "migration", "prisma", "drizzle"],
+        "plugins": ["plugin", "plugins", "extension", "module"],
+        "organizations": ["organization", "tenant", "multi-tenant", "team", "workspace"],
+        "reference": ["reference", "api", "options", "types", "client"],
+        "integration": ["integration", "next.js", "react", "vue", "svelte", "astro", "solid", "hono", "tanstack"]
+      },
+      "rate_limit": 0.3,
+      "max_pages": 200
+    },
+    {
+      "type": "github",
+      "repo": "better-auth/better-auth",
+      "include_code": true,
+      "code_analysis_depth": "surface",
+      "include_issues": true,
+      "max_issues": 100,
+      "include_changelog": true,
+      "include_releases": true,
+      "file_patterns": [
+        "packages/**/*.ts",
+        "packages/core/**/*.ts",
+        "packages/*/src/**/*.ts",
+        "examples/**/*.ts",
+        "examples/**/*.tsx",
+        "**/*.test.ts",
+        "**/*.spec.ts"
+      ],
+      "categories": {
+        "implementation": ["implementation", "source code", "core", "internal", "types"],
+        "client_api": ["client", "auth-client", "createAuthClient", "hooks", "use"],
+        "server_api": ["server", "betterAuth", "middleware", "endpoint", "api"],
+        "plugins": ["plugin", "auth-plugin", "extension", "middleware"],
+        "adapters": ["adapter", "database", "prisma", "drizzle", "mongodb", "postgres", "mysql"],
+        "examples": ["example", "demo", "sample", "tutorial", "starter"],
+        "tests": ["test", "spec", "testing", "e2e"]
+      }
+    }
+  ],
+  "rate_limit": 0.3,
+  "max_pages": 400
+}

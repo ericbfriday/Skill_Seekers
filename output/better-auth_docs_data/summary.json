@@ -1,0 +1,13 @@
+{
+  "name": "better-auth_docs",
+  "total_pages": 1,
+  "base_url": "https://www.better-auth.com/docs",
+  "llms_txt_detected": true,
+  "llms_txt_variant": null,
+  "pages": [
+    {
+      "title": "Better Auth",
+      "url": "llms-txt#better-auth"
+    }
+  ]
+}
